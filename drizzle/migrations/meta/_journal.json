@@ -8,6 +8,20 @@
       "when": 1789857410754,
       "tag": "0000_habla_core_schema",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1789860178524,
+      "tag": "0001_shared_content_cache",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1789860362730,
+      "tag": "0002_lock_down_cache_functions",
+      "breakpoints": true
     }
   ]
 }

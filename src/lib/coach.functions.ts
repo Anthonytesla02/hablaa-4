@@ -1,5 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
+import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 const CompanionBrief = z.object({
   personality: z.string().max(900).default(""),
@@ -57,8 +58,9 @@ const OK: CoachVerdict = {
 
 /** Checks a learner's line against the offered options before the scene advances. */
 export const checkUtterance = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
   .inputValidator((data) => CoachInput.parse(data))
-  .handler(async ({ data }): Promise<CoachVerdict> => {
+  .handler(async ({ data, context }): Promise<CoachVerdict> => {
     const apiKey = process.env["LOVABLE_API_KEY"];
     if (!apiKey) return OK;
 
@@ -72,6 +74,11 @@ export const checkUtterance = createServerFn({ method: "POST" })
 
     // Exact match with an offered option is always accepted, no model call.
     if (data.options.some((o) => norm(o) === norm(data.userText))) return OK;
+
+    // Live grading is personal to the conversation, so it cannot be shared:
+    // budget it per user instead.
+    const { withinQuota } = await import("./shared-cache.server");
+    if (!(await withinQuota(context.userId, "coach"))) return OK;
 
     const c = data.companion;
     const persona = c
