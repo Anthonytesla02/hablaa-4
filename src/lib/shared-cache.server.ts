@@ -43,7 +43,7 @@ export async function getCachedSpeech(cacheKey: string): Promise<ArrayBuffer | n
 
     const { data: file, error } = await db.storage.from(TTS_BUCKET).download(row.storage_path);
     if (error || !file) return null;
-    void db.rpc("touch_tts_cache", { _cache_key: cacheKey });
+    await db.rpc("touch_tts_cache", { _cache_key: cacheKey });
     return await file.arrayBuffer();
   } catch {
     return null;
@@ -104,7 +104,7 @@ export async function cachedJson<T>(
       .eq("cache_key", cacheKey)
       .maybeSingle();
     if (row?.payload) {
-      void db.rpc("touch_ai_cache", { _cache_key: cacheKey });
+      await db.rpc("touch_ai_cache", { _cache_key: cacheKey });
       return row.payload as T;
     }
   } catch {
