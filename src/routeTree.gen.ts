@@ -10,33 +10,282 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as FeedRouteImport } from './routes/feed'
+import { Route as IntroductionRouteImport } from './routes/introduction'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as StartRouteImport } from './routes/start'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as AuthenticatedBackupRouteImport } from './routes/_authenticated/backup'
+import { Route as AuthenticatedCompanionRouteImport } from './routes/_authenticated/companion'
+import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
+import { Route as AuthenticatedLeagueRouteImport } from './routes/_authenticated/league'
+import { Route as AuthenticatedProfileRouteImport } from './routes/_authenticated/profile'
+import { Route as AuthenticatedSessionRouteImport } from './routes/_authenticated/session'
+import { Route as AuthenticatedShopRouteImport } from './routes/_authenticated/shop'
+import { Route as AuthenticatedSimulateRouteImport } from './routes/_authenticated/simulate'
+import { Route as AuthenticatedStreakRouteImport } from './routes/_authenticated/streak'
+import { Route as AuthenticatedVaultRouteImport } from './routes/_authenticated/vault'
+import { Route as ApiTtsRouteImport } from './routes/api/tts'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeedRoute = FeedRouteImport.update({
+  id: '/feed',
+  path: '/feed',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntroductionRoute = IntroductionRouteImport.update({
+  id: '/introduction',
+  path: '/introduction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StartRoute = StartRouteImport.update({
+  id: '/start',
+  path: '/start',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedBackupRoute = AuthenticatedBackupRouteImport.update({
+  id: '/backup',
+  path: '/backup',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedCompanionRoute = AuthenticatedCompanionRouteImport.update({
+  id: '/companion',
+  path: '/companion',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedLeagueRoute = AuthenticatedLeagueRouteImport.update({
+  id: '/league',
+  path: '/league',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedProfileRoute = AuthenticatedProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedSessionRoute = AuthenticatedSessionRouteImport.update({
+  id: '/session',
+  path: '/session',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedShopRoute = AuthenticatedShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedSimulateRoute = AuthenticatedSimulateRouteImport.update({
+  id: '/simulate',
+  path: '/simulate',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedStreakRoute = AuthenticatedStreakRouteImport.update({
+  id: '/streak',
+  path: '/streak',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedVaultRoute = AuthenticatedVaultRouteImport.update({
+  id: '/vault',
+  path: '/vault',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const ApiTtsRoute = ApiTtsRouteImport.update({
+  id: '/api/tts',
+  path: '/api/tts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
+  '/feed': typeof FeedRoute
+  '/introduction': typeof IntroductionRoute
+  '/privacy': typeof PrivacyRoute
+  '/start': typeof StartRoute
+  '/terms': typeof TermsRoute
+  '/backup': typeof AuthenticatedBackupRoute
+  '/companion': typeof AuthenticatedCompanionRoute
+  '/dashboard': typeof AuthenticatedDashboardRoute
+  '/league': typeof AuthenticatedLeagueRoute
+  '/profile': typeof AuthenticatedProfileRoute
+  '/session': typeof AuthenticatedSessionRoute
+  '/shop': typeof AuthenticatedShopRoute
+  '/simulate': typeof AuthenticatedSimulateRoute
+  '/streak': typeof AuthenticatedStreakRoute
+  '/vault': typeof AuthenticatedVaultRoute
+  '/api/tts': typeof ApiTtsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
+  '/feed': typeof FeedRoute
+  '/introduction': typeof IntroductionRoute
+  '/privacy': typeof PrivacyRoute
+  '/start': typeof StartRoute
+  '/terms': typeof TermsRoute
+  '/backup': typeof AuthenticatedBackupRoute
+  '/companion': typeof AuthenticatedCompanionRoute
+  '/dashboard': typeof AuthenticatedDashboardRoute
+  '/league': typeof AuthenticatedLeagueRoute
+  '/profile': typeof AuthenticatedProfileRoute
+  '/session': typeof AuthenticatedSessionRoute
+  '/shop': typeof AuthenticatedShopRoute
+  '/simulate': typeof AuthenticatedSimulateRoute
+  '/streak': typeof AuthenticatedStreakRoute
+  '/vault': typeof AuthenticatedVaultRoute
+  '/api/tts': typeof ApiTtsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/auth': typeof AuthRoute
+  '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
+  '/feed': typeof FeedRoute
+  '/introduction': typeof IntroductionRoute
+  '/privacy': typeof PrivacyRoute
+  '/start': typeof StartRoute
+  '/terms': typeof TermsRoute
+  '/_authenticated/backup': typeof AuthenticatedBackupRoute
+  '/_authenticated/companion': typeof AuthenticatedCompanionRoute
+  '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
+  '/_authenticated/league': typeof AuthenticatedLeagueRoute
+  '/_authenticated/profile': typeof AuthenticatedProfileRoute
+  '/_authenticated/session': typeof AuthenticatedSessionRoute
+  '/_authenticated/shop': typeof AuthenticatedShopRoute
+  '/_authenticated/simulate': typeof AuthenticatedSimulateRoute
+  '/_authenticated/streak': typeof AuthenticatedStreakRoute
+  '/_authenticated/vault': typeof AuthenticatedVaultRoute
+  '/api/tts': typeof ApiTtsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/contact'
+    | '/cookies'
+    | '/feed'
+    | '/introduction'
+    | '/privacy'
+    | '/start'
+    | '/terms'
+    | '/backup'
+    | '/companion'
+    | '/dashboard'
+    | '/league'
+    | '/profile'
+    | '/session'
+    | '/shop'
+    | '/simulate'
+    | '/streak'
+    | '/vault'
+    | '/api/tts'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/auth'
+    | '/contact'
+    | '/cookies'
+    | '/feed'
+    | '/introduction'
+    | '/privacy'
+    | '/start'
+    | '/terms'
+    | '/backup'
+    | '/companion'
+    | '/dashboard'
+    | '/league'
+    | '/profile'
+    | '/session'
+    | '/shop'
+    | '/simulate'
+    | '/streak'
+    | '/vault'
+    | '/api/tts'
+  id:
+    | '__root__'
+    | '/'
+    | '/_authenticated'
+    | '/auth'
+    | '/contact'
+    | '/cookies'
+    | '/feed'
+    | '/introduction'
+    | '/privacy'
+    | '/start'
+    | '/terms'
+    | '/_authenticated/backup'
+    | '/_authenticated/companion'
+    | '/_authenticated/dashboard'
+    | '/_authenticated/league'
+    | '/_authenticated/profile'
+    | '/_authenticated/session'
+    | '/_authenticated/shop'
+    | '/_authenticated/simulate'
+    | '/_authenticated/streak'
+    | '/_authenticated/vault'
+    | '/api/tts'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AuthRoute: typeof AuthRoute
+  ContactRoute: typeof ContactRoute
+  CookiesRoute: typeof CookiesRoute
+  FeedRoute: typeof FeedRoute
+  IntroductionRoute: typeof IntroductionRoute
+  PrivacyRoute: typeof PrivacyRoute
+  StartRoute: typeof StartRoute
+  TermsRoute: typeof TermsRoute
+  ApiTtsRoute: typeof ApiTtsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +297,190 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feed': {
+      id: '/feed'
+      path: '/feed'
+      fullPath: '/feed'
+      preLoaderRoute: typeof FeedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/introduction': {
+      id: '/introduction'
+      path: '/introduction'
+      fullPath: '/introduction'
+      preLoaderRoute: typeof IntroductionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/start': {
+      id: '/start'
+      path: '/start'
+      fullPath: '/start'
+      preLoaderRoute: typeof StartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/backup': {
+      id: '/_authenticated/backup'
+      path: '/backup'
+      fullPath: '/backup'
+      preLoaderRoute: typeof AuthenticatedBackupRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/companion': {
+      id: '/_authenticated/companion'
+      path: '/companion'
+      fullPath: '/companion'
+      preLoaderRoute: typeof AuthenticatedCompanionRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/dashboard': {
+      id: '/_authenticated/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AuthenticatedDashboardRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/league': {
+      id: '/_authenticated/league'
+      path: '/league'
+      fullPath: '/league'
+      preLoaderRoute: typeof AuthenticatedLeagueRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/profile': {
+      id: '/_authenticated/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof AuthenticatedProfileRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/session': {
+      id: '/_authenticated/session'
+      path: '/session'
+      fullPath: '/session'
+      preLoaderRoute: typeof AuthenticatedSessionRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/shop': {
+      id: '/_authenticated/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof AuthenticatedShopRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/simulate': {
+      id: '/_authenticated/simulate'
+      path: '/simulate'
+      fullPath: '/simulate'
+      preLoaderRoute: typeof AuthenticatedSimulateRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/streak': {
+      id: '/_authenticated/streak'
+      path: '/streak'
+      fullPath: '/streak'
+      preLoaderRoute: typeof AuthenticatedStreakRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/vault': {
+      id: '/_authenticated/vault'
+      path: '/vault'
+      fullPath: '/vault'
+      preLoaderRoute: typeof AuthenticatedVaultRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/api/tts': {
+      id: '/api/tts'
+      path: '/api/tts'
+      fullPath: '/api/tts'
+      preLoaderRoute: typeof ApiTtsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedBackupRoute: typeof AuthenticatedBackupRoute
+  AuthenticatedCompanionRoute: typeof AuthenticatedCompanionRoute
+  AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
+  AuthenticatedLeagueRoute: typeof AuthenticatedLeagueRoute
+  AuthenticatedProfileRoute: typeof AuthenticatedProfileRoute
+  AuthenticatedSessionRoute: typeof AuthenticatedSessionRoute
+  AuthenticatedShopRoute: typeof AuthenticatedShopRoute
+  AuthenticatedSimulateRoute: typeof AuthenticatedSimulateRoute
+  AuthenticatedStreakRoute: typeof AuthenticatedStreakRoute
+  AuthenticatedVaultRoute: typeof AuthenticatedVaultRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedBackupRoute: AuthenticatedBackupRoute,
+  AuthenticatedCompanionRoute: AuthenticatedCompanionRoute,
+  AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
+  AuthenticatedLeagueRoute: AuthenticatedLeagueRoute,
+  AuthenticatedProfileRoute: AuthenticatedProfileRoute,
+  AuthenticatedSessionRoute: AuthenticatedSessionRoute,
+  AuthenticatedShopRoute: AuthenticatedShopRoute,
+  AuthenticatedSimulateRoute: AuthenticatedSimulateRoute,
+  AuthenticatedStreakRoute: AuthenticatedStreakRoute,
+  AuthenticatedVaultRoute: AuthenticatedVaultRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AuthRoute: AuthRoute,
+  ContactRoute: ContactRoute,
+  CookiesRoute: CookiesRoute,
+  FeedRoute: FeedRoute,
+  IntroductionRoute: IntroductionRoute,
+  PrivacyRoute: PrivacyRoute,
+  StartRoute: StartRoute,
+  TermsRoute: TermsRoute,
+  ApiTtsRoute: ApiTtsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
