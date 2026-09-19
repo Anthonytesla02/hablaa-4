@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "spanish-foundations-a0-a1",
+  "title": "Spanish Special Challenges",
+  "delivery": "optional scenario missions and weekly boss challenges",
+  "scoring": {
+    "task_completion": 0.5,
+    "comprehensibility": 0.25,
+    "retrieval_without_hints": 0.15,
+    "repair_strategy": 0.1
+  },
+  "challenges": [
+    {
+      "id": "sc01",
+      "title": "Pronunciation Lab",
+      "unlock_after_day": 2,
+      "scenario": "Produce five vowel pairs and shadow a short greeting clip.",
+      "required_language": [
+        "a e i o u",
+        "hola",
+        "gracias",
+        "por favor"
+      ],
+      "success_criteria": [
+        "clear stable vowels",
+        "repeats without visual text",
+        "uses a courtesy phrase"
+      ],
+      "fallback": "If audio is unavailable, use the written script and self-record."
+    },
+    {
+      "id": "sc02",
+      "title": "First Contact Interview",
+      "unlock_after_day": 7,
+      "scenario": "Interview a simulated new contact for 90 seconds.",
+      "required_language": [
+        "greeting",
+        "name",
+        "origin",
+        "one question",
+        "mucho gusto"
+      ],
+      "success_criteria": [
+        "asks and answers name",
+        "uses soy de",
+        "closes politely"
+      ],
+      "feedback_focus": "pronouns, ser forms, question words"
+    },
+    {
+      "id": "sc03",
+      "title": "Room Investigator",
+      "unlock_after_day": 8,
+      "scenario": "Inspect a visual room and report what exists and where it is.",
+      "required_language": [
+        "hay",
+        "está/están",
+        "en",
+        "aquí/allí",
+        "four objects"
+      ],
+      "success_criteria": [
+        "distinguishes hay from está",
+        "matches singular/plural",
+        "uses at least two locations"
+      ],
+      "feedback_focus": "existence vs location"
+    },
+    {
+      "id": "sc04",
+      "title": "Day-in-the-Life Briefing",
+      "unlock_after_day": 14,
+      "scenario": "Give a 90-second briefing about a person’s home, possessions, routine, and one negative fact.",
+      "required_language": [
+        "mi/tu/su/nuestro",
+        "primero",
+        "después",
+        "no",
+        "three present verbs"
+      ],
+      "success_criteria": [
+        "sequence is understandable",
+        "possessive agreement is mostly correct",
+        "includes a follow-up question"
+      ],
+      "feedback_focus": "word order and agreement"
+    },
+    {
+      "id": "sc05",
+      "title": "Café Under Pressure",
+      "unlock_after_day": 15,
+      "scenario": "Order food while the server asks one unexpected follow-up question.",
+      "required_language": [
+        "quiero",
+        "food/drink",
+        "por favor",
+        "no quiero",
+        "gracias"
+      ],
+      "success_criteria": [
+        "places an order",
+        "accepts or rejects an item",
+        "uses repair if needed"
+      ],
+      "feedback_focus": "retrieval under mild time pressure"
+    },
+    {
+      "id": "sc06",
+      "title": "Market Negotiation",
+      "unlock_after_day": 18,
+      "scenario": "Buy two items, ask the price, clarify one item, and close the exchange.",
+      "required_language": [
+        "este/esta/estos/estas",
+        "¿Cuánto cuesta?",
+        "numbers",
+        "gracias"
+      ],
+      "success_criteria": [
+        "demonstrative agrees",
+        "asks price",
+        "identifies quantity or price"
+      ],
+      "feedback_focus": "gender/number agreement"
+    },
+    {
+      "id": "sc07",
+      "title": "Shared Interests",
+      "unlock_after_day": 19,
+      "scenario": "Find one shared preference with a simulated partner and give a reason.",
+      "required_language": [
+        "me gusta/gustan",
+        "te gusta",
+        "porque",
+        "y tú"
+      ],
+      "success_criteria": [
+        "uses gusta/gustan correctly",
+        "asks back",
+        "gives one reason"
+      ],
+      "feedback_focus": "gustar pattern"
+    },
+    {
+      "id": "sc08",
+      "title": "Calendar Coordinator",
+      "unlock_after_day": 21,
+      "scenario": "Arrange a meeting for tomorrow, change the time once, and confirm the plan.",
+      "required_language": [
+        "voy a/vamos a",
+        "¿A qué hora?",
+        "numbers",
+        "mañana",
+        "confirmación"
+      ],
+      "success_criteria": [
+        "states a plan",
+        "understands changed time",
+        "confirms or repairs"
+      ],
+      "feedback_focus": "future chunk and time"
+    },
+    {
+      "id": "sc09",
+      "title": "Lost-and-Found Route",
+      "unlock_after_day": 22,
+      "scenario": "Ask where a place is and follow a two-step route, requesting repetition once.",
+      "required_language": [
+        "perdón",
+        "¿Dónde está?",
+        "sigue recto",
+        "derecha/izquierda",
+        "¿Puedes repetir?"
+      ],
+      "success_criteria": [
+        "asks location",
+        "gives or follows two steps",
+        "uses repair naturally"
+      ],
+      "feedback_focus": "directions and resilience"
+    },
+    {
+      "id": "sc10",
+      "title": "No-English Repair Round",
+      "unlock_after_day": 27,
+      "scenario": "Hold a conversation in which three words are deliberately hidden. Stay in Spanish using paraphrase and clarification.",
+      "required_language": [
+        "No entiendo",
+        "¿Qué significa?",
+        "¿Cómo se dice?",
+        "es una cosa para…",
+        "¿Entiendes?"
+      ],
+      "success_criteria": [
+        "uses two repair strategies",
+        "paraphrases one object",
+        "does not abandon the interaction"
+      ],
+      "feedback_focus": "communication strategy"
+    },
+    {
+      "id": "sc11",
+      "title": "Final Mission: Everyday Spanish",
+      "unlock_after_day": 28,
+      "scenario": "Complete a 3–5 minute conversation: meet someone, exchange origin and routine, state a preference and reason, make a plan, ask for help or directions, and repair one misunderstanding.",
+      "required_language": [
+        "identity",
+        "ser/estar",
+        "routine",
+        "gustar",
+        "ir a + infinitive",
+        "directions or needs",
+        "repair"
+      ],
+      "success_criteria": [
+        "80% task completion",
+        "two successful repair moves",
+        "answers at least two follow-up questions",
+        "produces at least five original sentences"
+      ],
+      "feedback_focus": "comprehensibility, turn-taking, retrieval, and strategic repair"
+    },
+    {
+      "id": "sc12",
+      "title": "Seven-Day Recovery Challenge",
+      "unlock_after_day": 28,
+      "scenario": "The app selects the learner’s ten weakest review items from Weeks 1–4 and builds a mixed retrieval circuit.",
+      "required_language": [
+        "10 weakest items"
+      ],
+      "success_criteria": [
+        "80% recall after one retry",
+        "speaks five target sentences",
+        "schedules a personal review plan"
+      ],
+      "feedback_focus": "personalized remediation"
+    }
+  ]
+}

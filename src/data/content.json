@@ -1,0 +1,2527 @@
+{
+  "meta": {
+    "project": "Operation Lingua",
+    "version": "2.0",
+    "description": "Companion data file for the Operation Lingua Project Specification. Contains onboarding configuration, gamification tables, the SRS engine parameters, and fully-authored curriculum content for a reference Mission Arc. Import this file as the single source of truth for app content.",
+    "companion_document": "Operation_Lingua_Project_Specification.md"
+  },
+  "onboarding_config": {
+    "target_languages": [
+      {
+        "id": "spanish",
+        "label": "Spanish",
+        "flag_emoji": "🇪🇸",
+        "dli_category": "I",
+        "category_multiplier": 1.0
+      },
+      {
+        "id": "french",
+        "label": "French",
+        "flag_emoji": "🇫🇷",
+        "dli_category": "I",
+        "category_multiplier": 1.0
+      },
+      {
+        "id": "italian",
+        "label": "Italian",
+        "flag_emoji": "🇮🇹",
+        "dli_category": "I",
+        "category_multiplier": 1.0
+      },
+      {
+        "id": "portuguese",
+        "label": "Portuguese",
+        "flag_emoji": "🇵🇹",
+        "dli_category": "I",
+        "category_multiplier": 1.0
+      },
+      {
+        "id": "german",
+        "label": "German",
+        "flag_emoji": "🇩🇪",
+        "dli_category": "II",
+        "category_multiplier": 1.3
+      },
+      {
+        "id": "russian",
+        "label": "Russian",
+        "flag_emoji": "🇷🇺",
+        "dli_category": "III",
+        "category_multiplier": 1.7
+      },
+      {
+        "id": "arabic",
+        "label": "Arabic",
+        "flag_emoji": "🇸🇦",
+        "dli_category": "IV",
+        "category_multiplier": 2.2
+      },
+      {
+        "id": "mandarin",
+        "label": "Mandarin Chinese",
+        "flag_emoji": "🇨🇳",
+        "dli_category": "IV",
+        "category_multiplier": 2.2
+      },
+      {
+        "id": "japanese",
+        "label": "Japanese",
+        "flag_emoji": "🇯🇵",
+        "dli_category": "IV",
+        "category_multiplier": 2.2
+      },
+      {
+        "id": "korean",
+        "label": "Korean",
+        "flag_emoji": "🇰🇷",
+        "dli_category": "IV",
+        "category_multiplier": 2.2
+      }
+    ],
+    "goal_timelines": [
+      {
+        "id": "sprint_30",
+        "label": "30-Day Sprint",
+        "days": 30,
+        "new_content_day_ratio": 0.8
+      },
+      {
+        "id": "intensive_60",
+        "label": "60-Day Intensive",
+        "days": 60,
+        "new_content_day_ratio": 0.8
+      },
+      {
+        "id": "standard_90",
+        "label": "90-Day Standard Deployment",
+        "days": 90,
+        "new_content_day_ratio": 0.8
+      },
+      {
+        "id": "mastery_180",
+        "label": "180-Day Full Mastery Track",
+        "days": 180,
+        "new_content_day_ratio": 0.8
+      }
+    ],
+    "daily_commitment_tiers": [
+      {
+        "id": "recon_10",
+        "label": "Recon",
+        "minutes": 10,
+        "session_composition": {
+          "new_drills_min": 4,
+          "srs_review_min": 3,
+          "shadowing_min": 2,
+          "sts_min": 1,
+          "freeroam_min": 0
+        },
+        "approx_new_items_per_session": "6-8"
+      },
+      {
+        "id": "field_op_30",
+        "label": "Field Op",
+        "minutes": 30,
+        "session_composition": {
+          "new_drills_min": 10,
+          "srs_review_min": 8,
+          "shadowing_min": 6,
+          "sts_min": 6,
+          "freeroam_min": 0
+        },
+        "approx_new_items_per_session": "12-15"
+      },
+      {
+        "id": "full_deployment_60",
+        "label": "Full Deployment",
+        "minutes": 60,
+        "session_composition": {
+          "new_drills_min": 18,
+          "srs_review_min": 12,
+          "shadowing_min": 10,
+          "sts_min": 15,
+          "freeroam_min": 5
+        },
+        "approx_new_items_per_session": "20-25"
+      }
+    ],
+    "operational_personas": [
+      {
+        "id": "undercover_traveler",
+        "label": "Undercover Traveler",
+        "description": "Tourism, transit, lodging, food, money.",
+        "priority_arcs": [
+          "arc_1_arrival_and_survival",
+          "arc_2_movement_and_navigation",
+          "arc_3_sustenance_and_commerce"
+        ]
+      },
+      {
+        "id": "corporate_diplomat",
+        "label": "Corporate Diplomat",
+        "description": "Business meetings, negotiation register, professional small talk.",
+        "priority_arcs": [
+          "arc_7_work_and_negotiation",
+          "arc_4_contact_and_communication"
+        ]
+      },
+      {
+        "id": "intelligence_operative",
+        "label": "Intelligence Operative",
+        "description": "Emergency, discretion, careful/evasive phrasing.",
+        "priority_arcs": [
+          "arc_6_crisis_and_emergency",
+          "arc_8_deep_cover"
+        ]
+      },
+      {
+        "id": "local_resident",
+        "label": "Local Resident (Relocation)",
+        "description": "Bureaucracy, housing, utilities, healthcare.",
+        "priority_arcs": [
+          "arc_5_lodging_and_logistics",
+          "arc_6_crisis_and_emergency"
+        ]
+      },
+      {
+        "id": "humanitarian_field_worker",
+        "label": "Humanitarian Field Worker",
+        "description": "Medical, coordination, basic technical vocabulary.",
+        "priority_arcs": [
+          "arc_6_crisis_and_emergency",
+          "arc_4_contact_and_communication"
+        ]
+      },
+      {
+        "id": "academic_exchange",
+        "label": "Academic Exchange",
+        "description": "Campus life, socializing, opinions.",
+        "priority_arcs": [
+          "arc_4_contact_and_communication",
+          "arc_8_deep_cover"
+        ]
+      }
+    ]
+  },
+  "clearance_levels": [
+    {
+      "level": 0,
+      "codename": "Unbriefed",
+      "ilr_equivalent": "0",
+      "cefr_approx": "Pre-A1",
+      "can_do_summary": "No functional ability yet."
+    },
+    {
+      "level": 0.5,
+      "codename": "Cover Established",
+      "ilr_equivalent": "0+",
+      "cefr_approx": "A1 (low)",
+      "can_do_summary": "Can use a handful of rehearsed, memorized phrases for immediate needs."
+    },
+    {
+      "level": 1,
+      "codename": "Field Ready",
+      "ilr_equivalent": "1",
+      "cefr_approx": "A1/A2",
+      "can_do_summary": "Can maintain simple face-to-face exchanges on familiar topics; frequent errors but gets basic meaning across."
+    },
+    {
+      "level": 1.5,
+      "codename": "Operational",
+      "ilr_equivalent": "1+",
+      "cefr_approx": "A2",
+      "can_do_summary": "Wider range of survival topics with more consistency, still leans on familiar patterns."
+    },
+    {
+      "level": 2,
+      "codename": "Independent Asset",
+      "ilr_equivalent": "2",
+      "cefr_approx": "B1",
+      "can_do_summary": "Can satisfy routine social demands and limited work requirements; gets the gist of most everyday conversation."
+    },
+    {
+      "level": 2.5,
+      "codename": "Case Officer",
+      "ilr_equivalent": "2+",
+      "cefr_approx": "B1/B2",
+      "can_do_summary": "Handles most everyday and some work situations with confidence, still needs help with complications."
+    },
+    {
+      "level": 3,
+      "codename": "Station Chief",
+      "ilr_equivalent": "3",
+      "cefr_approx": "B2/C1",
+      "can_do_summary": "Professional working proficiency — the FSI graduation bar. Typically requires ongoing practice beyond a single app cycle to reach."
+    }
+  ],
+  "gamification": {
+    "xp_rules": {
+      "pattern_drill_correct": 10,
+      "sts_correct_first_try": 20,
+      "sts_correct_after_hint": 10,
+      "shadowing_rep_completed": 8,
+      "dictation_exact_match": 15,
+      "dictation_close_match": 8,
+      "srs_review_correct": 5,
+      "checkpoint_passed_bonus": 50,
+      "field_certification_passed_bonus": 200,
+      "daily_quest_bonus_range": [
+        25,
+        40
+      ],
+      "perfect_session_multiplier": 1.15
+    },
+    "currency": {
+      "name": "Intel Credits",
+      "earn_rules": {
+        "daily_login": 5,
+        "per_20_xp": 1,
+        "streak_milestone_7_day": 25,
+        "streak_milestone_30_day": 50,
+        "streak_milestone_90_day": 100,
+        "league_promotion_range": [
+          30,
+          100
+        ]
+      },
+      "spend_catalog": [
+        {
+          "item": "cover_extension",
+          "label": "Cover Extension (streak freeze)",
+          "cost": 200
+        },
+        {
+          "item": "cover_integrity_refill",
+          "label": "Instant Cover Integrity refill",
+          "cost": 150
+        },
+        {
+          "item": "league_repair",
+          "label": "League Repair (undo one demotion)",
+          "cost": 300
+        },
+        {
+          "item": "handler_skip_token",
+          "label": "Handler Skip Token (skip one weak item, capped use)",
+          "cost": 100
+        },
+        {
+          "item": "voice_pack",
+          "label": "Alternate native-accent Voice Pack",
+          "cost": 400
+        },
+        {
+          "item": "echo_cosmetic_skin",
+          "label": "ECHO cosmetic skin",
+          "cost_range": [
+            250,
+            600
+          ]
+        }
+      ]
+    },
+    "streak": {
+      "name": "Active Deployment Streak",
+      "qualifying_action": "complete at least one drill set (any mode) in a day",
+      "freeze_item": "cover_extension",
+      "milestones_days": [
+        7,
+        14,
+        30,
+        60,
+        90,
+        180,
+        365
+      ]
+    },
+    "cover_integrity": {
+      "starting_points_per_session": 5,
+      "cost_on_wrong_new_content_answer": 1,
+      "cost_on_wrong_review_or_shadowing_answer": 0,
+      "on_zero_behavior": "restrict remainder of session to review/shadowing content only; never lock the app or end the session",
+      "resets": "every session"
+    },
+    "league_ranks": [
+      {
+        "tier": 1,
+        "name": "Trainee Cell"
+      },
+      {
+        "tier": 2,
+        "name": "Field Cell"
+      },
+      {
+        "tier": 3,
+        "name": "Active Cell"
+      },
+      {
+        "tier": 4,
+        "name": "Priority Cell"
+      },
+      {
+        "tier": 5,
+        "name": "Elite Cell"
+      },
+      {
+        "tier": 6,
+        "name": "Shadow Cell"
+      },
+      {
+        "tier": 7,
+        "name": "Apex Cell"
+      }
+    ],
+    "badges": [
+      {
+        "id": "first_contact",
+        "label": "First Contact",
+        "unlock_condition": "Complete Day 1 of any language."
+      },
+      {
+        "id": "border_crosser",
+        "label": "Border Crosser",
+        "unlock_condition": "Complete Arc 1 (Arrival & Survival)."
+      },
+      {
+        "id": "iron_cover",
+        "label": "Iron Cover",
+        "unlock_condition": "Finish a full week without losing any Cover Integrity."
+      },
+      {
+        "id": "night_shift",
+        "label": "Night Shift",
+        "unlock_condition": "Complete 5 sessions after 10pm local time."
+      },
+      {
+        "id": "dawn_patrol",
+        "label": "Dawn Patrol",
+        "unlock_condition": "Complete 5 sessions before 7am local time."
+      },
+      {
+        "id": "silver_tongue",
+        "label": "Silver Tongue",
+        "unlock_condition": "10 correct Speech-to-Speech exchanges in a row."
+      },
+      {
+        "id": "ghost_protocol",
+        "label": "Ghost Protocol",
+        "unlock_condition": "30-day Active Deployment Streak."
+      },
+      {
+        "id": "deep_cover_operative",
+        "label": "Deep Cover Operative",
+        "unlock_condition": "90-day Active Deployment Streak."
+      },
+      {
+        "id": "directors_circle",
+        "label": "Director's Circle",
+        "unlock_condition": "180-day Active Deployment Streak."
+      },
+      {
+        "id": "polyglot_handler",
+        "label": "Polyglot Handler",
+        "unlock_condition": "Active streaks in 2+ languages simultaneously."
+      },
+      {
+        "id": "fluent_interrogator",
+        "label": "Fluent Interrogator",
+        "unlock_condition": "Pass a Field Certification Exam on the first attempt."
+      },
+      {
+        "id": "quick_study",
+        "label": "Quick Study",
+        "unlock_condition": "Complete a Mission Day in under half the allotted time at 90%+ accuracy."
+      },
+      {
+        "id": "comeback_asset",
+        "label": "Comeback Asset",
+        "unlock_condition": "Return and complete a session after a break of 7+ days. A welcoming badge, not a shaming one."
+      },
+      {
+        "id": "the_shadow",
+        "label": "The Shadow",
+        "unlock_condition": "Complete 50 shadowing reps."
+      },
+      {
+        "id": "culture_briefed",
+        "label": "Culture Briefed",
+        "unlock_condition": "Complete every Culture & Tradecraft Briefing in an Arc."
+      }
+    ],
+    "daily_quest_templates": [
+      {
+        "id": "quest_sts_2",
+        "label": "Land 2 Field Interrogations",
+        "reward_xp": 30
+      },
+      {
+        "id": "quest_perfect_drill",
+        "label": "Perfect Pattern Drill set (0 misses)",
+        "reward_xp": 25
+      },
+      {
+        "id": "quest_clear_vault",
+        "label": "Clear your Debrief Vault",
+        "reward_xp": 35
+      },
+      {
+        "id": "quest_shadow_5",
+        "label": "Shadow 5 lines",
+        "reward_xp": 25
+      },
+      {
+        "id": "quest_beat_clock",
+        "label": "Finish today's mission before your usual time elapses",
+        "reward_xp": 40
+      }
+    ],
+    "handler_persona": {
+      "name": "ECHO",
+      "role": "AI Handler / narrator / mascot",
+      "personality": "Seasoned, dryly witty field handler. Warm and encouraging, never condescending, never cutesy.",
+      "language_boundary": "Speaks the target language during active lesson content once a language is chosen. Speaks the learner's own language for onboarding narration, notifications, and settings/app-chrome text."
+    }
+  },
+  "srs_engine": {
+    "algorithm": "Modified SM-2 (Leitner-simplified for MVP)",
+    "ease_factor_default": 2.5,
+    "ease_factor_minimum": 1.3,
+    "ease_factor_penalty_on_miss": 0.2,
+    "interval_growth_on_correct": "interval_days = previous_interval_days * ease_factor",
+    "interval_on_incorrect_days": 1,
+    "max_interval_days": 180,
+    "daily_review_cap_by_tier": {
+      "recon_10": 8,
+      "field_op_30": 20,
+      "full_deployment_60": 40
+    },
+    "pimsleur_reference_intervals_seconds": [
+      5,
+      25,
+      120,
+      600,
+      3600,
+      18000,
+      86400,
+      432000,
+      2160000
+    ],
+    "note": "Pimsleur intervals are used as reference/inspiration for same-session, short-horizon requeueing; cross-day scheduling uses the SM-2-simplified model above."
+  },
+  "mission_arcs_overview": [
+    {
+      "id": "arc_1_arrival_and_survival",
+      "order": 1,
+      "title": "Arrival & Survival",
+      "theme": "Greetings, identity, basic needs, yes/no, courtesy."
+    },
+    {
+      "id": "arc_2_movement_and_navigation",
+      "order": 2,
+      "title": "Movement & Navigation",
+      "theme": "Transport, directions, time."
+    },
+    {
+      "id": "arc_3_sustenance_and_commerce",
+      "order": 3,
+      "title": "Sustenance & Commerce",
+      "theme": "Food, ordering, shopping, prices."
+    },
+    {
+      "id": "arc_4_contact_and_communication",
+      "order": 4,
+      "title": "Contact & Communication",
+      "theme": "Phone, meeting people, making plans."
+    },
+    {
+      "id": "arc_5_lodging_and_logistics",
+      "order": 5,
+      "title": "Lodging & Logistics",
+      "theme": "Hotel/housing, requests, complaints."
+    },
+    {
+      "id": "arc_6_crisis_and_emergency",
+      "order": 6,
+      "title": "Crisis & Emergency",
+      "theme": "Medical, police, lost documents, urgent help."
+    },
+    {
+      "id": "arc_7_work_and_negotiation",
+      "order": 7,
+      "title": "Work & Negotiation",
+      "theme": "Meetings, opinions, professional register."
+    },
+    {
+      "id": "arc_8_deep_cover",
+      "order": 8,
+      "title": "Deep Cover",
+      "theme": "Small talk, storytelling, past/future, natural conversation."
+    }
+  ],
+  "curriculum": {
+    "spanish": {
+      "arc_1_arrival_and_survival": {
+        "arc_meta": {
+          "title": "Arrival & Survival",
+          "language": "Spanish",
+          "target_clearance_band": "0 to 1"
+        },
+        "day_1": {
+          "day_number": 1,
+          "theme": "Landing Protocol — Identity & First Contact",
+          "learning_objectives": [
+            "Greet someone and exchange names",
+            "State a basic need using 'Necesito...'",
+            "Ask a yes/no question and understand a yes/no answer",
+            "Signal non-comprehension without switching to English"
+          ],
+          "new_items": [
+            {
+              "id": "es_d1_001",
+              "target": "Hola",
+              "translation": "Hello"
+            },
+            {
+              "id": "es_d1_002",
+              "target": "Buenos días",
+              "translation": "Good morning"
+            },
+            {
+              "id": "es_d1_003",
+              "target": "Me llamo...",
+              "translation": "My name is..."
+            },
+            {
+              "id": "es_d1_004",
+              "target": "¿Cómo se llama usted?",
+              "translation": "What is your name? (formal)"
+            },
+            {
+              "id": "es_d1_005",
+              "target": "Por favor",
+              "translation": "Please"
+            },
+            {
+              "id": "es_d1_006",
+              "target": "Gracias",
+              "translation": "Thank you"
+            },
+            {
+              "id": "es_d1_007",
+              "target": "¿Dónde está...?",
+              "translation": "Where is...?"
+            },
+            {
+              "id": "es_d1_008",
+              "target": "la estación de tren",
+              "translation": "the train station"
+            },
+            {
+              "id": "es_d1_009",
+              "target": "el baño",
+              "translation": "the bathroom"
+            },
+            {
+              "id": "es_d1_010",
+              "target": "Necesito...",
+              "translation": "I need..."
+            },
+            {
+              "id": "es_d1_011",
+              "target": "un taxi",
+              "translation": "a taxi"
+            },
+            {
+              "id": "es_d1_012",
+              "target": "ayuda",
+              "translation": "help"
+            },
+            {
+              "id": "es_d1_013",
+              "target": "agua",
+              "translation": "water"
+            },
+            {
+              "id": "es_d1_014",
+              "target": "Sí / No",
+              "translation": "Yes / No"
+            },
+            {
+              "id": "es_d1_015",
+              "target": "No entiendo",
+              "translation": "I don't understand"
+            },
+            {
+              "id": "es_d1_016",
+              "target": "¿Habla usted inglés?",
+              "translation": "Do you speak English?"
+            },
+            {
+              "id": "es_d1_017",
+              "target": "turismo / negocios",
+              "translation": "tourism / business"
+            }
+          ],
+          "pattern_drills": [
+            {
+              "id": "es_d1_pd1",
+              "structure": "¿Dónde está ___?",
+              "structure_translation": "Where is ___?",
+              "base_example": {
+                "target": "¿Dónde está el baño?",
+                "translation": "Where is the bathroom?"
+              },
+              "substitutions": [
+                {
+                  "target": "la estación de tren",
+                  "translation": "the train station"
+                },
+                {
+                  "target": "el hotel",
+                  "translation": "the hotel"
+                },
+                {
+                  "target": "la embajada",
+                  "translation": "the embassy"
+                },
+                {
+                  "target": "la farmacia",
+                  "translation": "the pharmacy"
+                }
+              ]
+            },
+            {
+              "id": "es_d1_pd2",
+              "structure": "Necesito ___.",
+              "structure_translation": "I need ___.",
+              "base_example": {
+                "target": "Necesito un taxi.",
+                "translation": "I need a taxi."
+              },
+              "substitutions": [
+                {
+                  "target": "ayuda",
+                  "translation": "help"
+                },
+                {
+                  "target": "agua",
+                  "translation": "water"
+                },
+                {
+                  "target": "un médico",
+                  "translation": "a doctor"
+                },
+                {
+                  "target": "una habitación",
+                  "translation": "a room"
+                }
+              ]
+            },
+            {
+              "id": "es_d1_pd3",
+              "structure": "Me llamo ___.",
+              "structure_translation": "My name is ___.",
+              "base_example": {
+                "target": "Me llamo Diego.",
+                "translation": "My name is Diego."
+              },
+              "substitutions": [
+                {
+                  "target": "Ana",
+                  "translation": "Ana"
+                },
+                {
+                  "target": "Carlos",
+                  "translation": "Carlos"
+                },
+                {
+                  "target": "Elena",
+                  "translation": "Elena"
+                }
+              ]
+            }
+          ],
+          "tts_multiple_choice": [
+            {
+              "id": "es_d1_mc1",
+              "type": "contextual_response",
+              "audio_prompt_target": "¿Cómo se llama usted?",
+              "audio_prompt_translation": "What is your name?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Me llamo Diego.",
+                  "translation": "My name is Diego."
+                },
+                {
+                  "id": "b",
+                  "target": "Necesito un taxi.",
+                  "translation": "I need a taxi."
+                },
+                {
+                  "id": "c",
+                  "target": "Gracias, por favor.",
+                  "translation": "Thank you, please."
+                },
+                {
+                  "id": "d",
+                  "target": "Sí, hablo inglés.",
+                  "translation": "Yes, I speak English."
+                }
+              ],
+              "correct_option_id": "a"
+            },
+            {
+              "id": "es_d1_mc2",
+              "type": "listening_identification",
+              "audio_prompt_target": "¿Dónde está la estación de tren?",
+              "audio_prompt_translation": "Where is the train station?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "¿Dónde está el baño?",
+                  "translation": "Where is the bathroom?"
+                },
+                {
+                  "id": "b",
+                  "target": "¿Dónde está la estación de tren?",
+                  "translation": "Where is the train station?"
+                },
+                {
+                  "id": "c",
+                  "target": "Necesito un taxi.",
+                  "translation": "I need a taxi."
+                },
+                {
+                  "id": "d",
+                  "target": "¿Habla usted inglés?",
+                  "translation": "Do you speak English?"
+                }
+              ],
+              "correct_option_id": "b"
+            },
+            {
+              "id": "es_d1_mc3",
+              "type": "contextual_response",
+              "audio_prompt_target": "Hola. ¿Habla usted inglés?",
+              "audio_prompt_translation": "Hello. Do you speak English?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Me llamo Diego.",
+                  "translation": "My name is Diego."
+                },
+                {
+                  "id": "b",
+                  "target": "Necesito ayuda.",
+                  "translation": "I need help."
+                },
+                {
+                  "id": "c",
+                  "target": "No, no entiendo.",
+                  "translation": "No, I don't understand."
+                },
+                {
+                  "id": "d",
+                  "target": "¿Dónde está el baño?",
+                  "translation": "Where is the bathroom?"
+                }
+              ],
+              "correct_option_id": "c",
+              "design_note": "Correct answer deliberately keeps the scene in the target language even when asked about English — reinforces the app's own zero-English ethos inside the fiction."
+            },
+            {
+              "id": "es_d1_mc4",
+              "type": "listening_identification",
+              "audio_prompt_target": "Necesito un taxi.",
+              "audio_prompt_translation": "I need a taxi.",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Necesito ayuda.",
+                  "translation": "I need help."
+                },
+                {
+                  "id": "b",
+                  "target": "Necesito agua.",
+                  "translation": "I need water."
+                },
+                {
+                  "id": "c",
+                  "target": "Necesito un taxi.",
+                  "translation": "I need a taxi."
+                },
+                {
+                  "id": "d",
+                  "target": "¿Dónde está el baño?",
+                  "translation": "Where is the bathroom?"
+                }
+              ],
+              "correct_option_id": "c"
+            },
+            {
+              "id": "es_d1_mc5",
+              "type": "listening_identification",
+              "audio_prompt_target": "Gracias.",
+              "audio_prompt_translation": "Thank you.",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Por favor.",
+                  "translation": "Please."
+                },
+                {
+                  "id": "b",
+                  "target": "Gracias.",
+                  "translation": "Thank you."
+                },
+                {
+                  "id": "c",
+                  "target": "Sí.",
+                  "translation": "Yes."
+                },
+                {
+                  "id": "d",
+                  "target": "No.",
+                  "translation": "No."
+                }
+              ],
+              "correct_option_id": "b"
+            },
+            {
+              "id": "es_d1_mc6",
+              "type": "contextual_response",
+              "audio_prompt_target": "¿Necesita usted ayuda?",
+              "audio_prompt_translation": "Do you need help?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Sí, necesito ayuda.",
+                  "translation": "Yes, I need help."
+                },
+                {
+                  "id": "b",
+                  "target": "Me llamo Diego.",
+                  "translation": "My name is Diego."
+                },
+                {
+                  "id": "c",
+                  "target": "Buenos días.",
+                  "translation": "Good morning."
+                },
+                {
+                  "id": "d",
+                  "target": "¿Dónde está el baño?",
+                  "translation": "Where is the bathroom?"
+                }
+              ],
+              "correct_option_id": "a"
+            }
+          ],
+          "shadowing_drills": [
+            {
+              "id": "es_d1_sh1",
+              "target_text": "Hola, buenos días. Me llamo Diego.",
+              "translation": "Hello, good morning. My name is Diego.",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1.0,
+                1.25
+              ]
+            },
+            {
+              "id": "es_d1_sh2",
+              "target_text": "Por favor, ¿dónde está la estación de tren?",
+              "translation": "Please, where is the train station?",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1.0,
+                1.25
+              ]
+            },
+            {
+              "id": "es_d1_sh3",
+              "target_text": "Necesito ayuda, por favor. No entiendo.",
+              "translation": "I need help, please. I don't understand.",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1.0,
+                1.25
+              ]
+            }
+          ],
+          "speech_to_speech": [
+            {
+              "id": "es_d1_sts1",
+              "scenario_context": "Llegada al aeropuerto — un oficial de inmigración revisa tu pasaporte.",
+              "scenario_context_translation": "Arrival at the airport — an immigration officer is checking your passport.",
+              "ai_character": "Oficial de Inmigración",
+              "ai_prompt_target": "Buenos días. ¿Cómo se llama usted?",
+              "ai_prompt_translation": "Good morning. What is your name?",
+              "expected_answers": [
+                {
+                  "target": "Me llamo [nombre].",
+                  "translation": "My name is [name]."
+                }
+              ],
+              "acceptable_answer_pattern_notes": "Accept any answer using the 'Me llamo ___' pattern with a name filled in.",
+              "evaluation_rubric": {
+                "attempted_target_language": true,
+                "core_pattern_hit": "uses 'me llamo'",
+                "comprehension": "responds with a name, not an unrelated phrase"
+              },
+              "on_success_ai_response_target": "Gracias. Bienvenido.",
+              "on_success_ai_response_translation": "Thank you. Welcome.",
+              "on_struggle_ai_response_target": "No entendí. ¿Cómo se llama usted?",
+              "on_struggle_ai_response_translation": "I didn't understand. What is your name?",
+              "on_struggle_hint_target": "Intente: 'Me llamo...'"
+            },
+            {
+              "id": "es_d1_sts2",
+              "scenario_context": "El oficial continúa la entrevista de llegada.",
+              "scenario_context_translation": "The officer continues the arrival interview.",
+              "ai_character": "Oficial de Inmigración",
+              "ai_prompt_target": "¿Cuál es el motivo de su viaje?",
+              "ai_prompt_translation": "What is the reason for your trip?",
+              "expected_answers": [
+                {
+                  "target": "Turismo.",
+                  "translation": "Tourism."
+                },
+                {
+                  "target": "Negocios.",
+                  "translation": "Business."
+                },
+                {
+                  "target": "Turismo y negocios.",
+                  "translation": "Tourism and business."
+                }
+              ],
+              "acceptable_answer_pattern_notes": "Accept any answer naming a valid travel purpose, alone or preceded by 'Vengo por...'",
+              "evaluation_rubric": {
+                "attempted_target_language": true,
+                "core_pattern_hit": "uses 'turismo' and/or 'negocios'",
+                "comprehension": "names a plausible travel purpose"
+              },
+              "on_success_ai_response_target": "Perfecto. Bienvenido.",
+              "on_success_ai_response_translation": "Perfect. Welcome.",
+              "on_struggle_ai_response_target": "No entendí. ¿Turismo o negocios?",
+              "on_struggle_ai_response_translation": "I didn't understand. Tourism or business?",
+              "on_struggle_hint_target": "Intente: 'Turismo.'"
+            },
+            {
+              "id": "es_d1_sts3",
+              "scenario_context": "Estás perdido en la calle y un transeúnte te ofrece ayuda.",
+              "scenario_context_translation": "You're lost on the street and a passerby offers help.",
+              "ai_character": "Transeúnte",
+              "ai_prompt_target": "Hola, ¿necesita usted ayuda?",
+              "ai_prompt_translation": "Hello, do you need help?",
+              "expected_answers": [
+                {
+                  "target": "Sí, necesito un taxi, por favor.",
+                  "translation": "Yes, I need a taxi, please."
+                },
+                {
+                  "target": "Sí, necesito ayuda.",
+                  "translation": "Yes, I need help."
+                }
+              ],
+              "acceptable_answer_pattern_notes": "Accept any affirmative using 'necesito' plus a Day-1 need (taxi, ayuda, agua).",
+              "evaluation_rubric": {
+                "attempted_target_language": true,
+                "core_pattern_hit": "uses 'sí' and 'necesito'",
+                "comprehension": "confirms needing help"
+              },
+              "on_success_ai_response_target": "Está bien. Un momento.",
+              "on_success_ai_response_translation": "OK. One moment.",
+              "on_struggle_ai_response_target": "¿Necesita ayuda, sí o no?",
+              "on_struggle_ai_response_translation": "Do you need help, yes or no?",
+              "on_struggle_hint_target": "Intente: 'Sí, necesito ayuda.'",
+              "design_note": "AI response intentionally introduces 'está bien' and 'un momento' receptively, slightly ahead of the learner's active vocabulary (i+1) — the learner is never required to produce these, only understand them."
+            }
+          ],
+          "dictation": [
+            {
+              "id": "es_d1_dict1",
+              "audio_target": "Necesito un taxi, por favor.",
+              "correct_transcription": "Necesito un taxi, por favor.",
+              "acceptable_variants": [
+                "necesito un taxi por favor",
+                "Necesito un taxi por favor."
+              ],
+              "translation": "I need a taxi, please."
+            }
+          ],
+          "checkpoint_quiz": {
+            "composition": "sampled from this day's own item pool",
+            "sample_counts": {
+              "tts_multiple_choice": 2,
+              "shadowing_completion": 1,
+              "speech_to_speech": 1,
+              "dictation": 1
+            },
+            "passing_threshold": 0.8
+          }
+        },
+        "day_2": {
+          "day_number": 2,
+          "theme": "Movement Protocol — Getting Where You Need to Go",
+          "learning_objectives": [
+            "Ask how to get somewhere and understand basic directions",
+            "Ask the price of something",
+            "Request transport and confirm a destination"
+          ],
+          "new_items": [
+            {
+              "id": "es_d2_001",
+              "target": "el autobús",
+              "translation": "the bus"
+            },
+            {
+              "id": "es_d2_002",
+              "target": "el metro",
+              "translation": "the subway/metro"
+            },
+            {
+              "id": "es_d2_003",
+              "target": "a la izquierda",
+              "translation": "to the left"
+            },
+            {
+              "id": "es_d2_004",
+              "target": "a la derecha",
+              "translation": "to the right"
+            },
+            {
+              "id": "es_d2_005",
+              "target": "todo recto",
+              "translation": "straight ahead"
+            },
+            {
+              "id": "es_d2_006",
+              "target": "cerca / lejos",
+              "translation": "near / far"
+            },
+            {
+              "id": "es_d2_007",
+              "target": "¿Cuánto cuesta?",
+              "translation": "How much does it cost?"
+            },
+            {
+              "id": "es_d2_008",
+              "target": "la calle",
+              "translation": "the street"
+            },
+            {
+              "id": "es_d2_009",
+              "target": "Pare aquí, por favor.",
+              "translation": "Stop here, please."
+            },
+            {
+              "id": "es_d2_010",
+              "target": "¿A qué hora sale?",
+              "translation": "What time does it leave?"
+            },
+            {
+              "id": "es_d2_011",
+              "target": "el billete",
+              "translation": "the ticket"
+            },
+            {
+              "id": "es_d2_012",
+              "target": "Necesito ir a...",
+              "translation": "I need to go to..."
+            }
+          ],
+          "pattern_drills": [
+            {
+              "id": "es_d2_pd1",
+              "structure": "Necesito ir a ___.",
+              "structure_translation": "I need to go to ___.",
+              "base_example": {
+                "target": "Necesito ir al hotel.",
+                "translation": "I need to go to the hotel."
+              },
+              "substitutions": [
+                {
+                  "target": "la estación",
+                  "translation": "the station"
+                },
+                {
+                  "target": "el aeropuerto",
+                  "translation": "the airport"
+                },
+                {
+                  "target": "el centro",
+                  "translation": "downtown"
+                },
+                {
+                  "target": "la embajada",
+                  "translation": "the embassy"
+                }
+              ]
+            },
+            {
+              "id": "es_d2_pd2",
+              "structure": "¿Está ___?",
+              "structure_translation": "Is it ___?",
+              "base_example": {
+                "target": "¿Está cerca?",
+                "translation": "Is it near?"
+              },
+              "substitutions": [
+                {
+                  "target": "lejos",
+                  "translation": "far"
+                },
+                {
+                  "target": "a la izquierda",
+                  "translation": "to the left"
+                },
+                {
+                  "target": "a la derecha",
+                  "translation": "to the right"
+                }
+              ]
+            }
+          ],
+          "tts_multiple_choice": [
+            {
+              "id": "es_d2_mc1",
+              "type": "listening_identification",
+              "audio_prompt_target": "¿Cuánto cuesta el billete?",
+              "audio_prompt_translation": "How much does the ticket cost?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "¿Cuánto cuesta el billete?",
+                  "translation": "How much does the ticket cost?"
+                },
+                {
+                  "id": "b",
+                  "target": "¿A qué hora sale?",
+                  "translation": "What time does it leave?"
+                },
+                {
+                  "id": "c",
+                  "target": "¿Dónde está la estación?",
+                  "translation": "Where is the station?"
+                },
+                {
+                  "id": "d",
+                  "target": "Necesito ir al hotel.",
+                  "translation": "I need to go to the hotel."
+                }
+              ],
+              "correct_option_id": "a"
+            },
+            {
+              "id": "es_d2_mc2",
+              "type": "contextual_response",
+              "audio_prompt_target": "¿Adónde necesita ir?",
+              "audio_prompt_translation": "Where do you need to go?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Necesito ir al aeropuerto.",
+                  "translation": "I need to go to the airport."
+                },
+                {
+                  "id": "b",
+                  "target": "Cuesta diez.",
+                  "translation": "It costs ten."
+                },
+                {
+                  "id": "c",
+                  "target": "Pare aquí, por favor.",
+                  "translation": "Stop here, please."
+                },
+                {
+                  "id": "d",
+                  "target": "Gracias.",
+                  "translation": "Thank you."
+                }
+              ],
+              "correct_option_id": "a"
+            },
+            {
+              "id": "es_d2_mc3",
+              "type": "listening_identification",
+              "audio_prompt_target": "Pare aquí, por favor.",
+              "audio_prompt_translation": "Stop here, please.",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Todo recto.",
+                  "translation": "Straight ahead."
+                },
+                {
+                  "id": "b",
+                  "target": "Pare aquí, por favor.",
+                  "translation": "Stop here, please."
+                },
+                {
+                  "id": "c",
+                  "target": "A la izquierda.",
+                  "translation": "To the left."
+                },
+                {
+                  "id": "d",
+                  "target": "¿Cuánto cuesta?",
+                  "translation": "How much does it cost?"
+                }
+              ],
+              "correct_option_id": "b"
+            }
+          ],
+          "shadowing_drills": [
+            {
+              "id": "es_d2_sh1",
+              "target_text": "Necesito ir a la estación, por favor.",
+              "translation": "I need to go to the station, please.",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1.0,
+                1.25
+              ]
+            },
+            {
+              "id": "es_d2_sh2",
+              "target_text": "¿Cuánto cuesta el billete de autobús?",
+              "translation": "How much does the bus ticket cost?",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1.0,
+                1.25
+              ]
+            }
+          ],
+          "speech_to_speech": [
+            {
+              "id": "es_d2_sts1",
+              "scenario_context": "Estás en un taxi y el conductor pregunta tu destino.",
+              "scenario_context_translation": "You're in a taxi and the driver asks your destination.",
+              "ai_character": "Taxista",
+              "ai_prompt_target": "Buenos días. ¿Adónde necesita ir?",
+              "ai_prompt_translation": "Good morning. Where do you need to go?",
+              "expected_answers": [
+                {
+                  "target": "Necesito ir al hotel.",
+                  "translation": "I need to go to the hotel."
+                },
+                {
+                  "target": "Necesito ir a la estación.",
+                  "translation": "I need to go to the station."
+                }
+              ],
+              "acceptable_answer_pattern_notes": "Accept any 'Necesito ir a/al ___' with a Day 1 or Day 2 destination.",
+              "evaluation_rubric": {
+                "attempted_target_language": true,
+                "core_pattern_hit": "uses 'necesito ir a'",
+                "comprehension": "names a plausible destination"
+              },
+              "on_success_ai_response_target": "Muy bien. Vamos.",
+              "on_success_ai_response_translation": "Very good. Let's go.",
+              "on_struggle_ai_response_target": "¿Adónde, por favor?",
+              "on_struggle_ai_response_translation": "Where to, please?",
+              "on_struggle_hint_target": "Intente: 'Necesito ir a...'"
+            }
+          ],
+          "dictation": [
+            {
+              "id": "es_d2_dict1",
+              "audio_target": "¿Cuánto cuesta el billete?",
+              "correct_transcription": "¿Cuánto cuesta el billete?",
+              "acceptable_variants": [
+                "cuanto cuesta el billete",
+                "¿Cuanto cuesta el billete?"
+              ],
+              "translation": "How much does the ticket cost?"
+            }
+          ],
+          "checkpoint_quiz": {
+            "composition": "sampled from this day's own item pool",
+            "sample_counts": {
+              "tts_multiple_choice": 2,
+              "shadowing_completion": 1,
+              "speech_to_speech": 1,
+              "dictation": 1
+            },
+            "passing_threshold": 0.8
+          }
+        },
+        "day_3": {
+          "day_number": 3,
+          "theme": "Sustenance Protocol — Ordering & Commerce",
+          "learning_objectives": [
+            "Order food or drink using 'Quisiera...'",
+            "Ask for a recommendation",
+            "Ask for and understand the check/bill"
+          ],
+          "new_items": [
+            {
+              "id": "es_d3_001",
+              "target": "la comida",
+              "translation": "the food"
+            },
+            {
+              "id": "es_d3_002",
+              "target": "el menú",
+              "translation": "the menu"
+            },
+            {
+              "id": "es_d3_003",
+              "target": "Quisiera...",
+              "translation": "I would like..."
+            },
+            {
+              "id": "es_d3_004",
+              "target": "la cuenta",
+              "translation": "the check/bill"
+            },
+            {
+              "id": "es_d3_005",
+              "target": "¿Qué me recomienda?",
+              "translation": "What do you recommend?"
+            },
+            {
+              "id": "es_d3_006",
+              "target": "Tengo hambre",
+              "translation": "I'm hungry"
+            },
+            {
+              "id": "es_d3_007",
+              "target": "Tengo sed",
+              "translation": "I'm thirsty"
+            },
+            {
+              "id": "es_d3_008",
+              "target": "vegetariano",
+              "translation": "vegetarian"
+            },
+            {
+              "id": "es_d3_009",
+              "target": "sin gluten",
+              "translation": "gluten-free"
+            },
+            {
+              "id": "es_d3_010",
+              "target": "delicioso",
+              "translation": "delicious"
+            },
+            {
+              "id": "es_d3_011",
+              "target": "una mesa para dos",
+              "translation": "a table for two"
+            }
+          ],
+          "pattern_drills": [
+            {
+              "id": "es_d3_pd1",
+              "structure": "Quisiera ___.",
+              "structure_translation": "I would like ___.",
+              "base_example": {
+                "target": "Quisiera agua, por favor.",
+                "translation": "I would like water, please."
+              },
+              "substitutions": [
+                {
+                  "target": "el menú",
+                  "translation": "the menu"
+                },
+                {
+                  "target": "la cuenta",
+                  "translation": "the check"
+                },
+                {
+                  "target": "una mesa para dos",
+                  "translation": "a table for two"
+                }
+              ]
+            }
+          ],
+          "tts_multiple_choice": [
+            {
+              "id": "es_d3_mc1",
+              "type": "contextual_response",
+              "audio_prompt_target": "¿Qué desea ordenar?",
+              "audio_prompt_translation": "What would you like to order?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Quisiera agua, por favor.",
+                  "translation": "I would like water, please."
+                },
+                {
+                  "id": "b",
+                  "target": "Pare aquí, por favor.",
+                  "translation": "Stop here, please."
+                },
+                {
+                  "id": "c",
+                  "target": "¿Cuánto cuesta el billete?",
+                  "translation": "How much does the ticket cost?"
+                },
+                {
+                  "id": "d",
+                  "target": "Necesito ir al hotel.",
+                  "translation": "I need to go to the hotel."
+                }
+              ],
+              "correct_option_id": "a"
+            },
+            {
+              "id": "es_d3_mc2",
+              "type": "listening_identification",
+              "audio_prompt_target": "¿Qué me recomienda?",
+              "audio_prompt_translation": "What do you recommend?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Tengo hambre.",
+                  "translation": "I'm hungry."
+                },
+                {
+                  "id": "b",
+                  "target": "¿Qué me recomienda?",
+                  "translation": "What do you recommend?"
+                },
+                {
+                  "id": "c",
+                  "target": "La cuenta, por favor.",
+                  "translation": "The check, please."
+                },
+                {
+                  "id": "d",
+                  "target": "Soy vegetariano.",
+                  "translation": "I'm vegetarian."
+                }
+              ],
+              "correct_option_id": "b"
+            },
+            {
+              "id": "es_d3_mc3",
+              "type": "contextual_response",
+              "audio_prompt_target": "¿Algo más?",
+              "audio_prompt_translation": "Anything else?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "No, la cuenta, por favor.",
+                  "translation": "No, the check, please."
+                },
+                {
+                  "id": "b",
+                  "target": "Me llamo Diego.",
+                  "translation": "My name is Diego."
+                },
+                {
+                  "id": "c",
+                  "target": "A la izquierda.",
+                  "translation": "To the left."
+                },
+                {
+                  "id": "d",
+                  "target": "Necesito un taxi.",
+                  "translation": "I need a taxi."
+                }
+              ],
+              "correct_option_id": "a"
+            }
+          ],
+          "shadowing_drills": [
+            {
+              "id": "es_d3_sh1",
+              "target_text": "Quisiera una mesa para dos, por favor.",
+              "translation": "I would like a table for two, please.",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1.0,
+                1.25
+              ]
+            },
+            {
+              "id": "es_d3_sh2",
+              "target_text": "¿Qué me recomienda? Tengo hambre.",
+              "translation": "What do you recommend? I'm hungry.",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1.0,
+                1.25
+              ]
+            }
+          ],
+          "speech_to_speech": [
+            {
+              "id": "es_d3_sts1",
+              "scenario_context": "Estás en un restaurante y el mesero toma tu orden.",
+              "scenario_context_translation": "You're at a restaurant and the waiter takes your order.",
+              "ai_character": "Mesero",
+              "ai_prompt_target": "Buenas tardes. ¿Qué desea ordenar?",
+              "ai_prompt_translation": "Good afternoon. What would you like to order?",
+              "expected_answers": [
+                {
+                  "target": "Quisiera el menú, por favor.",
+                  "translation": "I would like the menu, please."
+                },
+                {
+                  "target": "Quisiera agua, por favor.",
+                  "translation": "I would like water, please."
+                }
+              ],
+              "acceptable_answer_pattern_notes": "Accept any 'Quisiera ___' response using known Day 1-3 vocabulary.",
+              "evaluation_rubric": {
+                "attempted_target_language": true,
+                "core_pattern_hit": "uses 'quisiera'",
+                "comprehension": "names a plausible order item"
+              },
+              "on_success_ai_response_target": "Enseguida se lo traigo.",
+              "on_success_ai_response_translation": "I'll bring it right away.",
+              "on_struggle_ai_response_target": "¿Qué quisiera, por favor?",
+              "on_struggle_ai_response_translation": "What would you like, please?",
+              "on_struggle_hint_target": "Intente: 'Quisiera...'"
+            },
+            {
+              "id": "es_d3_sts2",
+              "scenario_context": "Terminaste de comer y quieres pagar.",
+              "scenario_context_translation": "You've finished eating and want to pay.",
+              "ai_character": "Mesero",
+              "ai_prompt_target": "¿Algo más?",
+              "ai_prompt_translation": "Anything else?",
+              "expected_answers": [
+                {
+                  "target": "No, la cuenta, por favor.",
+                  "translation": "No, the check, please."
+                }
+              ],
+              "acceptable_answer_pattern_notes": "Accept any negative response followed by a request for 'la cuenta'.",
+              "evaluation_rubric": {
+                "attempted_target_language": true,
+                "core_pattern_hit": "uses 'la cuenta'",
+                "comprehension": "signals the meal is finished"
+              },
+              "on_success_ai_response_target": "Claro que sí.",
+              "on_success_ai_response_translation": "Of course.",
+              "on_struggle_ai_response_target": "¿Desea la cuenta?",
+              "on_struggle_ai_response_translation": "Would you like the check?",
+              "on_struggle_hint_target": "Intente: 'La cuenta, por favor.'"
+            }
+          ],
+          "dictation": [
+            {
+              "id": "es_d3_dict1",
+              "audio_target": "Quisiera la cuenta, por favor.",
+              "correct_transcription": "Quisiera la cuenta, por favor.",
+              "acceptable_variants": [
+                "quisiera la cuenta por favor"
+              ],
+              "translation": "I would like the check, please."
+            }
+          ],
+          "checkpoint_quiz": {
+            "composition": "sampled from this day's own item pool",
+            "sample_counts": {
+              "tts_multiple_choice": 2,
+              "shadowing_completion": 1,
+              "speech_to_speech": 1,
+              "dictation": 1
+            },
+            "passing_threshold": 0.8
+          }
+        },
+        "day_4": {
+          "day_number": 4,
+          "theme": "Meeting Someone — Introductions & Personal Intelligence",
+          "learning_objectives": [
+            "Introduce yourself and respond to introductions (Mucho gusto, Encantado)",
+            "Ask and answer where someone is from (¿De dónde eres? / Soy de...)",
+            "Ask and state professions (¿A qué se dedica? / Soy...)",
+            "Use polite closings in conversation (Un placer, Hasta luego)"
+          ],
+          "new_items": [
+            {
+              "id": "es_d4_001",
+              "target": "Mucho gusto",
+              "translation": "Nice to meet you"
+            },
+            {
+              "id": "es_d4_002",
+              "target": "Encantado de conocerte",
+              "translation": "Pleased to meet you"
+            },
+            {
+              "id": "es_d4_003",
+              "target": "¿De dónde eres?",
+              "translation": "Where are you from?"
+            },
+            {
+              "id": "es_d4_004",
+              "target": "Soy de Estados Unidos",
+              "translation": "I am from the United States"
+            },
+            {
+              "id": "es_d4_005",
+              "target": "¿A qué te dedicas?",
+              "translation": "What do you do for a living?"
+            },
+            {
+              "id": "es_d4_006",
+              "target": "Soy profesor",
+              "translation": "I am a teacher"
+            },
+            {
+              "id": "es_d4_007",
+              "target": "Un placer",
+              "translation": "A pleasure"
+            },
+            {
+              "id": "es_d4_008",
+              "target": "Hasta luego",
+              "translation": "See you later"
+            },
+            {
+              "id": "es_d4_009",
+              "target": "¿Cómo te llamas?",
+              "translation": "What is your name? (informal)"
+            },
+            {
+              "id": "es_d4_010",
+              "target": "Me llamo Ana",
+              "translation": "My name is Ana"
+            },
+            {
+              "id": "es_d4_011",
+              "target": "Encantada",
+              "translation": "Pleased (feminine)"
+            },
+            {
+              "id": "es_d4_012",
+              "target": "Igualmente",
+              "translation": "Likewise"
+            },
+            {
+              "id": "es_d4_013",
+              "target": "¿Hablas inglés?",
+              "translation": "Do you speak English? (informal)"
+            },
+            {
+              "id": "es_d4_014",
+              "target": "Un poco",
+              "translation": "A little"
+            },
+            {
+              "id": "es_d4_015",
+              "target": "Nos vemos",
+              "translation": "See you"
+            },
+            {
+              "id": "es_d4_016",
+              "target": "¿De dónde viene?",
+              "translation": "Where are you from? (formal)"
+            },
+            {
+              "id": "es_d4_017",
+              "target": "Vengo de Madrid",
+              "translation": "I come from Madrid"
+            }
+          ],
+          "pattern_drills": [
+            {
+              "id": "es_d4_pd1",
+              "structure": "Soy de {lugar}",
+              "structure_translation": "I am from {place}",
+              "base_example": {
+                "target": "Soy de España",
+                "translation": "I am from Spain"
+              },
+              "substitutions": [
+                {
+                  "target": "Soy de México",
+                  "translation": "I am from Mexico"
+                },
+                {
+                  "target": "Soy de Argentina",
+                  "translation": "I am from Argentina"
+                },
+                {
+                  "target": "Soy de Colombia",
+                  "translation": "I am from Colombia"
+                },
+                {
+                  "target": "Soy de Cuba",
+                  "translation": "I am from Cuba"
+                }
+              ]
+            },
+            {
+              "id": "es_d4_pd2",
+              "structure": "Soy {profesión}",
+              "structure_translation": "I am a {profession}",
+              "base_example": {
+                "target": "Soy médico",
+                "translation": "I am a doctor"
+              },
+              "substitutions": [
+                {
+                  "target": "Soy profesor",
+                  "translation": "I am a teacher"
+                },
+                {
+                  "target": "Soy periodista",
+                  "translation": "I am a journalist"
+                },
+                {
+                  "target": "Soy ingeniero",
+                  "translation": "I am an engineer"
+                },
+                {
+                  "target": "Soy estudiante",
+                  "translation": "I am a student"
+                }
+              ]
+            },
+            {
+              "id": "es_d4_pd3",
+              "structure": "Mucho gusto, {nombre}",
+              "structure_translation": "Nice to meet you, {name}",
+              "base_example": {
+                "target": "Mucho gusto, Carlos",
+                "translation": "Nice to meet you, Carlos"
+              },
+              "substitutions": [
+                {
+                  "target": "Mucho gusto, María",
+                  "translation": "Nice to meet you, María"
+                },
+                {
+                  "target": "Mucho gusto, Diego",
+                  "translation": "Nice to meet you, Diego"
+                },
+                {
+                  "target": "Mucho gusto, Lucía",
+                  "translation": "Nice to meet you, Lucía"
+                }
+              ]
+            }
+          ],
+          "tts_multiple_choice": [
+            {
+              "id": "es_d4_mc1",
+              "type": "contextual_response",
+              "audio_prompt_target": "Mucho gusto, ¿de dónde eres?",
+              "audio_prompt_translation": "Nice to meet you, where are you from?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Soy de México.",
+                  "translation": "I am from Mexico."
+                },
+                {
+                  "id": "b",
+                  "target": "Necesito un taxi.",
+                  "translation": "I need a taxi."
+                },
+                {
+                  "id": "c",
+                  "target": "Gracias, por favor.",
+                  "translation": "Thank you, please."
+                },
+                {
+                  "id": "d",
+                  "target": "Hasta luego.",
+                  "translation": "See you later."
+                }
+              ],
+              "correct_option_id": "a"
+            },
+            {
+              "id": "es_d4_mc2",
+              "type": "contextual_response",
+              "audio_prompt_target": "¿A qué te dedicas?",
+              "audio_prompt_translation": "What do you do for a living?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Un poco.",
+                  "translation": "A little."
+                },
+                {
+                  "id": "b",
+                  "target": "Soy periodista.",
+                  "translation": "I am a journalist."
+                },
+                {
+                  "id": "c",
+                  "target": "Encantada.",
+                  "translation": "Pleased (feminine)."
+                },
+                {
+                  "id": "d",
+                  "target": "Nos vemos.",
+                  "translation": "See you."
+                }
+              ],
+              "correct_option_id": "b"
+            },
+            {
+              "id": "es_d4_mc3",
+              "type": "contextual_response",
+              "audio_prompt_target": "Me llamo Diego. ¿Y tú?",
+              "audio_prompt_translation": "My name is Diego. And you?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Soy de Cuba.",
+                  "translation": "I am from Cuba."
+                },
+                {
+                  "id": "b",
+                  "target": "Me llamo Ana.",
+                  "translation": "My name is Ana."
+                },
+                {
+                  "id": "c",
+                  "target": "Soy ingeniero.",
+                  "translation": "I am an engineer."
+                },
+                {
+                  "id": "d",
+                  "target": "Igualmente.",
+                  "translation": "Likewise."
+                }
+              ],
+              "correct_option_id": "b"
+            },
+            {
+              "id": "es_d4_mc4",
+              "type": "comprehension",
+              "audio_prompt_target": "Vengo de Madrid. Soy profesor.",
+              "audio_prompt_translation": "I come from Madrid. I am a teacher.",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Es de Madrid y es profesor.",
+                  "translation": "He is from Madrid and is a teacher."
+                },
+                {
+                  "id": "b",
+                  "target": "Es de México y es médico.",
+                  "translation": "He is from Mexico and is a doctor."
+                },
+                {
+                  "id": "c",
+                  "target": "Es de Colombia y es estudiante.",
+                  "translation": "He is from Colombia and is a student."
+                },
+                {
+                  "id": "d",
+                  "target": "Es de Argentina y es periodista.",
+                  "translation": "He is from Argentina and is a journalist."
+                }
+              ],
+              "correct_option_id": "a"
+            },
+            {
+              "id": "es_d4_mc5",
+              "type": "contextual_response",
+              "audio_prompt_target": "Encantado de conocerte.",
+              "audio_prompt_translation": "Pleased to meet you.",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Igualmente.",
+                  "translation": "Likewise."
+                },
+                {
+                  "id": "b",
+                  "target": "Un poco.",
+                  "translation": "A little."
+                },
+                {
+                  "id": "c",
+                  "target": "Hasta luego.",
+                  "translation": "See you later."
+                },
+                {
+                  "id": "d",
+                  "target": "¿Hablas inglés?",
+                  "translation": "Do you speak English?"
+                }
+              ],
+              "correct_option_id": "a"
+            },
+            {
+              "id": "es_d4_mc6",
+              "type": "contextual_response",
+              "audio_prompt_target": "¿Hablas inglés?",
+              "audio_prompt_translation": "Do you speak English?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Soy de España.",
+                  "translation": "I am from Spain."
+                },
+                {
+                  "id": "b",
+                  "target": "Un poco.",
+                  "translation": "A little."
+                },
+                {
+                  "id": "c",
+                  "target": "Mucho gusto.",
+                  "translation": "Nice to meet you."
+                },
+                {
+                  "id": "d",
+                  "target": "Nos vemos.",
+                  "translation": "See you."
+                }
+              ],
+              "correct_option_id": "b"
+            }
+          ],
+          "shadowing_drills": [
+            {
+              "id": "es_d4_sh1",
+              "target_text": "Mucho gusto. Me llamo Carlos. Soy de México y soy ingeniero.",
+              "translation": "Nice to meet you. My name is Carlos. I am from Mexico and I am an engineer.",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1
+              ]
+            },
+            {
+              "id": "es_d4_sh2",
+              "target_text": "Encantado de conocerte. ¿De dónde vienes? ¿A qué te dedicas?",
+              "translation": "Pleased to meet you. Where do you come from? What do you do for a living?",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1
+              ]
+            }
+          ],
+          "speech_to_speech": [
+            {
+              "id": "es_d4_sts1",
+              "scenario_context": "A local introduces themselves at a café and asks about you.",
+              "scenario_context_translation": "A local introduces themselves at a café and asks about you.",
+              "ai_character": "Café local",
+              "ai_prompt_target": "¡Hola! Me llamo Lucía. Mucho gusto. ¿De dónde eres?",
+              "ai_prompt_translation": "Hi! My name is Lucía. Nice to meet you. Where are you from?",
+              "expected_answers": [
+                {
+                  "target": "Soy de Estados Unidos",
+                  "translation": "I am from the United States"
+                },
+                {
+                  "target": "Vengo de Inglaterra",
+                  "translation": "I come from England"
+                },
+                {
+                  "target": "Soy de Canadá",
+                  "translation": "I am from Canada"
+                }
+              ],
+              "evaluation_rubric": {
+                "core_pattern_hit": "Responds with 'Soy de' or 'Vengo de' + place",
+                "comprehension": "Understands the question asks for origin"
+              },
+              "on_success_ai_response_target": "¡Qué interesante! ¿Y a qué te dedicas?",
+              "on_success_ai_response_translation": "How interesting! And what do you do for a living?",
+              "on_struggle_ai_response_target": "No te preocupes. ¿De dónde eres? ¿España, México, Estados Unidos?",
+              "on_struggle_ai_response_translation": "Don't worry. Where are you from? Spain, Mexico, the United States?",
+              "hint_target": "Soy de..."
+            },
+            {
+              "id": "es_d4_sts2",
+              "scenario_context": "Someone you just met asks about your profession.",
+              "scenario_context_translation": "Someone you just met asks about your profession.",
+              "ai_character": "New acquaintance",
+              "ai_prompt_target": "Encantado. ¿A qué te dedicas?",
+              "ai_prompt_translation": "Pleased to meet you. What do you do for a living?",
+              "expected_answers": [
+                {
+                  "target": "Soy profesor",
+                  "translation": "I am a teacher"
+                },
+                {
+                  "target": "Soy periodista",
+                  "translation": "I am a journalist"
+                },
+                {
+                  "target": "Soy estudiante",
+                  "translation": "I am a student"
+                }
+              ],
+              "evaluation_rubric": {
+                "core_pattern_hit": "Responds with 'Soy' + profession",
+                "comprehension": "Understands the question asks about occupation"
+              },
+              "on_success_ai_response_target": "¡Qué bien! Un placer conocerte.",
+              "on_success_ai_response_translation": "That's great! A pleasure to meet you.",
+              "hint_target": "Soy..."
+            }
+          ],
+          "dictation": [
+            {
+              "id": "es_d4_dic1",
+              "audio_target": "Mucho gusto, me llamo Ana",
+              "correct_transcription": "mucho gusto me llamo ana",
+              "acceptable_variants": [
+                "mucho gusto, me llamo ana"
+              ],
+              "translation": "Nice to meet you, my name is Ana"
+            },
+            {
+              "id": "es_d4_dic2",
+              "audio_target": "Soy de México y soy profesor",
+              "correct_transcription": "soy de mexico y soy profesor",
+              "acceptable_variants": [
+                "soy de méxico y soy profesor"
+              ],
+              "translation": "I am from Mexico and I am a teacher"
+            }
+          ]
+        }
+      }
+    },
+    "french": {
+      "arc_1_arrival_and_survival": {
+        "arc_meta": {
+          "title": "Arrival & Survival",
+          "language": "French",
+          "target_clearance_band": "0 to 1",
+          "note": "Demonstrates the schema is language-agnostic; extend following this exact pattern."
+        },
+        "day_1": {
+          "day_number": 1,
+          "theme": "Landing Protocol — Identity & First Contact",
+          "learning_objectives": [
+            "Greet someone and exchange names",
+            "State a basic need using 'J'ai besoin de...'",
+            "Signal non-comprehension without switching to English"
+          ],
+          "new_items": [
+            {
+              "id": "fr_d1_001",
+              "target": "Bonjour",
+              "translation": "Hello / Good day"
+            },
+            {
+              "id": "fr_d1_002",
+              "target": "Je m'appelle...",
+              "translation": "My name is..."
+            },
+            {
+              "id": "fr_d1_003",
+              "target": "Comment vous appelez-vous ?",
+              "translation": "What is your name? (formal)"
+            },
+            {
+              "id": "fr_d1_004",
+              "target": "S'il vous plaît",
+              "translation": "Please"
+            },
+            {
+              "id": "fr_d1_005",
+              "target": "Merci",
+              "translation": "Thank you"
+            },
+            {
+              "id": "fr_d1_006",
+              "target": "Où est / Où sont...?",
+              "translation": "Where is / Where are...?"
+            },
+            {
+              "id": "fr_d1_007",
+              "target": "la gare",
+              "translation": "the train station"
+            },
+            {
+              "id": "fr_d1_008",
+              "target": "les toilettes",
+              "translation": "the bathroom"
+            },
+            {
+              "id": "fr_d1_009",
+              "target": "J'ai besoin de...",
+              "translation": "I need..."
+            },
+            {
+              "id": "fr_d1_010",
+              "target": "un taxi",
+              "translation": "a taxi"
+            },
+            {
+              "id": "fr_d1_011",
+              "target": "de l'aide",
+              "translation": "help"
+            },
+            {
+              "id": "fr_d1_012",
+              "target": "Oui / Non",
+              "translation": "Yes / No"
+            },
+            {
+              "id": "fr_d1_013",
+              "target": "Je ne comprends pas",
+              "translation": "I don't understand"
+            },
+            {
+              "id": "fr_d1_014",
+              "target": "Parlez-vous anglais ?",
+              "translation": "Do you speak English?"
+            },
+            {
+              "id": "fr_d1_015",
+              "target": "le tourisme / les affaires",
+              "translation": "tourism / business"
+            }
+          ],
+          "pattern_drills": [
+            {
+              "id": "fr_d1_pd1",
+              "structure": "Où est / Où sont ___ ?",
+              "structure_translation": "Where is / are ___?",
+              "base_example": {
+                "target": "Où sont les toilettes ?",
+                "translation": "Where is the bathroom?"
+              },
+              "substitutions": [
+                {
+                  "target": "la gare",
+                  "translation": "the train station"
+                },
+                {
+                  "target": "l'hôtel",
+                  "translation": "the hotel"
+                },
+                {
+                  "target": "l'ambassade",
+                  "translation": "the embassy"
+                },
+                {
+                  "target": "la pharmacie",
+                  "translation": "the pharmacy"
+                }
+              ]
+            }
+          ],
+          "tts_multiple_choice": [
+            {
+              "id": "fr_d1_mc1",
+              "type": "contextual_response",
+              "audio_prompt_target": "Comment vous appelez-vous ?",
+              "audio_prompt_translation": "What is your name?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Je m'appelle Claire.",
+                  "translation": "My name is Claire."
+                },
+                {
+                  "id": "b",
+                  "target": "J'ai besoin d'un taxi.",
+                  "translation": "I need a taxi."
+                },
+                {
+                  "id": "c",
+                  "target": "Merci, s'il vous plaît.",
+                  "translation": "Thank you, please."
+                },
+                {
+                  "id": "d",
+                  "target": "Oui, je parle anglais.",
+                  "translation": "Yes, I speak English."
+                }
+              ],
+              "correct_option_id": "a"
+            },
+            {
+              "id": "fr_d1_mc2",
+              "type": "listening_identification",
+              "audio_prompt_target": "Où est la gare ?",
+              "audio_prompt_translation": "Where is the train station?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Où sont les toilettes ?",
+                  "translation": "Where is the bathroom?"
+                },
+                {
+                  "id": "b",
+                  "target": "J'ai besoin d'aide.",
+                  "translation": "I need help."
+                },
+                {
+                  "id": "c",
+                  "target": "Où est la gare ?",
+                  "translation": "Where is the train station?"
+                },
+                {
+                  "id": "d",
+                  "target": "Parlez-vous anglais ?",
+                  "translation": "Do you speak English?"
+                }
+              ],
+              "correct_option_id": "c"
+            },
+            {
+              "id": "fr_d1_mc3",
+              "type": "contextual_response",
+              "audio_prompt_target": "Parlez-vous anglais ?",
+              "audio_prompt_translation": "Do you speak English?",
+              "options": [
+                {
+                  "id": "a",
+                  "target": "Je m'appelle Claire.",
+                  "translation": "My name is Claire."
+                },
+                {
+                  "id": "b",
+                  "target": "Non, je ne comprends pas.",
+                  "translation": "No, I don't understand."
+                },
+                {
+                  "id": "c",
+                  "target": "J'ai besoin d'un taxi.",
+                  "translation": "I need a taxi."
+                },
+                {
+                  "id": "d",
+                  "target": "Où est la gare ?",
+                  "translation": "Where is the train station?"
+                }
+              ],
+              "correct_option_id": "b"
+            }
+          ],
+          "shadowing_drills": [
+            {
+              "id": "fr_d1_sh1",
+              "target_text": "Bonjour, je m'appelle Claire.",
+              "translation": "Hello, my name is Claire.",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1.0,
+                1.25
+              ]
+            },
+            {
+              "id": "fr_d1_sh2",
+              "target_text": "S'il vous plaît, où est la gare ?",
+              "translation": "Please, where is the train station?",
+              "recommended_reps": 3,
+              "playback_speeds": [
+                0.75,
+                1.0,
+                1.25
+              ]
+            }
+          ],
+          "speech_to_speech": [
+            {
+              "id": "fr_d1_sts1",
+              "scenario_context": "Arrivée à l'aéroport — un agent contrôle ton passeport.",
+              "scenario_context_translation": "Arrival at the airport — an officer is checking your passport.",
+              "ai_character": "Agent d'immigration",
+              "ai_prompt_target": "Bonjour. Comment vous appelez-vous ?",
+              "ai_prompt_translation": "Hello. What is your name?",
+              "expected_answers": [
+                {
+                  "target": "Je m'appelle [nom].",
+                  "translation": "My name is [name]."
+                }
+              ],
+              "acceptable_answer_pattern_notes": "Accept any answer using the 'Je m'appelle ___' pattern with a name filled in.",
+              "evaluation_rubric": {
+                "attempted_target_language": true,
+                "core_pattern_hit": "uses 'je m'appelle'",
+                "comprehension": "responds with a name"
+              },
+              "on_success_ai_response_target": "Merci. Bienvenue.",
+              "on_success_ai_response_translation": "Thank you. Welcome.",
+              "on_struggle_ai_response_target": "Je n'ai pas compris. Comment vous appelez-vous ?",
+              "on_struggle_ai_response_translation": "I didn't understand. What is your name?",
+              "on_struggle_hint_target": "Essayez : « Je m'appelle... »"
+            }
+          ],
+          "dictation": [
+            {
+              "id": "fr_d1_dict1",
+              "audio_target": "J'ai besoin d'un taxi, s'il vous plaît.",
+              "correct_transcription": "J'ai besoin d'un taxi, s'il vous plaît.",
+              "acceptable_variants": [
+                "j'ai besoin d'un taxi s'il vous plait"
+              ],
+              "translation": "I need a taxi, please."
+            }
+          ],
+          "checkpoint_quiz": {
+            "composition": "sampled from this day's own item pool",
+            "sample_counts": {
+              "tts_multiple_choice": 2,
+              "shadowing_completion": 1,
+              "speech_to_speech": 1,
+              "dictation": 1
+            },
+            "passing_threshold": 0.8
+          }
+        }
+      }
+    }
+  },
+  "phrase_bank": {
+    "survival": [
+      {
+        "target": "Hola",
+        "translation": "Hello"
+      },
+      {
+        "target": "Gracias",
+        "translation": "Thank you"
+      },
+      {
+        "target": "Por favor",
+        "translation": "Please"
+      },
+      {
+        "target": "Sí / No",
+        "translation": "Yes / No"
+      },
+      {
+        "target": "Ayuda",
+        "translation": "Help"
+      },
+      {
+        "target": "No entiendo",
+        "translation": "I don't understand"
+      },
+      {
+        "target": "¿Habla usted inglés?",
+        "translation": "Do you speak English?"
+      }
+    ],
+    "transport": [
+      {
+        "target": "¿Dónde está la estación?",
+        "translation": "Where is the station?"
+      },
+      {
+        "target": "Necesito un taxi.",
+        "translation": "I need a taxi."
+      },
+      {
+        "target": "¿Cuánto cuesta?",
+        "translation": "How much does it cost?"
+      },
+      {
+        "target": "A la izquierda / a la derecha",
+        "translation": "To the left / to the right"
+      },
+      {
+        "target": "Todo recto",
+        "translation": "Straight ahead"
+      }
+    ],
+    "food": [
+      {
+        "target": "Quisiera...",
+        "translation": "I would like..."
+      },
+      {
+        "target": "La cuenta, por favor.",
+        "translation": "The check, please."
+      },
+      {
+        "target": "Tengo hambre.",
+        "translation": "I'm hungry."
+      },
+      {
+        "target": "Tengo sed.",
+        "translation": "I'm thirsty."
+      },
+      {
+        "target": "¿Qué me recomienda?",
+        "translation": "What do you recommend?"
+      }
+    ],
+    "emergency": [
+      {
+        "target": "Necesito un médico.",
+        "translation": "I need a doctor."
+      },
+      {
+        "target": "Llame a la policía.",
+        "translation": "Call the police."
+      },
+      {
+        "target": "Es una emergencia.",
+        "translation": "It's an emergency."
+      },
+      {
+        "target": "Me perdí.",
+        "translation": "I got lost."
+      },
+      {
+        "target": "Necesito un intérprete.",
+        "translation": "I need an interpreter."
+      }
+    ],
+    "social": [
+      {
+        "target": "Mucho gusto.",
+        "translation": "Nice to meet you."
+      },
+      {
+        "target": "¿Cómo está usted?",
+        "translation": "How are you?"
+      },
+      {
+        "target": "Encantado / Encantada.",
+        "translation": "Delighted (to meet you)."
+      },
+      {
+        "target": "Hasta luego.",
+        "translation": "See you later."
+      },
+      {
+        "target": "Nos vemos.",
+        "translation": "See you around."
+      }
+    ],
+    "business": [
+      {
+        "target": "Tengo una reunión.",
+        "translation": "I have a meeting."
+      },
+      {
+        "target": "Mi tarjeta.",
+        "translation": "My (business) card."
+      },
+      {
+        "target": "¿Podemos hablar de negocios?",
+        "translation": "Can we talk business?"
+      },
+      {
+        "target": "Firmemos el contrato.",
+        "translation": "Let's sign the contract."
+      },
+      {
+        "target": "Un placer hacer negocios con usted.",
+        "translation": "A pleasure doing business with you."
+      }
+    ]
+  },
+  "content_generation_prompt_template": "You are a content designer for Operation Lingua, an FSI/DLI-style immersive language app. Generate ONE Mission Day of content for [LANGUAGE], Arc [ARC_NUMBER] ([ARC_THEME]), Day [DAY_NUMBER], that conforms EXACTLY to the JSON schema used in Operation_Lingua_Content_Data.json under curriculum.spanish.arc_1_arrival_and_survival.day_1 (same keys, same nesting, same field names). Requirements: (1) 8-15 new_items building only on vocabulary already introduced in earlier days of this arc, (2) 2-3 pattern_drills with a base_example plus 3-4 substitutions each, (3) 4-6 tts_multiple_choice items, mixing 'contextual_response' (options must be answerable using ONLY vocabulary already taught up to and including this day) and 'listening_identification' types, each with exactly 4 target-language options and a correct_option_id, (4) 2-3 shadowing_drills, (5) 2-3 speech_to_speech items with scenario_context, ai_character, expected_answers, evaluation_rubric, and both an on_success and on_struggle branch, (6) 1-2 dictation items, (7) a checkpoint_quiz block using the same sampled-composition pattern as existing days. Do not introduce any grammar explanations or English-language instructional text inside the content itself — only target-language content plus English translation fields. Return valid JSON only, matching the schema exactly."
+}

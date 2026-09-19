@@ -1,0 +1,1589 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "spanish-foundations-a0-a1",
+  "week": 4,
+  "title": "Conversation: Plans and Repair",
+  "lessons": [
+    {
+      "id": "es-w4-d22",
+      "day": 22,
+      "title": "Plans for Tomorrow",
+      "focus": "ir a + infinitive",
+      "estimated_minutes": 20,
+      "objectives": [
+        "talk about immediate future plans",
+        "ask what someone is going to do",
+        "combine a plan with a time and place"
+      ],
+      "teaching": {
+        "explanation": "The high-frequency future pattern is ir a + infinitive: voy a estudiar, vas a trabajar, va a comer. It is more useful at this level than memorizing the full simple future.",
+        "pattern": "Voy a estudiar mañana. ¿Qué vas a hacer? = What are you going to do?",
+        "note": "The preposition a appears twice in many travel/planning phrases: voy a Madrid; voy a estudiar."
+      },
+      "vocabulary": [
+        {
+          "id": "voy-a",
+          "es": "voy a",
+          "en": "I am going to",
+          "pos": "future chunk",
+          "gender": null,
+          "audio_key": "es.voy-a",
+          "review_tags": [
+            "future"
+          ]
+        },
+        {
+          "id": "vas-a",
+          "es": "vas a",
+          "en": "you are going to",
+          "pos": "future chunk",
+          "gender": null,
+          "audio_key": "es.vas-a",
+          "review_tags": [
+            "future"
+          ]
+        },
+        {
+          "id": "vamos-a",
+          "es": "vamos a",
+          "en": "we are going to",
+          "pos": "future chunk",
+          "gender": null,
+          "audio_key": "es.vamos-a",
+          "review_tags": [
+            "future"
+          ]
+        },
+        {
+          "id": "hacer",
+          "es": "hacer",
+          "en": "to do/make",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.hacer",
+          "review_tags": [
+            "verbs",
+            "future"
+          ]
+        },
+        {
+          "id": "manana",
+          "es": "mañana",
+          "en": "tomorrow",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.manana",
+          "review_tags": [
+            "future",
+            "time"
+          ]
+        },
+        {
+          "id": "plan",
+          "es": "plan",
+          "en": "plan",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.plan",
+          "review_tags": [
+            "future"
+          ]
+        },
+        {
+          "id": "descansar",
+          "es": "descansar",
+          "en": "to rest",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.descansar",
+          "review_tags": [
+            "routine"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "future",
+        "ir",
+        "plans"
+      ],
+      "examples": [
+        {
+          "es": "Voy a estudiar mañana.",
+          "en": "I am going to study tomorrow.",
+          "analysis": "voy a + infinitive"
+        },
+        {
+          "es": "¿Qué vas a hacer?",
+          "en": "What are you going to do?",
+          "analysis": "vas a + infinitive"
+        },
+        {
+          "es": "Vamos a comer a las ocho.",
+          "en": "We are going to eat at eight.",
+          "analysis": "vamos a + infinitive + time"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w4d1-a1",
+          "type": "mcq",
+          "prompt": "Choose “I am going to work.”",
+          "answer": "Voy a trabajar.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "future"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Voy trabajar.",
+            "Voy a trabajar.",
+            "Veo a trabajar."
+          ]
+        },
+        {
+          "id": "w4d1-a2",
+          "type": "translate",
+          "prompt": "Translate: “What are you going to do tomorrow?”",
+          "answer": "¿Qué vas a hacer mañana?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "future",
+            "questions"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d1-a3",
+          "type": "cloze",
+          "prompt": "Complete: Vamos ___ comer a las ocho.",
+          "answer": "a",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "future",
+            "time"
+          ],
+          "difficulty": "core",
+          "options": [
+            "a",
+            "en",
+            "de"
+          ]
+        },
+        {
+          "id": "w4d1-a4",
+          "type": "ordering",
+          "prompt": "Put in order: estudiar / mañana / Voy / a",
+          "answer": "Voy a estudiar mañana.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "future",
+            "word-order"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d1-a5",
+          "type": "speak",
+          "prompt": "Say three plans for tomorrow using different verbs.",
+          "answer": "Mañana voy a ____. Después voy a ____. Finalmente voy a ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "future",
+            "sequence"
+          ],
+          "difficulty": "production"
+        }
+      ],
+      "mission": "Make and discuss a simple plan.",
+      "dialogue": {
+        "title": "Planning tomorrow",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Qué vas a hacer mañana?",
+            "en": "What are you going to do tomorrow?"
+          },
+          {
+            "speaker": "B",
+            "es": "Voy a estudiar y trabajar. ¿Y tú?",
+            "en": "I am going to study and work. And you?"
+          },
+          {
+            "speaker": "A",
+            "es": "Voy a descansar.",
+            "en": "I am going to rest."
+          }
+        ],
+        "learner_turns": [
+          "Make the plans realistic or imaginary.",
+          "Add a time and place."
+        ]
+      },
+      "exit_check": [
+        "Build three immediate-future sentences.",
+        "Ask about another person’s plans.",
+        "Combine a plan with sequence and time."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w4-d23",
+      "day": 23,
+      "title": "Getting Around",
+      "focus": "Directions and movement",
+      "estimated_minutes": 20,
+      "objectives": [
+        "ask where a place is",
+        "understand left, right, straight, and near",
+        "give a two-step direction"
+      ],
+      "teaching": {
+        "explanation": "Direction language is best practiced with a map or visual route. Keep the sentence frame stable while changing only one landmark at a time.",
+        "pattern": "¿Dónde está el banco? Sigue recto. Gira a la derecha. Está cerca.",
+        "safety": "For real-world safety, confirm important directions and use a map; this lesson is language practice, not navigation advice."
+      },
+      "vocabulary": [
+        {
+          "id": "perdon",
+          "es": "perdón",
+          "en": "excuse me/sorry",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.perdon",
+          "review_tags": [
+            "repair",
+            "directions"
+          ]
+        },
+        {
+          "id": "izquierda",
+          "es": "izquierda",
+          "en": "left",
+          "pos": "noun/adverb",
+          "gender": "f",
+          "audio_key": "es.izquierda",
+          "review_tags": [
+            "directions"
+          ]
+        },
+        {
+          "id": "derecha",
+          "es": "derecha",
+          "en": "right",
+          "pos": "noun/adverb",
+          "gender": "f",
+          "audio_key": "es.derecha",
+          "review_tags": [
+            "directions"
+          ]
+        },
+        {
+          "id": "recto",
+          "es": "recto",
+          "en": "straight",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.recto",
+          "review_tags": [
+            "directions"
+          ]
+        },
+        {
+          "id": "cerca",
+          "es": "cerca",
+          "en": "near",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.cerca",
+          "review_tags": [
+            "directions"
+          ]
+        },
+        {
+          "id": "gira",
+          "es": "gira",
+          "en": "turn",
+          "pos": "verb command",
+          "gender": null,
+          "audio_key": "es.gira",
+          "review_tags": [
+            "directions"
+          ]
+        },
+        {
+          "id": "sigue",
+          "es": "sigue",
+          "en": "continue/go",
+          "pos": "verb command",
+          "gender": null,
+          "audio_key": "es.sigue",
+          "review_tags": [
+            "directions"
+          ]
+        },
+        {
+          "id": "estacion",
+          "es": "estación",
+          "en": "station",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.estacion",
+          "review_tags": [
+            "places"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "directions",
+        "estar",
+        "commands"
+      ],
+      "examples": [
+        {
+          "es": "¿Dónde está el banco?",
+          "en": "Where is the bank?",
+          "analysis": "location question"
+        },
+        {
+          "es": "Gira a la derecha.",
+          "en": "Turn right.",
+          "analysis": "direction command"
+        },
+        {
+          "es": "Está cerca de aquí.",
+          "en": "It is near here.",
+          "analysis": "location + relation"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w4d2-a1",
+          "type": "matching",
+          "prompt": "Match: izquierda = left; derecha = right; recto = straight; cerca = near.",
+          "answer": "izquierda = left; derecha = right; recto = straight; cerca = near.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "directions"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d2-a2",
+          "type": "translate",
+          "prompt": "Translate: “Where is the station?”",
+          "answer": "¿Dónde está la estación?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "directions",
+            "estar"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d2-a3",
+          "type": "mcq",
+          "prompt": "Choose “Turn right.”",
+          "answer": "Gira a la derecha.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "directions"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Gira a la izquierda.",
+            "Gira a la derecha.",
+            "Sigue recto."
+          ]
+        },
+        {
+          "id": "w4d2-a4",
+          "type": "ordering",
+          "prompt": "Put in order: recto / Sigue / y / gira / derecha / a",
+          "answer": "Sigue recto y gira a la derecha.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "directions",
+            "connectors"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d2-a5",
+          "type": "roleplay",
+          "prompt": "Give directions from a hotel to a café using two steps.",
+          "answer": "Sigue recto. Gira a la ____. Está cerca.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "directions"
+          ],
+          "difficulty": "production"
+        }
+      ],
+      "mission": "Navigate a short route while asking for clarification.",
+      "dialogue": {
+        "title": "Finding a place",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "Perdón, ¿dónde está la estación?",
+            "en": "Excuse me, where is the station?"
+          },
+          {
+            "speaker": "B",
+            "es": "Sigue recto y gira a la derecha. Está cerca.",
+            "en": "Go straight and turn right. It is nearby."
+          },
+          {
+            "speaker": "A",
+            "es": "Gracias.",
+            "en": "Thank you."
+          }
+        ],
+        "learner_turns": [
+          "Replace station with bank, café, or hotel.",
+          "Give directions using a drawn route."
+        ]
+      },
+      "exit_check": [
+        "Retrieve four direction words.",
+        "Ask for a place.",
+        "Give two connected direction steps."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w4-d24",
+      "day": 24,
+      "title": "Conversation Glue",
+      "focus": "connectors and repair strategies",
+      "estimated_minutes": 20,
+      "objectives": [
+        "connect ideas with y, pero, porque, también",
+        "clarify a word or ask for a slower repetition",
+        "give a short reason"
+      ],
+      "teaching": {
+        "explanation": "Conversation becomes less robotic when sentences connect. Start with four glue words and use them repeatedly.",
+        "pattern": "Me gusta el café porque es bueno. Trabajo y estudio. No quiero té, pero quiero agua.",
+        "repair": "¿Qué significa ___? = What does ___ mean? ¿Cómo se dice ___? = How do you say ___?"
+      },
+      "vocabulary": [
+        {
+          "id": "porque",
+          "es": "porque",
+          "en": "because",
+          "pos": "conjunction",
+          "gender": null,
+          "audio_key": "es.porque",
+          "review_tags": [
+            "connectors"
+          ]
+        },
+        {
+          "id": "tambien",
+          "es": "también",
+          "en": "also",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.tambien",
+          "review_tags": [
+            "connectors"
+          ]
+        },
+        {
+          "id": "significa",
+          "es": "significa",
+          "en": "means",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.significa",
+          "review_tags": [
+            "repair"
+          ]
+        },
+        {
+          "id": "como-se-dice",
+          "es": "¿Cómo se dice?",
+          "en": "How do you say it?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.como-se-dice",
+          "review_tags": [
+            "repair"
+          ]
+        },
+        {
+          "id": "que-significa",
+          "es": "¿Qué significa?",
+          "en": "What does it mean?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.que-significa",
+          "review_tags": [
+            "repair"
+          ]
+        },
+        {
+          "id": "bueno",
+          "es": "bueno",
+          "en": "good",
+          "pos": "adjective",
+          "gender": "m",
+          "audio_key": "es.bueno",
+          "review_tags": [
+            "adjectives"
+          ]
+        },
+        {
+          "id": "bebida",
+          "es": "bebida",
+          "en": "drink",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.bebida",
+          "review_tags": [
+            "food"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "connectors",
+        "repair",
+        "conversation"
+      ],
+      "examples": [
+        {
+          "es": "Me gusta porque es bueno.",
+          "en": "I like it because it is good.",
+          "analysis": "porque gives a reason"
+        },
+        {
+          "es": "Trabajo y estudio.",
+          "en": "I work and study.",
+          "analysis": "y joins actions"
+        },
+        {
+          "es": "¿Qué significa “cerca”?",
+          "en": "What does “cerca” mean?",
+          "analysis": "meaning clarification"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w4d3-a1",
+          "type": "matching",
+          "prompt": "Match: y = and; pero = but; porque = because; también = also.",
+          "answer": "y = and; pero = but; porque = because; también = also.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "connectors"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d3-a2",
+          "type": "translate",
+          "prompt": "Translate: “I like tea because it is good.”",
+          "answer": "Me gusta el té porque es bueno.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gustar",
+            "connectors"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d3-a3",
+          "type": "cloze",
+          "prompt": "Complete: No quiero café, ___ quiero té.",
+          "answer": "pero",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "connectors"
+          ],
+          "difficulty": "core",
+          "options": [
+            "y",
+            "pero",
+            "porque",
+            "también"
+          ]
+        },
+        {
+          "id": "w4d3-a4",
+          "type": "repair",
+          "prompt": "Ask “What does ___ mean?” about the word cerca.",
+          "answer": "¿Qué significa “cerca”?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "repair",
+            "questions"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d3-a5",
+          "type": "speak",
+          "prompt": "Give a preference with a reason and one contrast.",
+          "answer": "Me gusta __ porque ____. No me gusta __, pero ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "connectors",
+            "preferences"
+          ],
+          "difficulty": "production"
+        }
+      ],
+      "mission": "Keep an imperfect conversation moving and make meaning clear.",
+      "dialogue": {
+        "title": "Clarifying a misunderstanding",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Quieres café?",
+            "en": "Do you want coffee?"
+          },
+          {
+            "speaker": "B",
+            "es": "No entiendo. ¿Qué significa café?",
+            "en": "I do not understand. What does café mean?"
+          },
+          {
+            "speaker": "A",
+            "es": "Es una bebida.",
+            "en": "It is a drink."
+          },
+          {
+            "speaker": "B",
+            "es": "Ah, sí. Quiero café, por favor.",
+            "en": "Ah, yes. I want coffee, please."
+          }
+        ],
+        "learner_turns": [
+          "Replace café with another item.",
+          "Use ¿Puedes repetir? and ¿Qué significa…?"
+        ]
+      },
+      "exit_check": [
+        "Join two ideas with y or pero.",
+        "Give one reason with porque.",
+        "Use two repair strategies without switching languages."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w4-d25",
+      "day": 25,
+      "title": "High-Frequency Irregulars",
+      "focus": "ser, estar, tener, ir, hacer",
+      "estimated_minutes": 20,
+      "objectives": [
+        "recognize essential irregular forms",
+        "use tengo for possession and basic states",
+        "build practical sentences without overgeneralizing regular endings"
+      ],
+      "teaching": {
+        "explanation": "Some of the most useful verbs are irregular. Learn the first-person forms as chunks: soy, estoy, tengo, voy, hago. Add the subject only when contrast or emphasis helps.",
+        "pattern": "Tengo tiempo. Estoy cansado/a. Voy al café. Hago una pregunta.",
+        "note": "Gendered adjectives such as cansado/cansada should match the speaker when relevant; the app should accept both forms where appropriate."
+      },
+      "vocabulary": [
+        {
+          "id": "tengo",
+          "es": "tengo",
+          "en": "I have",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.tengo",
+          "review_tags": [
+            "irregulars"
+          ]
+        },
+        {
+          "id": "tiempo",
+          "es": "tiempo",
+          "en": "time",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.tiempo",
+          "review_tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "estoy",
+          "es": "estoy",
+          "en": "I am / I am located",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.estoy",
+          "review_tags": [
+            "irregulars"
+          ]
+        },
+        {
+          "id": "cansado",
+          "es": "cansado",
+          "en": "tired masculine",
+          "pos": "adjective",
+          "gender": "m",
+          "audio_key": "es.cansado",
+          "review_tags": [
+            "states"
+          ]
+        },
+        {
+          "id": "cansada",
+          "es": "cansada",
+          "en": "tired feminine",
+          "pos": "adjective",
+          "gender": "f",
+          "audio_key": "es.cansada",
+          "review_tags": [
+            "states"
+          ]
+        },
+        {
+          "id": "voy",
+          "es": "voy",
+          "en": "I go / I am going",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.voy",
+          "review_tags": [
+            "irregulars"
+          ]
+        },
+        {
+          "id": "hago",
+          "es": "hago",
+          "en": "I do/make",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.hago",
+          "review_tags": [
+            "irregulars"
+          ]
+        },
+        {
+          "id": "al",
+          "es": "al",
+          "en": "to the masculine singular",
+          "pos": "contraction",
+          "gender": null,
+          "audio_key": "es.al",
+          "review_tags": [
+            "contractions"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "irregulars",
+        "ser-vs-estar",
+        "contractions"
+      ],
+      "examples": [
+        {
+          "es": "Tengo tiempo.",
+          "en": "I have time.",
+          "analysis": "tengo = I have"
+        },
+        {
+          "es": "Estoy cansado/cansada.",
+          "en": "I am tired.",
+          "analysis": "estar + adjective"
+        },
+        {
+          "es": "Voy al café.",
+          "en": "I am going to the café.",
+          "analysis": "a + el contracts to al"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w4d4-a1",
+          "type": "retrieval",
+          "prompt": "Write the five first-person chunks: I am (identity), I am (state/location), I have, I go, I do.",
+          "answer": "soy, estoy, tengo, voy, hago",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "irregulars"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d4-a2",
+          "type": "translate",
+          "prompt": "Translate: “I have time.”",
+          "answer": "Tengo tiempo.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "tener"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d4-a3",
+          "type": "mcq",
+          "prompt": "Choose the sentence for “I am tired” (speaker feminine allowed).",
+          "answer": "Estoy cansada.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "estar"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Soy cansada.",
+            "Estoy cansada.",
+            "Tengo cansada."
+          ]
+        },
+        {
+          "id": "w4d4-a4",
+          "type": "cloze",
+          "prompt": "Complete: Voy ___ café.",
+          "answer": "al",
+          "hint": "",
+          "feedback": "a + el contracts to al.",
+          "rationale": "",
+          "review_item_ids": [
+            "ir",
+            "contractions"
+          ],
+          "difficulty": "core",
+          "options": [
+            "a el",
+            "al",
+            "en el"
+          ]
+        },
+        {
+          "id": "w4d4-a5",
+          "type": "production",
+          "prompt": "Make five short sentences, one with each first-person chunk.",
+          "answer": "Soy ____. Estoy ____. Tengo ____. Voy a ____. Hago ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "irregulars"
+          ],
+          "difficulty": "production"
+        }
+      ],
+      "mission": "Give a concise personal status update and ask one practical question.",
+      "dialogue": {
+        "title": "Quick status update",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Cómo estás?",
+            "en": "How are you?"
+          },
+          {
+            "speaker": "B",
+            "es": "Estoy bien. Tengo tiempo y voy al café.",
+            "en": "I am well. I have time and I am going to the café."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Qué haces?",
+            "en": "What are you doing?"
+          },
+          {
+            "speaker": "B",
+            "es": "Hago una pregunta: ¿Dónde está la estación?",
+            "en": "I ask a question: Where is the station?"
+          }
+        ],
+        "learner_turns": [
+          "Change the state, destination, and question.",
+          "Use soy only for identity and estoy for state/location."
+        ]
+      },
+      "exit_check": [
+        "Retrieve soy, estoy, tengo, voy, hago.",
+        "Choose ser or estar in identity/state examples.",
+        "Use al correctly in one sentence."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w4-d26",
+      "day": 26,
+      "title": "People, Places, and Plans",
+      "focus": "integrated conversation",
+      "estimated_minutes": 20,
+      "objectives": [
+        "sustain a conversation for two minutes",
+        "ask follow-up questions",
+        "combine identity, routine, preference, and plans"
+      ],
+      "teaching": {
+        "explanation": "Today trains conversation turns. A conversation is not a speech: answer, ask back, react, and repair. Use ¿Y tú? and ¿Qué te gusta? to return the turn.",
+        "pattern": "Soy de ____. Vivo en ____. Trabajo y estudio. Me gusta ____. Mañana voy a ____. ¿Y tú?",
+        "strategy": "When stuck, use one of four moves: repeat, ask meaning, ask the partner a question, or give a simpler answer."
+      },
+      "vocabulary": [
+        {
+          "id": "y-tu",
+          "es": "¿Y tú?",
+          "en": "And you?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.y-tu",
+          "review_tags": [
+            "conversation"
+          ]
+        },
+        {
+          "id": "que-te-gusta",
+          "es": "¿Qué te gusta hacer?",
+          "en": "What do you like to do?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.que-te-gusta",
+          "review_tags": [
+            "preferences",
+            "conversation"
+          ]
+        },
+        {
+          "id": "vivo",
+          "es": "vivo",
+          "en": "I live",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.vivo",
+          "review_tags": [
+            "routine"
+          ]
+        },
+        {
+          "id": "bien",
+          "es": "bien",
+          "en": "well/good",
+          "pos": "adverb/adjective",
+          "gender": null,
+          "audio_key": "es.bien",
+          "review_tags": [
+            "states"
+          ]
+        },
+        {
+          "id": "mal",
+          "es": "mal",
+          "en": "badly/not well",
+          "pos": "adverb/adjective",
+          "gender": null,
+          "audio_key": "es.mal",
+          "review_tags": [
+            "states"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "conversation",
+        "integration",
+        "turn-taking"
+      ],
+      "examples": [
+        {
+          "es": "¿Y tú?",
+          "en": "And you?",
+          "analysis": "returns the turn"
+        },
+        {
+          "es": "¿Qué te gusta hacer?",
+          "en": "What do you like to do?",
+          "analysis": "preference question with infinitive"
+        },
+        {
+          "es": "Mañana voy a trabajar.",
+          "en": "Tomorrow I am going to work.",
+          "analysis": "future plan"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w4d5-a1",
+          "type": "retrieval",
+          "prompt": "Write a five-line self-profile from memory.",
+          "answer": "Me llamo ____. Soy de ____. Vivo en ____. Me gusta ____. Mañana voy a ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "integration"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d5-a2",
+          "type": "listening_comprehension",
+          "prompt": "Listen to a learner profile and identify origin, routine, preference, and plan.",
+          "answer": "profile_facts",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "integration"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d5-a3",
+          "type": "ordering",
+          "prompt": "Order the conversation moves: answer / ask back / repair / close",
+          "answer": "answer, ask back, repair, close",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "conversation"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d5-a4",
+          "type": "free_response",
+          "prompt": "Answer: ¿Qué te gusta hacer? Include a reason with porque.",
+          "answer": "Me gusta ____ porque ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gustar",
+            "connectors"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d5-a5",
+          "type": "roleplay",
+          "prompt": "Hold a two-minute conversation with four required moves.",
+          "answer": "Introduce yourself, ask a question, answer a preference, state a plan, and ask ¿Y tú?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "conversation"
+          ],
+          "difficulty": "production"
+        }
+      ],
+      "mission": "Sustain a short exchange by answering and asking back.",
+      "dialogue": {
+        "title": "Conversation exchange",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿De dónde eres y qué te gusta hacer?",
+            "en": "Where are you from and what do you like to do?"
+          },
+          {
+            "speaker": "B",
+            "es": "Soy de ____. Me gusta ____ porque ____. ¿Y tú?",
+            "en": "I am from ____. I like ____ because ____. And you?"
+          },
+          {
+            "speaker": "A",
+            "es": "Mañana voy a ____.",
+            "en": "Tomorrow I am going to ____."
+          }
+        ],
+        "learner_turns": [
+          "Change every blank.",
+          "Insert one repair phrase naturally."
+        ]
+      },
+      "exit_check": [
+        "Ask a follow-up rather than ending after one answer.",
+        "Give a preference with a reason.",
+        "State a future plan and return the turn."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w4-d27",
+      "day": 27,
+      "title": "Listening and Comprehension",
+      "focus": "slow authentic-style micro-dialogues",
+      "estimated_minutes": 20,
+      "objectives": [
+        "extract key facts from a short dialogue",
+        "use context to tolerate unknown words",
+        "respond to who, where, when, and what questions"
+      ],
+      "teaching": {
+        "explanation": "Do not demand word-for-word comprehension. First listen for the mission facts: person, place, time, action. Then replay for details. This mirrors real listening, where the learner must act on meaning rather than translate every word.",
+        "pattern": "Who? quién. Where? dónde. When? cuándo. What? qué. Why? por qué.",
+        "strategy": "Listen once for the situation, once for facts, and a third time for one useful phrase."
+      },
+      "vocabulary": [
+        {
+          "id": "cuando",
+          "es": "cuándo",
+          "en": "when",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.cuando",
+          "review_tags": [
+            "questions",
+            "time"
+          ]
+        },
+        {
+          "id": "por-que",
+          "es": "por qué",
+          "en": "why",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.por-que",
+          "review_tags": [
+            "questions"
+          ]
+        },
+        {
+          "id": "en-casa",
+          "es": "en casa",
+          "en": "at home",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.en-casa",
+          "review_tags": [
+            "locations"
+          ]
+        },
+        {
+          "id": "despues",
+          "es": "después",
+          "en": "afterwards",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.despues",
+          "review_tags": [
+            "sequence"
+          ]
+        },
+        {
+          "id": "extraer",
+          "es": "extraer",
+          "en": "to extract",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.extraer",
+          "review_tags": [
+            "learning"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "listening",
+        "comprehension",
+        "shadowing"
+      ],
+      "examples": [
+        {
+          "es": "¿Cuándo vas a estudiar?",
+          "en": "When are you going to study?",
+          "analysis": "cuándo + future plan"
+        },
+        {
+          "es": "Voy a estudiar en casa.",
+          "en": "I am going to study at home.",
+          "analysis": "future + location"
+        },
+        {
+          "es": "Porque tengo tiempo.",
+          "en": "Because I have time.",
+          "analysis": "reason"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w4d6-a1",
+          "type": "listening_comprehension",
+          "prompt": "After the first play, choose the main mission: meeting, shopping, or scheduling.",
+          "answer": "scheduling",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "listening"
+          ],
+          "difficulty": "core",
+          "options": [
+            "meeting",
+            "shopping",
+            "scheduling"
+          ]
+        },
+        {
+          "id": "w4d6-a2",
+          "type": "listening_select",
+          "prompt": "After the second play, identify the place.",
+          "answer": "en casa",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "locations",
+            "listening"
+          ],
+          "difficulty": "core",
+          "options": [
+            "en casa",
+            "en el café",
+            "en la estación"
+          ]
+        },
+        {
+          "id": "w4d6-a3",
+          "type": "listening_select",
+          "prompt": "After the second play, identify the time.",
+          "answer": "a las ocho",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "time",
+            "listening"
+          ],
+          "difficulty": "core",
+          "options": [
+            "a la una",
+            "a las ocho",
+            "a las diez"
+          ]
+        },
+        {
+          "id": "w4d6-a4",
+          "type": "retrieval",
+          "prompt": "Write the phrase for “because I have time.”",
+          "answer": "Porque tengo tiempo.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "porque",
+            "tener"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d6-a5",
+          "type": "shadowing",
+          "prompt": "Replay the dialogue and speak simultaneously with the audio, then repeat from memory.",
+          "answer": "shadowing_complete",
+          "hint": "",
+          "feedback": "Completion is behavioral: the learner must shadow once and produce the key sentence without audio.",
+          "rationale": "",
+          "review_item_ids": [
+            "listening",
+            "pronunciation"
+          ],
+          "difficulty": "production"
+        }
+      ],
+      "mission": "Understand the actionable facts in a short slow dialogue.",
+      "dialogue": {
+        "title": "Listen, extract, act",
+        "audio_script": "Hola. Mañana voy a estudiar en casa a las ocho porque tengo tiempo. Después voy a trabajar. ¿Y tú?",
+        "translation": "Hi. Tomorrow I am going to study at home at eight because I have time. Afterwards I am going to work. And you?",
+        "learner_turns": [
+          "Listen once without text.",
+          "Answer where, when, and why.",
+          "Shadow the audio."
+        ]
+      },
+      "exit_check": [
+        "Identify the main situation before translating.",
+        "Extract place, time, and reason.",
+        "Shadow and reproduce one sentence."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w4-d28",
+      "day": 28,
+      "title": "Week 4 Final Mission",
+      "focus": "integrated beginner conversation",
+      "estimated_minutes": 20,
+      "objectives": [
+        "understand and produce a simple conversation",
+        "form new sentences from known patterns",
+        "demonstrate a sustainable review habit"
+      ],
+      "teaching": {
+        "explanation": "The final mission is a performance check. The learner must use Spanish to meet someone, exchange personal information, describe a routine, express a preference, make a plan, ask for directions or help, and repair one misunderstanding.",
+        "success_definition": "A successful beginner conversation is understandable, responsive, and resilient. It may contain errors; it must not depend on memorizing one exact script.",
+        "next_step": "After Week 4, the learner should enter an A1 continuation course covering more present-tense verbs, direct objects, gender exceptions, past events, expanded listening, and regular speaking practice."
+      },
+      "vocabulary": [
+        {
+          "id": "operacion",
+          "es": "operación",
+          "en": "operation/mission",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.operacion",
+          "review_tags": [
+            "missions"
+          ]
+        },
+        {
+          "id": "cotidiano",
+          "es": "cotidiano",
+          "en": "everyday",
+          "pos": "adjective",
+          "gender": "m",
+          "audio_key": "es.cotidiano",
+          "review_tags": [
+            "missions"
+          ]
+        },
+        {
+          "id": "responder",
+          "es": "responder",
+          "en": "to answer",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.responder",
+          "review_tags": [
+            "learning"
+          ]
+        },
+        {
+          "id": "preguntar",
+          "es": "preguntar",
+          "en": "to ask",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.preguntar",
+          "review_tags": [
+            "learning"
+          ]
+        },
+        {
+          "id": "comprender",
+          "es": "comprender",
+          "en": "to understand",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.comprender",
+          "review_tags": [
+            "learning"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "final",
+        "integration",
+        "mastery"
+      ],
+      "examples": [
+        {
+          "es": "Me llamo ____. Soy de ____.",
+          "en": "My name is ____. I am from ____."
+        },
+        {
+          "es": "Me gusta ____ porque ____.",
+          "en": "I like ____ because ____."
+        },
+        {
+          "es": "Mañana voy a ____.",
+          "en": "Tomorrow I am going to ____."
+        }
+      ],
+      "activities": [
+        {
+          "id": "w4d8-a1",
+          "type": "retrieval",
+          "prompt": "From memory, write a seven-line self-introduction and plan.",
+          "answer": "Hola. Me llamo ____. Soy de ____. Vivo en ____. Me gusta ____. Mañana voy a ____. ¿Y tú?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "integration"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d8-a2",
+          "type": "listening_comprehension",
+          "prompt": "Listen to a final dialogue and answer who, where, what, when, and why.",
+          "answer": "five_facts_from_audio",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "listening",
+            "questions"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d8-a3",
+          "type": "translation_chain",
+          "prompt": "Translate: “I need help. Where is the station? Can you repeat, please?”",
+          "answer": "Necesito ayuda. ¿Dónde está la estación? ¿Puedes repetir, por favor?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "needs",
+            "directions",
+            "repair"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d8-a4",
+          "type": "error_correction",
+          "prompt": "Correct two errors in a short paragraph and explain the reason for each.",
+          "answer": "student_specific_corrections",
+          "hint": "",
+          "feedback": "The app should identify agreement, hay/estar, gustar, or word-order errors and show one concise explanation.",
+          "rationale": "",
+          "review_item_ids": [
+            "grammar"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w4d8-a5",
+          "type": "final_roleplay",
+          "prompt": "Complete the final mission with a simulated partner for 3–5 minutes.",
+          "answer": "final_conversation_complete",
+          "hint": "",
+          "feedback": "Pass target: at least 80% task completion, at least two successful repair moves, and understandable responses to follow-up questions.",
+          "rationale": "",
+          "review_item_ids": [
+            "all-week4"
+          ],
+          "difficulty": "final"
+        }
+      ],
+      "mission": "Hold a flexible beginner conversation about familiar needs and plans.",
+      "dialogue": {
+        "title": "Operation: everyday Spanish",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "Hola. ¿Cómo te llamas y de dónde eres?",
+            "en": "Hello. What is your name and where are you from?"
+          },
+          {
+            "speaker": "B",
+            "es": "Me llamo ____. Soy de ____. Vivo en ____.",
+            "en": "My name is ____. I am from ____. I live in ____."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Qué te gusta hacer?",
+            "en": "What do you like to do?"
+          },
+          {
+            "speaker": "B",
+            "es": "Me gusta ____ porque ____. Mañana voy a ____. ¿Y tú?",
+            "en": "I like ____ because ____. Tomorrow I am going to ____. And you?"
+          },
+          {
+            "speaker": "A",
+            "es": "Necesito ayuda. ¿Dónde está la estación?",
+            "en": "I need help. Where is the station?"
+          },
+          {
+            "speaker": "B",
+            "es": "Sigue recto y gira a la derecha.",
+            "en": "Go straight and turn right."
+          }
+        ],
+        "learner_turns": [
+          "Perform once with prompts.",
+          "Perform again with only the mission card.",
+          "Record or submit a final spoken response if the app supports audio."
+        ]
+      },
+      "exit_check": [
+        "Complete the seven-line self-profile from memory.",
+        "Answer five comprehension questions.",
+        "Pass the final roleplay with two repair strategies and one unscripted substitution."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1720 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "spanish-foundations-a0-a1",
+  "week": 2,
+  "title": "Sentence Engine: Daily Life",
+  "lessons": [
+    {
+      "id": "es-w2-d08",
+      "day": 8,
+      "title": "Where Things Are",
+      "focus": "estar, hay, and locations",
+      "estimated_minutes": 20,
+      "objectives": [
+        "say where a person or object is",
+        "distinguish hay from está/están",
+        "use en, aquí, and allí"
+      ],
+      "teaching": {
+        "explanation": "Use hay for “there is/there are” when introducing existence. Use está or están for the location of a known singular or plural item.",
+        "pattern": "Hay un libro en la mesa. = There is a book on the table. El libro está en la mesa. = The book is on the table.",
+        "contrast": "Hay introduces; está/están locates."
+      },
+      "vocabulary": [
+        {
+          "id": "hay",
+          "es": "hay",
+          "en": "there is/are",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.hay",
+          "review_tags": [
+            "existence"
+          ]
+        },
+        {
+          "id": "estar",
+          "es": "estar",
+          "en": "to be located/to be",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.estar",
+          "review_tags": [
+            "location"
+          ]
+        },
+        {
+          "id": "esta",
+          "es": "está",
+          "en": "is located",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.esta",
+          "review_tags": [
+            "location"
+          ]
+        },
+        {
+          "id": "estan",
+          "es": "están",
+          "en": "are located",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.estan",
+          "review_tags": [
+            "location"
+          ]
+        },
+        {
+          "id": "aqui",
+          "es": "aquí",
+          "en": "here",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.aqui",
+          "review_tags": [
+            "locations"
+          ]
+        },
+        {
+          "id": "alli",
+          "es": "allí",
+          "en": "there",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.alli",
+          "review_tags": [
+            "locations"
+          ]
+        },
+        {
+          "id": "silla",
+          "es": "silla",
+          "en": "chair",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.silla",
+          "review_tags": [
+            "room"
+          ]
+        },
+        {
+          "id": "habitacion",
+          "es": "habitación",
+          "en": "room",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.habitacion",
+          "review_tags": [
+            "room"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "estar",
+        "hay",
+        "locations"
+      ],
+      "examples": [
+        {
+          "es": "Hay una mesa.",
+          "en": "There is a table.",
+          "analysis": "hay introduces existence"
+        },
+        {
+          "es": "El libro está aquí.",
+          "en": "The book is here.",
+          "analysis": "known singular object + está"
+        },
+        {
+          "es": "Las casas están allí.",
+          "en": "The houses are there.",
+          "analysis": "known plural objects + están"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w2d1-a1",
+          "type": "mcq",
+          "prompt": "Choose the phrase that means “There is a book.”",
+          "answer": "Hay un libro.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "hay"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Está un libro.",
+            "Hay un libro.",
+            "Es un libro."
+          ]
+        },
+        {
+          "id": "w2d1-a2",
+          "type": "translate",
+          "prompt": "Translate: “The table is here.”",
+          "answer": "La mesa está aquí.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "estar",
+            "aqui"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "La mesa está aquí"
+          ]
+        },
+        {
+          "id": "w2d1-a3",
+          "type": "cloze",
+          "prompt": "Complete: Las casas ___ allí.",
+          "answer": "están",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "estan"
+          ],
+          "difficulty": "core",
+          "options": [
+            "está",
+            "están",
+            "hay",
+            "son"
+          ]
+        },
+        {
+          "id": "w2d1-a4",
+          "type": "classification",
+          "prompt": "Is this introducing existence or locating a known item? Hay una silla.",
+          "answer": "introducing existence",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "hay"
+          ],
+          "difficulty": "core",
+          "options": [
+            "introducing existence",
+            "locating a known item"
+          ]
+        },
+        {
+          "id": "w2d1-a5",
+          "type": "speak",
+          "prompt": "Describe two things in a room using hay and está/están.",
+          "answer": "Hay ____. El/La ____ está ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "hay",
+            "estar",
+            "locations"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Give a location briefing about a simple room.",
+      "dialogue": {
+        "title": "A room scan",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Qué hay en la habitación?",
+            "en": "What is there in the room?"
+          },
+          {
+            "speaker": "B",
+            "es": "Hay una mesa. La mesa está aquí.",
+            "en": "There is a table. The table is here."
+          }
+        ],
+        "learner_turns": [
+          "Name three imaginary objects.",
+          "Use allí for an object farther away."
+        ]
+      },
+      "exit_check": [
+        "Choose hay or está/están in five sentences.",
+        "Locate two known objects.",
+        "Describe a room with one hay sentence and one estar sentence."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w2-d09",
+      "day": 9,
+      "title": "Action Builders",
+      "focus": "Regular -ar verbs in the present",
+      "estimated_minutes": 20,
+      "objectives": [
+        "conjugate common -ar verbs with yo, tú, and él/ella",
+        "make simple subject–verb–object sentences",
+        "recognize the infinitive ending -ar"
+      ],
+      "teaching": {
+        "explanation": "Regular present-tense -ar verbs remove -ar and take endings: yo -o, tú -as, él/ella/usted -a, nosotros -amos, ustedes/ellos -an.",
+        "pattern": "hablar: hablo, hablas, habla, hablamos, hablan.",
+        "strategy": "Retrieve the ending from the subject first, then attach it to the verb stem."
+      },
+      "vocabulary": [
+        {
+          "id": "hablar",
+          "es": "hablar",
+          "en": "to speak",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.hablar",
+          "review_tags": [
+            "verbs",
+            "ar"
+          ]
+        },
+        {
+          "id": "estudiar",
+          "es": "estudiar",
+          "en": "to study",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.estudiar",
+          "review_tags": [
+            "verbs",
+            "ar"
+          ]
+        },
+        {
+          "id": "trabajar",
+          "es": "trabajar",
+          "en": "to work",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.trabajar",
+          "review_tags": [
+            "verbs",
+            "ar"
+          ]
+        },
+        {
+          "id": "vivir",
+          "es": "vivir",
+          "en": "to live",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.vivir",
+          "review_tags": [
+            "verbs"
+          ]
+        },
+        {
+          "id": "escuchar",
+          "es": "escuchar",
+          "en": "to listen",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.escuchar",
+          "review_tags": [
+            "verbs",
+            "ar"
+          ]
+        },
+        {
+          "id": "hago",
+          "es": "hago",
+          "en": "I do/make",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.hago",
+          "review_tags": [
+            "verbs"
+          ]
+        },
+        {
+          "id": "poco",
+          "es": "poco",
+          "en": "a little",
+          "pos": "adjective/adverb",
+          "gender": null,
+          "audio_key": "es.poco",
+          "review_tags": [
+            "quantity"
+          ]
+        },
+        {
+          "id": "si",
+          "es": "sí",
+          "en": "yes",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.si",
+          "review_tags": [
+            "answers"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "present",
+        "ar-verbs",
+        "word-order"
+      ],
+      "examples": [
+        {
+          "es": "Yo hablo español.",
+          "en": "I speak Spanish.",
+          "analysis": "habl- + o"
+        },
+        {
+          "es": "Ella estudia español.",
+          "en": "She studies Spanish.",
+          "analysis": "estudi- + a"
+        },
+        {
+          "es": "Nosotros trabajamos aquí.",
+          "en": "We work here.",
+          "analysis": "trabaj- + amos"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w2d2-a1",
+          "type": "mcq",
+          "prompt": "Choose the yo form of hablar.",
+          "answer": "hablo",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "ar-conjugation"
+          ],
+          "difficulty": "core",
+          "options": [
+            "habla",
+            "hablo",
+            "hablan"
+          ]
+        },
+        {
+          "id": "w2d2-a2",
+          "type": "translate",
+          "prompt": "Translate: “We study Spanish.”",
+          "answer": "Estudiamos español.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "ar-conjugation",
+            "study"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Nosotros estudiamos español",
+            "Estudiamos español"
+          ]
+        },
+        {
+          "id": "w2d2-a3",
+          "type": "cloze",
+          "prompt": "Complete: Tú ___ español. (hablar)",
+          "answer": "hablas",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "ar-conjugation"
+          ],
+          "difficulty": "core",
+          "options": [
+            "hablo",
+            "hablas",
+            "habla",
+            "hablan"
+          ]
+        },
+        {
+          "id": "w2d2-a4",
+          "type": "ordering",
+          "prompt": "Put in order: aquí / trabajo / Yo",
+          "answer": "Yo trabajo aquí.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "word-order"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w2d2-a5",
+          "type": "production",
+          "prompt": "Write one sentence with a subject, regular -ar verb, and place or object.",
+          "answer": "Yo ____ ____.",
+          "hint": "Use hablo, estudio, trabajo, vivo, or escucho.",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "ar-conjugation"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Report what you do in a normal day.",
+      "dialogue": {
+        "title": "Daily status report",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Qué haces?",
+            "en": "What do you do?"
+          },
+          {
+            "speaker": "B",
+            "es": "Trabajo y estudio español.",
+            "en": "I work and study Spanish."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Hablas español?",
+            "en": "Do you speak Spanish?"
+          },
+          {
+            "speaker": "B",
+            "es": "Sí, hablo un poco.",
+            "en": "Yes, I speak a little."
+          }
+        ],
+        "learner_turns": [
+          "Substitute your real activities.",
+          "Ask and answer ¿Qué haces? aloud."
+        ]
+      },
+      "exit_check": [
+        "Conjugate hablar for yo, tú, él/ella, nosotros, ustedes.",
+        "Produce two subject–verb sentences.",
+        "Identify the infinitive ending -ar."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w2-d10",
+      "day": 10,
+      "title": "People and Possession",
+      "focus": "Possessives and family",
+      "estimated_minutes": 20,
+      "objectives": [
+        "use mi, tu, su, and nuestro/a in short phrases",
+        "describe one family member or friend",
+        "keep noun and possessive agreement clear"
+      ],
+      "teaching": {
+        "explanation": "Short possessives come before the noun: mi casa, tu amigo, su libro, nuestro país. Nuestro changes for gender and number; mi, tu, and su do not change for gender.",
+        "pattern": "Mi madre es amable. Nuestro amigo es alto. Su casa está aquí.",
+        "note": "Su can mean his, her, your formal, or their; context supplies the meaning."
+      },
+      "vocabulary": [
+        {
+          "id": "mi",
+          "es": "mi",
+          "en": "my",
+          "pos": "possessive",
+          "gender": null,
+          "audio_key": "es.mi",
+          "review_tags": [
+            "possessives"
+          ]
+        },
+        {
+          "id": "tu",
+          "es": "tu",
+          "en": "your informal",
+          "pos": "possessive",
+          "gender": null,
+          "audio_key": "es.tu",
+          "review_tags": [
+            "possessives"
+          ]
+        },
+        {
+          "id": "su",
+          "es": "su",
+          "en": "his/her/your formal/their",
+          "pos": "possessive",
+          "gender": null,
+          "audio_key": "es.su",
+          "review_tags": [
+            "possessives"
+          ]
+        },
+        {
+          "id": "nuestro",
+          "es": "nuestro",
+          "en": "our masculine",
+          "pos": "possessive",
+          "gender": "m",
+          "audio_key": "es.nuestro",
+          "review_tags": [
+            "possessives",
+            "agreement"
+          ]
+        },
+        {
+          "id": "nuestra",
+          "es": "nuestra",
+          "en": "our feminine",
+          "pos": "possessive",
+          "gender": "f",
+          "audio_key": "es.nuestra",
+          "review_tags": [
+            "possessives",
+            "agreement"
+          ]
+        },
+        {
+          "id": "madre",
+          "es": "madre",
+          "en": "mother",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.madre",
+          "review_tags": [
+            "family"
+          ]
+        },
+        {
+          "id": "padre",
+          "es": "padre",
+          "en": "father",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.padre",
+          "review_tags": [
+            "family"
+          ]
+        },
+        {
+          "id": "hermano",
+          "es": "hermano",
+          "en": "brother",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.hermano",
+          "review_tags": [
+            "family"
+          ]
+        },
+        {
+          "id": "hermana",
+          "es": "hermana",
+          "en": "sister",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.hermana",
+          "review_tags": [
+            "family"
+          ]
+        },
+        {
+          "id": "amable",
+          "es": "amable",
+          "en": "kind",
+          "pos": "adjective",
+          "gender": null,
+          "audio_key": "es.amable",
+          "review_tags": [
+            "adjectives"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "possessives",
+        "agreement",
+        "family"
+      ],
+      "examples": [
+        {
+          "es": "Mi hermano es estudiante.",
+          "en": "My brother is a student.",
+          "analysis": "mi + masculine noun"
+        },
+        {
+          "es": "Nuestra amiga es de Chile.",
+          "en": "Our female friend is from Chile.",
+          "analysis": "nuestra matches feminine amiga"
+        },
+        {
+          "es": "Su casa está allí.",
+          "en": "His/her/your formal/their house is there.",
+          "analysis": "su is context-dependent"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w2d3-a1",
+          "type": "mcq",
+          "prompt": "Choose “our female friend.”",
+          "answer": "nuestra amiga",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "possessives",
+            "agreement"
+          ],
+          "difficulty": "core",
+          "options": [
+            "nuestro amiga",
+            "nuestra amiga",
+            "nuestras amigo"
+          ]
+        },
+        {
+          "id": "w2d3-a2",
+          "type": "translate",
+          "prompt": "Translate: “My brother is a student.”",
+          "answer": "Mi hermano es estudiante.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "possessives",
+            "identity"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Mi hermano es estudiante",
+            "Mi hermano es un estudiante"
+          ]
+        },
+        {
+          "id": "w2d3-a3",
+          "type": "cloze",
+          "prompt": "Complete: ___ casa (your informal house).",
+          "answer": "tu",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "possessives"
+          ],
+          "difficulty": "core",
+          "options": [
+            "mi",
+            "tu",
+            "su",
+            "nuestro"
+          ]
+        },
+        {
+          "id": "w2d3-a4",
+          "type": "classification",
+          "prompt": "Does nuestro change here? nuestra amiga",
+          "answer": "yes, to match feminine singular",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "possessives",
+            "agreement"
+          ],
+          "difficulty": "core",
+          "options": [
+            "yes, to match feminine singular",
+            "no, possessives never change"
+          ]
+        },
+        {
+          "id": "w2d3-a5",
+          "type": "speak",
+          "prompt": "Describe a person using a possessive and one adjective.",
+          "answer": "Mi ____ es ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "possessives",
+            "agreement"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Describe people who belong to you or your social circle.",
+      "dialogue": {
+        "title": "Family photo description",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Quién es?",
+            "en": "Who is it?"
+          },
+          {
+            "speaker": "B",
+            "es": "Es mi hermana. Es amable.",
+            "en": "She is my sister. She is kind."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Y ellos?",
+            "en": "And them?"
+          },
+          {
+            "speaker": "B",
+            "es": "Son nuestros amigos.",
+            "en": "They are our friends."
+          }
+        ],
+        "learner_turns": [
+          "Replace family words and adjectives.",
+          "Say the difference between mi and nuestra."
+        ]
+      },
+      "exit_check": [
+        "Choose mi, tu, su, or nuestro/a.",
+        "Describe one person with a possessive.",
+        "Explain why nuestra agrees with amiga."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w2-d11",
+      "day": 11,
+      "title": "Negation and Yes/No Questions",
+      "focus": "no, sí, and inversion-free questions",
+      "estimated_minutes": 20,
+      "objectives": [
+        "make negative statements with no",
+        "ask yes/no questions with intonation and ¿?",
+        "answer with sí/no plus a full sentence"
+      ],
+      "teaching": {
+        "explanation": "Put no directly before the conjugated verb: No hablo inglés. Spanish yes/no questions can keep the same word order as a statement; intonation and question marks signal the question.",
+        "pattern": "¿Hablas español? Sí, hablo español. No, no hablo francés.",
+        "strategy": "For active recall, convert statements to questions and then answer both yes and no versions."
+      },
+      "vocabulary": [
+        {
+          "id": "no",
+          "es": "no",
+          "en": "no/not",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.no",
+          "review_tags": [
+            "negation"
+          ]
+        },
+        {
+          "id": "pregunta",
+          "es": "pregunta",
+          "en": "question",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.pregunta",
+          "review_tags": [
+            "questions"
+          ]
+        },
+        {
+          "id": "vives",
+          "es": "vives",
+          "en": "you live",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.vives",
+          "review_tags": [
+            "verbs"
+          ]
+        },
+        {
+          "id": "hablas",
+          "es": "hablas",
+          "en": "you speak",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.hablas",
+          "review_tags": [
+            "verbs"
+          ]
+        },
+        {
+          "id": "estudias",
+          "es": "estudias",
+          "en": "you study",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.estudias",
+          "review_tags": [
+            "verbs"
+          ]
+        },
+        {
+          "id": "ingles",
+          "es": "inglés",
+          "en": "English",
+          "pos": "noun",
+          "gender": null,
+          "audio_key": "es.ingles",
+          "review_tags": [
+            "languages"
+          ]
+        },
+        {
+          "id": "frances",
+          "es": "francés",
+          "en": "French",
+          "pos": "noun",
+          "gender": null,
+          "audio_key": "es.frances",
+          "review_tags": [
+            "languages"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "negation",
+        "questions",
+        "present"
+      ],
+      "examples": [
+        {
+          "es": "No vivo aquí.",
+          "en": "I do not live here.",
+          "analysis": "no before verb"
+        },
+        {
+          "es": "¿Estudias español?",
+          "en": "Do you study Spanish?",
+          "analysis": "same order as statement, rising intonation"
+        },
+        {
+          "es": "Sí, trabajo.",
+          "en": "Yes, I work.",
+          "analysis": "sí + comma + sentence"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w2d4-a1",
+          "type": "transform",
+          "prompt": "Make negative: Vivo aquí.",
+          "answer": "No vivo aquí.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "negation"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w2d4-a2",
+          "type": "translate",
+          "prompt": "Translate: “Do you speak Spanish?”",
+          "answer": "¿Hablas español?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "questions",
+            "ar-conjugation"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "¿Hablas español?"
+          ]
+        },
+        {
+          "id": "w2d4-a3",
+          "type": "mcq",
+          "prompt": "Choose the correct answer to ¿Estudias español?",
+          "answer": "Sí, estudio español.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "answers"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Sí, estudio español.",
+            "No es español.",
+            "Estoy español."
+          ]
+        },
+        {
+          "id": "w2d4-a4",
+          "type": "error_correction",
+          "prompt": "Correct: No yo hablo inglés.",
+          "answer": "No hablo inglés.",
+          "hint": "",
+          "feedback": "No goes immediately before the conjugated verb; yo is optional.",
+          "rationale": "",
+          "review_item_ids": [
+            "negation",
+            "word-order"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w2d4-a5",
+          "type": "speak",
+          "prompt": "Ask yourself three yes/no questions and answer each with sí or no.",
+          "answer": "¿____? Sí, ____. / No, no ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "questions",
+            "negation"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Confirm or correct basic information without switching to English.",
+      "dialogue": {
+        "title": "Confirming information",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Vives aquí?",
+            "en": "Do you live here?"
+          },
+          {
+            "speaker": "B",
+            "es": "Sí, vivo aquí.",
+            "en": "Yes, I live here."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Trabajas aquí?",
+            "en": "Do you work here?"
+          },
+          {
+            "speaker": "B",
+            "es": "No, no trabajo aquí.",
+            "en": "No, I do not work here."
+          }
+        ],
+        "learner_turns": [
+          "Change the verbs.",
+          "Answer once yes and once no."
+        ]
+      },
+      "exit_check": [
+        "Turn two statements into negative sentences.",
+        "Ask two yes/no questions.",
+        "Answer with sí/no plus a full clause."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w2-d12",
+      "day": 12,
+      "title": "Core Prepositions",
+      "focus": "en, con, para, de, a",
+      "estimated_minutes": 20,
+      "objectives": [
+        "use five core prepositions in useful chunks",
+        "express location, accompaniment, purpose, origin, and movement",
+        "avoid translating each preposition mechanically"
+      ],
+      "teaching": {
+        "explanation": "Prepositions are best learned inside chunks. en often marks location, con means with, para often marks purpose or destination, de marks origin/possession, and a marks movement toward a place or person.",
+        "pattern": "Estoy en casa. Voy a Madrid. Café con leche. Es para Ana. Soy de Perú.",
+        "warning": "English and Spanish prepositions do not map one-to-one in every expression; memorize the high-frequency chunks first."
+      },
+      "vocabulary": [
+        {
+          "id": "en",
+          "es": "en",
+          "en": "in/at",
+          "pos": "preposition",
+          "gender": null,
+          "audio_key": "es.en",
+          "review_tags": [
+            "prepositions"
+          ]
+        },
+        {
+          "id": "con",
+          "es": "con",
+          "en": "with",
+          "pos": "preposition",
+          "gender": null,
+          "audio_key": "es.con",
+          "review_tags": [
+            "prepositions"
+          ]
+        },
+        {
+          "id": "para",
+          "es": "para",
+          "en": "for/to (purpose)",
+          "pos": "preposition",
+          "gender": null,
+          "audio_key": "es.para",
+          "review_tags": [
+            "prepositions"
+          ]
+        },
+        {
+          "id": "a",
+          "es": "a",
+          "en": "to",
+          "pos": "preposition",
+          "gender": null,
+          "audio_key": "es.a",
+          "review_tags": [
+            "prepositions"
+          ]
+        },
+        {
+          "id": "cafe",
+          "es": "café",
+          "en": "café",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.cafe",
+          "review_tags": [
+            "places"
+          ]
+        },
+        {
+          "id": "leche",
+          "es": "leche",
+          "en": "milk",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.leche",
+          "review_tags": [
+            "food"
+          ]
+        },
+        {
+          "id": "casa",
+          "es": "casa",
+          "en": "home/house",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.casa",
+          "review_tags": [
+            "places"
+          ]
+        },
+        {
+          "id": "voy",
+          "es": "voy",
+          "en": "I go",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.voy",
+          "review_tags": [
+            "movement"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "prepositions",
+        "locations",
+        "movement"
+      ],
+      "examples": [
+        {
+          "es": "Estoy en casa.",
+          "en": "I am at home.",
+          "analysis": "en + location"
+        },
+        {
+          "es": "Voy a Madrid.",
+          "en": "I am going to Madrid.",
+          "analysis": "a + destination"
+        },
+        {
+          "es": "Es para ti.",
+          "en": "It is for you.",
+          "analysis": "para + recipient"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w2d5-a1",
+          "type": "matching",
+          "prompt": "Match: en = in/at; con = with; para = for; de = from/of; a = to.",
+          "answer": "en = in/at; con = with; para = for; de = from/of; a = to.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "prepositions"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w2d5-a2",
+          "type": "translate",
+          "prompt": "Translate: “Coffee with milk.”",
+          "answer": "Café con leche.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "con"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Café con leche",
+            "Cafe con leche"
+          ]
+        },
+        {
+          "id": "w2d5-a3",
+          "type": "cloze",
+          "prompt": "Complete: Soy ___ Perú.",
+          "answer": "de",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "de"
+          ],
+          "difficulty": "core",
+          "options": [
+            "en",
+            "con",
+            "para",
+            "de",
+            "a"
+          ]
+        },
+        {
+          "id": "w2d5-a4",
+          "type": "cloze",
+          "prompt": "Complete: Voy ___ Madrid.",
+          "answer": "a",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "a"
+          ],
+          "difficulty": "core",
+          "options": [
+            "en",
+            "con",
+            "para",
+            "de",
+            "a"
+          ]
+        },
+        {
+          "id": "w2d5-a5",
+          "type": "production",
+          "prompt": "Say where you are, where you are going, and with whom.",
+          "answer": "Estoy en ____. Voy a ____. Voy con ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "prepositions",
+            "estar"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Explain a simple destination and travel companion.",
+      "dialogue": {
+        "title": "Planning a visit",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Dónde estás?",
+            "en": "Where are you?"
+          },
+          {
+            "speaker": "B",
+            "es": "Estoy en casa. Voy a la cafetería.",
+            "en": "I am at home. I am going to the café."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Con quién?",
+            "en": "With whom?"
+          },
+          {
+            "speaker": "B",
+            "es": "Voy con mi amigo.",
+            "en": "I am going with my friend."
+          }
+        ],
+        "learner_turns": [
+          "Replace the places and person.",
+          "Say what something is for: Es para ____."
+        ]
+      },
+      "exit_check": [
+        "Choose the correct preposition in five chunks.",
+        "Say where you are and where you are going.",
+        "Use con to name a companion."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w2-d13",
+      "day": 13,
+      "title": "A Normal Day",
+      "focus": "Routine verbs and sequence words",
+      "estimated_minutes": 20,
+      "objectives": [
+        "describe three daily actions",
+        "use primero, después, luego, and finalmente",
+        "combine a subject, verb, and time or place"
+      ],
+      "teaching": {
+        "explanation": "Routine language becomes easier when ordered. Use sequence words to create a mini-story instead of isolated sentences.",
+        "pattern": "Primero estudio. Después trabajo. Luego descanso. Finalmente duermo.",
+        "note": "The target is intelligible sequencing, not a complete list of irregular verbs."
+      },
+      "vocabulary": [
+        {
+          "id": "primero",
+          "es": "primero",
+          "en": "first",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.primero",
+          "review_tags": [
+            "sequence"
+          ]
+        },
+        {
+          "id": "despues",
+          "es": "después",
+          "en": "afterwards",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.despues",
+          "review_tags": [
+            "sequence"
+          ]
+        },
+        {
+          "id": "luego",
+          "es": "luego",
+          "en": "then",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.luego",
+          "review_tags": [
+            "sequence"
+          ]
+        },
+        {
+          "id": "finalmente",
+          "es": "finalmente",
+          "en": "finally",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.finalmente",
+          "review_tags": [
+            "sequence"
+          ]
+        },
+        {
+          "id": "desayunar",
+          "es": "desayunar",
+          "en": "to have breakfast",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.desayunar",
+          "review_tags": [
+            "routine"
+          ]
+        },
+        {
+          "id": "descansar",
+          "es": "descansar",
+          "en": "to rest",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.descansar",
+          "review_tags": [
+            "routine"
+          ]
+        },
+        {
+          "id": "dormir",
+          "es": "dormir",
+          "en": "to sleep",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.dormir",
+          "review_tags": [
+            "routine"
+          ]
+        },
+        {
+          "id": "manana",
+          "es": "mañana",
+          "en": "morning/tomorrow",
+          "pos": "noun/adverb",
+          "gender": null,
+          "audio_key": "es.manana",
+          "review_tags": [
+            "time"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "routine",
+        "sequence",
+        "present"
+      ],
+      "examples": [
+        {
+          "es": "Primero desayuno.",
+          "en": "First I have breakfast.",
+          "analysis": "primero marks sequence"
+        },
+        {
+          "es": "Después trabajo.",
+          "en": "Afterwards I work.",
+          "analysis": "después links the next action"
+        },
+        {
+          "es": "Finalmente descanso.",
+          "en": "Finally I rest.",
+          "analysis": "finally closes the sequence"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w2d6-a1",
+          "type": "ordering",
+          "prompt": "Order the sequence: finalmente / después / primero",
+          "answer": "primero, después, finalmente",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "sequence"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w2d6-a2",
+          "type": "translate",
+          "prompt": "Translate: “First I study, then I work.”",
+          "answer": "Primero estudio, luego trabajo.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "routine",
+            "sequence"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Primero estudio, luego trabajo",
+            "Primero estudio, después trabajo"
+          ]
+        },
+        {
+          "id": "w2d6-a3",
+          "type": "cloze",
+          "prompt": "Complete: ___ descanso. (Finally)",
+          "answer": "Finalmente",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "sequence"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Primero",
+            "Después",
+            "Finalmente"
+          ]
+        },
+        {
+          "id": "w2d6-a4",
+          "type": "production",
+          "prompt": "Write three actions in sequence.",
+          "answer": "Primero ____. Después ____. Finalmente ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "routine",
+            "sequence"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w2d6-a5",
+          "type": "speak",
+          "prompt": "Tell a partner about your day for 20 seconds.",
+          "answer": "Primero ____. Luego ____. Después ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "routine"
+          ],
+          "difficulty": "production"
+        }
+      ],
+      "mission": "Give a short report of your normal day.",
+      "dialogue": {
+        "title": "Routine briefing",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Qué haces por la mañana?",
+            "en": "What do you do in the morning?"
+          },
+          {
+            "speaker": "B",
+            "es": "Primero desayuno. Después estudio. Luego trabajo.",
+            "en": "First I have breakfast. Then I study. Afterwards I work."
+          }
+        ],
+        "learner_turns": [
+          "Make your own three-step routine.",
+          "Say it once slowly and once at natural speed."
+        ]
+      },
+      "exit_check": [
+        "Put four sequence words in order.",
+        "Produce a three-sentence routine.",
+        "Speak the routine without reading it."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w2-d14",
+      "day": 14,
+      "title": "Week 2 Field Check",
+      "focus": "Locations, routines, possession, and questions",
+      "estimated_minutes": 20,
+      "objectives": [
+        "describe a room or neighborhood",
+        "state a routine with sequence words",
+        "ask and answer three questions about daily life"
+      ],
+      "teaching": {
+        "explanation": "This checkpoint requires recombination. The learner should choose vocabulary and make new sentences, not merely repeat the dialogue.",
+        "pattern": "Hay ____. Está ____. Primero ____. Después ____. ¿Vives aquí? Sí/No, ____.",
+        "checkpoint": "Complete a 90-second “daily life” mission with location, routine, possession, and one negative answer."
+      },
+      "vocabulary": [
+        {
+          "id": "pero",
+          "es": "pero",
+          "en": "but",
+          "pos": "conjunction",
+          "gender": null,
+          "audio_key": "es.pero",
+          "review_tags": [
+            "connectors"
+          ]
+        },
+        {
+          "id": "donde-vives",
+          "es": "¿Dónde vives?",
+          "en": "Where do you live?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.donde-vives",
+          "review_tags": [
+            "questions",
+            "routine"
+          ]
+        },
+        {
+          "id": "que-haces",
+          "es": "¿Qué haces?",
+          "en": "What do you do?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.que-haces",
+          "review_tags": [
+            "questions",
+            "routine"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "review",
+        "integration",
+        "mastery"
+      ],
+      "examples": [
+        {
+          "es": "Hay una mesa en la habitación.",
+          "en": "There is a table in the room.",
+          "analysis": "existence + location"
+        },
+        {
+          "es": "Primero estudio y después trabajo.",
+          "en": "First I study and then I work.",
+          "analysis": "sequence + coordinated actions"
+        },
+        {
+          "es": "No vivo aquí; vivo en ____.",
+          "en": "I do not live here; I live in ____.",
+          "analysis": "negation + correction"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w2d7-a1",
+          "type": "retrieval",
+          "prompt": "Retrieve five prepositions and use each in a phrase.",
+          "answer": "en, con, para, de, a",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "prepositions"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w2d7-a2",
+          "type": "listening_comprehension",
+          "prompt": "Listen to a room description and identify two objects and their locations.",
+          "answer": "two_objects_and_locations",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "hay",
+            "estar",
+            "locations"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w2d7-a3",
+          "type": "translation_chain",
+          "prompt": "Translate: “My friend lives here, but I work there.”",
+          "answer": "Mi amigo vive aquí, pero yo trabajo allí.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "possessives",
+            "locations",
+            "connectors"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Mi amigo vive aquí, pero trabajo allí"
+          ]
+        },
+        {
+          "id": "w2d7-a4",
+          "type": "error_correction",
+          "prompt": "Correct: Hay el libro en la mesa.",
+          "answer": "El libro está en la mesa. / Hay un libro en la mesa.",
+          "hint": "",
+          "feedback": "Use hay with an indefinite item or está with a known item.",
+          "rationale": "",
+          "review_item_ids": [
+            "hay",
+            "estar"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w2d7-a5",
+          "type": "roleplay",
+          "prompt": "Complete a daily-life briefing with a partner.",
+          "answer": "Hay ____. Vivo en ____. Primero ____. Después ____. ¿Y tú?",
+          "hint": "",
+          "feedback": "Pass when you locate an object, describe your routine, ask a question, and repair one mistake.",
+          "rationale": "",
+          "review_item_ids": [
+            "week2"
+          ],
+          "difficulty": "checkpoint"
+        }
+      ],
+      "mission": "Give a practical briefing about where you live and what you do.",
+      "dialogue": {
+        "title": "Daily-life briefing",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Dónde vives?",
+            "en": "Where do you live?"
+          },
+          {
+            "speaker": "B",
+            "es": "Vivo en ____. Hay ____.",
+            "en": "I live in ____. There is/are ____."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Qué haces primero?",
+            "en": "What do you do first?"
+          },
+          {
+            "speaker": "B",
+            "es": "Primero ____. Después ____.",
+            "en": "First ____. Afterwards ____."
+          }
+        ],
+        "learner_turns": [
+          "Perform without English.",
+          "Change at least four details."
+        ]
+      },
+      "exit_check": [
+        "Use hay and está/están accurately.",
+        "Sequence three routine actions.",
+        "Pass the roleplay and cumulative checkpoint."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    }
+  ]
+}

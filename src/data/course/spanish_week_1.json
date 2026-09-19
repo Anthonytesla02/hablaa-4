@@ -1,0 +1,1887 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "spanish-foundations-a0-a1",
+  "week": 1,
+  "title": "Foundations: First Contact",
+  "lessons": [
+    {
+      "id": "es-w1-d01",
+      "day": 1,
+      "title": "First Contact",
+      "focus": "Greetings, names, and courtesy",
+      "estimated_minutes": 20,
+      "objectives": [
+        "greet someone formally and informally",
+        "say your name and ask another person’s name",
+        "recognize tú and usted as different levels of formality"
+      ],
+      "teaching": {
+        "explanation": "Spanish greetings are short chunks. Learn them as complete actions before analyzing grammar. Use hola at any time; buenos días, buenas tardes, and buenas noches match the time of day. Tú is familiar singular “you”; usted is formal singular “you.”",
+        "pattern": "Me llamo + name = My name is + name. ¿Cómo te llamas? = What is your name? ¿Cómo se llama usted? = What is your name? (formal)",
+        "culture_note": "Use usted when you want to show respect or when regional norms are unknown; tú is common with peers and in many everyday settings."
+      },
+      "vocabulary": [
+        {
+          "id": "hola",
+          "es": "hola",
+          "en": "hello",
+          "pos": "interjection",
+          "gender": null,
+          "audio_key": "es.hola",
+          "review_tags": [
+            "greetings"
+          ]
+        },
+        {
+          "id": "buenos-dias",
+          "es": "buenos días",
+          "en": "good morning",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.buenos-dias",
+          "review_tags": [
+            "greetings",
+            "time"
+          ]
+        },
+        {
+          "id": "buenas-tardes",
+          "es": "buenas tardes",
+          "en": "good afternoon",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.buenas-tardes",
+          "review_tags": [
+            "greetings",
+            "time"
+          ]
+        },
+        {
+          "id": "buenas-noches",
+          "es": "buenas noches",
+          "en": "good evening/night",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.buenas-noches",
+          "review_tags": [
+            "greetings",
+            "time"
+          ]
+        },
+        {
+          "id": "adios",
+          "es": "adiós",
+          "en": "goodbye",
+          "pos": "interjection",
+          "gender": null,
+          "audio_key": "es.adios",
+          "review_tags": [
+            "greetings"
+          ]
+        },
+        {
+          "id": "hasta-luego",
+          "es": "hasta luego",
+          "en": "see you later",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.hasta-luego",
+          "review_tags": [
+            "greetings"
+          ]
+        },
+        {
+          "id": "me-llamo",
+          "es": "me llamo",
+          "en": "my name is",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.me-llamo",
+          "review_tags": [
+            "identity"
+          ]
+        },
+        {
+          "id": "como-te-llamas",
+          "es": "¿Cómo te llamas?",
+          "en": "What is your name? informal",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.como-te-llamas",
+          "review_tags": [
+            "identity"
+          ]
+        },
+        {
+          "id": "mucho-gusto",
+          "es": "mucho gusto",
+          "en": "nice to meet you",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.mucho-gusto",
+          "review_tags": [
+            "courtesy"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "chunks",
+        "formality"
+      ],
+      "examples": [
+        {
+          "es": "Hola, me llamo Ana.",
+          "en": "Hello, my name is Ana.",
+          "analysis": "hola = hello; me llamo = I am called / my name is"
+        },
+        {
+          "es": "¿Cómo te llamas?",
+          "en": "What is your name?",
+          "analysis": "cómo = how; te llamas = you are called (familiar)"
+        },
+        {
+          "es": "Mucho gusto.",
+          "en": "Nice to meet you.",
+          "analysis": "a fixed courtesy phrase"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w1d1-a1",
+          "type": "listen_select",
+          "prompt": "Choose the phrase you hear: “Good morning.”",
+          "answer": "Buenos días.",
+          "hint": "",
+          "feedback": "Buenos días means good morning. Buenos tardes is not used; the correct afternoon phrase is buenas tardes.",
+          "rationale": "Time-of-day greetings are memorized chunks.",
+          "review_item_ids": [
+            "buenos-dias"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Buenas noches.",
+            "Buenos días.",
+            "Hasta luego."
+          ]
+        },
+        {
+          "id": "w1d1-a2",
+          "type": "translate",
+          "prompt": "Translate: “My name is Luis.”",
+          "answer": "Me llamo Luis.",
+          "hint": "Use the fixed pattern me llamo + name.",
+          "feedback": "Me llamo literally means “I call myself,” but the natural translation is “my name is.”",
+          "rationale": "",
+          "review_item_ids": [
+            "me-llamo"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Me llamo Luis",
+            "Me llamo luis"
+          ]
+        },
+        {
+          "id": "w1d1-a3",
+          "type": "mcq",
+          "prompt": "Which question asks a friend their name?",
+          "answer": "¿Cómo te llamas?",
+          "hint": "",
+          "feedback": "Te marks the familiar tú form.",
+          "rationale": "",
+          "review_item_ids": [
+            "como-te-llamas"
+          ],
+          "difficulty": "core",
+          "options": [
+            "¿Cómo se llama usted?",
+            "¿Cómo te llamas?",
+            "¿De dónde es usted?"
+          ]
+        },
+        {
+          "id": "w1d1-a4",
+          "type": "ordering",
+          "prompt": "Put the words in order: llamo / Me / Sofía",
+          "answer": "Me llamo Sofía.",
+          "hint": "",
+          "feedback": "The fixed chunk is Me llamo + name.",
+          "rationale": "",
+          "review_item_ids": [
+            "me-llamo",
+            "name"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w1d1-a5",
+          "type": "speak",
+          "prompt": "Say a greeting, your name, and Mucho gusto.",
+          "answer": "Hola. Me llamo ____. Mucho gusto.",
+          "hint": "Speak the full three-part introduction aloud.",
+          "feedback": "A successful introduction contains a greeting, name, and courtesy phrase.",
+          "rationale": "",
+          "review_item_ids": [
+            "hola",
+            "me-llamo",
+            "mucho-gusto"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Hola. Me llamo ____. Mucho gusto."
+          ]
+        }
+      ],
+      "mission": "Introduce yourself to a new contact and close the conversation politely.",
+      "dialogue": {
+        "title": "At the registration desk",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "Hola, me llamo Marta. ¿Cómo te llamas?",
+            "en": "Hello, my name is Marta. What is your name?"
+          },
+          {
+            "speaker": "B",
+            "es": "Me llamo Diego. Mucho gusto.",
+            "en": "My name is Diego. Nice to meet you."
+          },
+          {
+            "speaker": "A",
+            "es": "Mucho gusto. Hasta luego.",
+            "en": "Nice to meet you. See you later."
+          }
+        ],
+        "learner_turns": [
+          "Replace Marta and Diego with your own name and a fictional partner.",
+          "Repeat the exchange once using usted: ¿Cómo se llama usted?"
+        ]
+      },
+      "exit_check": [
+        "Say “Hello, my name is …” from memory.",
+        "Choose the familiar name question.",
+        "Say “Nice to meet you” and “See you later.”"
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w1-d02",
+      "day": 2,
+      "title": "The Sound System",
+      "focus": "Vowels, stress, and classroom repair",
+      "estimated_minutes": 20,
+      "objectives": [
+        "pronounce the five Spanish vowels consistently",
+        "ask someone to repeat or slow down",
+        "use gracias and por favor in a request"
+      ],
+      "teaching": {
+        "explanation": "Spanish vowels are stable: a as in father, e as in café, i as in machine, o as in open, u as in rule. Stress is often predictable, but the course first prioritizes clear vowels over a perfect accent.",
+        "pattern": "¿Puedes repetir? = Can you repeat? Más despacio, por favor. = More slowly, please. No entiendo. = I do not understand.",
+        "memory_tip": "Attach each vowel to a gesture or image and retrieve the sound before looking at the written word."
+      },
+      "vocabulary": [
+        {
+          "id": "vowels",
+          "es": "a e i o u",
+          "en": "Spanish vowels",
+          "pos": "pronunciation",
+          "gender": null,
+          "audio_key": "es.vowels",
+          "review_tags": [
+            "pronunciation"
+          ]
+        },
+        {
+          "id": "por-favor",
+          "es": "por favor",
+          "en": "please",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.por-favor",
+          "review_tags": [
+            "courtesy"
+          ]
+        },
+        {
+          "id": "gracias",
+          "es": "gracias",
+          "en": "thank you",
+          "pos": "noun/phrase",
+          "gender": "f",
+          "audio_key": "es.gracias",
+          "review_tags": [
+            "courtesy"
+          ]
+        },
+        {
+          "id": "de-nuevo",
+          "es": "de nuevo",
+          "en": "again",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.de-nuevo",
+          "review_tags": [
+            "repair"
+          ]
+        },
+        {
+          "id": "repite",
+          "es": "repite",
+          "en": "repeat",
+          "pos": "verb command",
+          "gender": null,
+          "audio_key": "es.repite",
+          "review_tags": [
+            "repair"
+          ]
+        },
+        {
+          "id": "puedes-repetir",
+          "es": "¿Puedes repetir?",
+          "en": "Can you repeat?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.puedes-repetir",
+          "review_tags": [
+            "repair"
+          ]
+        },
+        {
+          "id": "mas-despacio",
+          "es": "más despacio",
+          "en": "more slowly",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.mas-despacio",
+          "review_tags": [
+            "repair"
+          ]
+        },
+        {
+          "id": "no-entiendo",
+          "es": "no entiendo",
+          "en": "I do not understand",
+          "pos": "sentence",
+          "gender": null,
+          "audio_key": "es.no-entiendo",
+          "review_tags": [
+            "repair"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "pronunciation",
+        "repair"
+      ],
+      "examples": [
+        {
+          "es": "¿Puedes repetir?",
+          "en": "Can you repeat?",
+          "analysis": "puedes = you can; repetir = to repeat"
+        },
+        {
+          "es": "Más despacio, por favor.",
+          "en": "More slowly, please.",
+          "analysis": "más = more; despacio = slowly; por favor = please"
+        },
+        {
+          "es": "Gracias.",
+          "en": "Thank you.",
+          "analysis": "courtesy word"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w1d2-a1",
+          "type": "listen_select",
+          "prompt": "Choose the word with the /i/ vowel:",
+          "answer": "sí",
+          "hint": "",
+          "feedback": "Sí has the clear /i/ sound.",
+          "rationale": "",
+          "review_item_ids": [
+            "vowels"
+          ],
+          "difficulty": "core",
+          "options": [
+            "sí",
+            "sol",
+            "mesa"
+          ]
+        },
+        {
+          "id": "w1d2-a2",
+          "type": "translate",
+          "prompt": "Translate: “Please repeat.”",
+          "answer": "Repite, por favor.",
+          "hint": "Use the command chunk repite plus por favor.",
+          "feedback": "Repite is the practical classroom command “repeat.”",
+          "rationale": "",
+          "review_item_ids": [
+            "repeat"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Repite por favor",
+            "Repite, por favor"
+          ]
+        },
+        {
+          "id": "w1d2-a3",
+          "type": "mcq",
+          "prompt": "You did not understand. What should you say?",
+          "answer": "No entiendo.",
+          "hint": "",
+          "feedback": "No entiendo means “I do not understand.”",
+          "rationale": "",
+          "review_item_ids": [
+            "no-entiendo"
+          ],
+          "difficulty": "core",
+          "options": [
+            "No hablo.",
+            "No entiendo.",
+            "No gracias."
+          ]
+        },
+        {
+          "id": "w1d2-a4",
+          "type": "matching",
+          "prompt": "Match the repair phrase to its meaning.",
+          "answer": "¿Puedes repetir? = Can you repeat?; Más despacio = More slowly; Gracias = Thank you.",
+          "hint": "",
+          "feedback": "These phrases keep a conversation moving even with limited grammar.",
+          "rationale": "",
+          "review_item_ids": [
+            "repeat",
+            "slowly",
+            "thanks"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w1d2-a5",
+          "type": "speak",
+          "prompt": "Ask a partner to repeat more slowly and thank them.",
+          "answer": "¿Puedes repetir? Más despacio, por favor. Gracias.",
+          "hint": "",
+          "feedback": "Use the whole repair sequence aloud.",
+          "rationale": "",
+          "review_item_ids": [
+            "repeat",
+            "slowly",
+            "thanks"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Keep a conversation alive when you miss a sound or word.",
+      "dialogue": {
+        "title": "Repairing a missed word",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Cómo te llamas?",
+            "en": "What is your name?"
+          },
+          {
+            "speaker": "B",
+            "es": "No entiendo. ¿Puedes repetir?",
+            "en": "I do not understand. Can you repeat?"
+          },
+          {
+            "speaker": "A",
+            "es": "¿Cómo te llamas?",
+            "en": "What is your name?"
+          },
+          {
+            "speaker": "B",
+            "es": "Me llamo Elena.",
+            "en": "My name is Elena."
+          }
+        ],
+        "learner_turns": [
+          "Read B aloud without looking at the English.",
+          "Change Elena to your name."
+        ]
+      },
+      "exit_check": [
+        "Say all five vowels aloud twice.",
+        "Retrieve the phrase for “I do not understand.”",
+        "Ask for repetition and slower speech."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w1-d03",
+      "day": 3,
+      "title": "People and Pronouns",
+      "focus": "Subject pronouns and identity",
+      "estimated_minutes": 20,
+      "objectives": [
+        "recognize the main subject pronouns",
+        "use soy and eres in short identity sentences",
+        "ask and answer where someone is from"
+      ],
+      "teaching": {
+        "explanation": "Spanish often drops subject pronouns because the verb ending carries information, but pronouns are useful for beginners and for emphasis. In this week, keep them visible while learning the pattern.",
+        "pattern": "Yo soy = I am. Tú eres = you are. Él/Ella es = he/she is. Nosotros somos = we are. Ustedes son = you all are.",
+        "contrast": "Do not translate English “you are” into a single Spanish form: tú eres is familiar singular, usted es formal singular, and ustedes son plural."
+      },
+      "vocabulary": [
+        {
+          "id": "yo",
+          "es": "yo",
+          "en": "I",
+          "pos": "pronoun",
+          "gender": null,
+          "audio_key": "es.yo",
+          "review_tags": [
+            "pronouns"
+          ]
+        },
+        {
+          "id": "tu",
+          "es": "tú",
+          "en": "you informal singular",
+          "pos": "pronoun",
+          "gender": null,
+          "audio_key": "es.tu",
+          "review_tags": [
+            "pronouns",
+            "formality"
+          ]
+        },
+        {
+          "id": "usted",
+          "es": "usted",
+          "en": "you formal singular",
+          "pos": "pronoun",
+          "gender": null,
+          "audio_key": "es.usted",
+          "review_tags": [
+            "pronouns",
+            "formality"
+          ]
+        },
+        {
+          "id": "el",
+          "es": "él",
+          "en": "he",
+          "pos": "pronoun",
+          "gender": null,
+          "audio_key": "es.el",
+          "review_tags": [
+            "pronouns"
+          ]
+        },
+        {
+          "id": "ella",
+          "es": "ella",
+          "en": "she",
+          "pos": "pronoun",
+          "gender": null,
+          "audio_key": "es.ella",
+          "review_tags": [
+            "pronouns"
+          ]
+        },
+        {
+          "id": "nosotros",
+          "es": "nosotros",
+          "en": "we",
+          "pos": "pronoun",
+          "gender": null,
+          "audio_key": "es.nosotros",
+          "review_tags": [
+            "pronouns"
+          ]
+        },
+        {
+          "id": "ustedes",
+          "es": "ustedes",
+          "en": "you all",
+          "pos": "pronoun",
+          "gender": null,
+          "audio_key": "es.ustedes",
+          "review_tags": [
+            "pronouns"
+          ]
+        },
+        {
+          "id": "soy",
+          "es": "soy",
+          "en": "I am",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.soy",
+          "review_tags": [
+            "ser",
+            "identity"
+          ]
+        },
+        {
+          "id": "eres",
+          "es": "eres",
+          "en": "you are informal",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.eres",
+          "review_tags": [
+            "ser",
+            "identity"
+          ]
+        },
+        {
+          "id": "es",
+          "es": "es",
+          "en": "is / you are formal",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.es",
+          "review_tags": [
+            "ser",
+            "identity"
+          ]
+        },
+        {
+          "id": "son",
+          "es": "son",
+          "en": "they are / you all are",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.son",
+          "review_tags": [
+            "ser",
+            "identity"
+          ]
+        },
+        {
+          "id": "de",
+          "es": "de",
+          "en": "from/of",
+          "pos": "preposition",
+          "gender": null,
+          "audio_key": "es.de",
+          "review_tags": [
+            "prepositions"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "pronouns",
+        "ser",
+        "prepositions"
+      ],
+      "examples": [
+        {
+          "es": "Yo soy de Canadá.",
+          "en": "I am from Canada.",
+          "analysis": "yo = I; soy = am; de = from/of"
+        },
+        {
+          "es": "¿De dónde eres?",
+          "en": "Where are you from? informal",
+          "analysis": "de dónde = from where; eres = you are"
+        },
+        {
+          "es": "Ella es de México.",
+          "en": "She is from Mexico.",
+          "analysis": "ella = she; es = is"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w1d3-a1",
+          "type": "mcq",
+          "prompt": "Which word means “I”?",
+          "answer": "yo",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "pronouns"
+          ],
+          "difficulty": "core",
+          "options": [
+            "yo",
+            "tú",
+            "ellos"
+          ]
+        },
+        {
+          "id": "w1d3-a2",
+          "type": "translate",
+          "prompt": "Translate: “I am from Chile.”",
+          "answer": "Yo soy de Chile.",
+          "hint": "Use soy de + place.",
+          "feedback": "Spanish can omit yo, but both Soy de Chile and Yo soy de Chile are correct.",
+          "rationale": "",
+          "review_item_ids": [
+            "soy",
+            "de"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Soy de Chile",
+            "Yo soy de Chile"
+          ]
+        },
+        {
+          "id": "w1d3-a3",
+          "type": "mcq",
+          "prompt": "Choose the informal singular question:",
+          "answer": "¿De dónde eres?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "formality",
+            "eres"
+          ],
+          "difficulty": "core",
+          "options": [
+            "¿De dónde es usted?",
+            "¿De dónde eres?",
+            "¿De dónde son ustedes?"
+          ]
+        },
+        {
+          "id": "w1d3-a4",
+          "type": "cloze",
+          "prompt": "Complete: Ella ___ de España.",
+          "answer": "es",
+          "hint": "",
+          "feedback": "Ella takes the third-person singular form es.",
+          "rationale": "",
+          "review_item_ids": [
+            "es"
+          ],
+          "difficulty": "core",
+          "options": [
+            "soy",
+            "eres",
+            "es",
+            "son"
+          ]
+        },
+        {
+          "id": "w1d3-a5",
+          "type": "speak",
+          "prompt": "Answer in Spanish: ¿De dónde eres?",
+          "answer": "Soy de ____.",
+          "hint": "Use a real or invented country/city.",
+          "feedback": "A complete answer is Soy de + place.",
+          "rationale": "",
+          "review_item_ids": [
+            "soy",
+            "de"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Exchange identity information with a new classmate.",
+      "dialogue": {
+        "title": "Meeting a classmate",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "Hola. ¿De dónde eres?",
+            "en": "Hi. Where are you from?"
+          },
+          {
+            "speaker": "B",
+            "es": "Soy de Colombia. ¿Y tú?",
+            "en": "I am from Colombia. And you?"
+          },
+          {
+            "speaker": "A",
+            "es": "Soy de Estados Unidos. Mucho gusto.",
+            "en": "I am from the United States. Nice to meet you."
+          }
+        ],
+        "learner_turns": [
+          "Replace both places.",
+          "Repeat without reading the English."
+        ]
+      },
+      "exit_check": [
+        "Identify yo, tú, él, ella, nosotros, and ustedes.",
+        "Say where you are from.",
+        "Ask a familiar person where they are from."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w1-d04",
+      "day": 4,
+      "title": "Nouns Have a Profile",
+      "focus": "Gender, number, and articles",
+      "estimated_minutes": 20,
+      "objectives": [
+        "identify common noun gender cues",
+        "use el/la and un/una with singular nouns",
+        "make regular nouns plural"
+      ],
+      "teaching": {
+        "explanation": "Every Spanish noun has grammatical gender. Many nouns ending in -o are masculine and many ending in -a are feminine, but this is a useful pattern, not a guarantee. Learn each noun with its article.",
+        "pattern": "el libro / los libros; la casa / las casas; un amigo / una amiga. Add -s after a vowel and -es after many consonants to form regular plurals.",
+        "warning": "Gender is grammatical, not a statement about the real-world object. Exceptions must be learned as vocabulary."
+      },
+      "vocabulary": [
+        {
+          "id": "libro",
+          "es": "libro",
+          "en": "book",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.libro",
+          "review_tags": [
+            "nouns",
+            "school"
+          ]
+        },
+        {
+          "id": "casa",
+          "es": "casa",
+          "en": "house",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.casa",
+          "review_tags": [
+            "nouns",
+            "places"
+          ]
+        },
+        {
+          "id": "amigo",
+          "es": "amigo",
+          "en": "friend",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.amigo",
+          "review_tags": [
+            "nouns",
+            "people"
+          ]
+        },
+        {
+          "id": "amiga",
+          "es": "amiga",
+          "en": "female friend",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.amiga",
+          "review_tags": [
+            "nouns",
+            "people"
+          ]
+        },
+        {
+          "id": "mapa",
+          "es": "mapa",
+          "en": "map",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.mapa",
+          "review_tags": [
+            "nouns",
+            "places"
+          ]
+        },
+        {
+          "id": "mesa",
+          "es": "mesa",
+          "en": "table",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.mesa",
+          "review_tags": [
+            "nouns",
+            "objects"
+          ]
+        },
+        {
+          "id": "el",
+          "es": "el",
+          "en": "the masculine singular",
+          "pos": "article",
+          "gender": "m",
+          "audio_key": "es.el",
+          "review_tags": [
+            "articles"
+          ]
+        },
+        {
+          "id": "la",
+          "es": "la",
+          "en": "the feminine singular",
+          "pos": "article",
+          "gender": "f",
+          "audio_key": "es.la",
+          "review_tags": [
+            "articles"
+          ]
+        },
+        {
+          "id": "los",
+          "es": "los",
+          "en": "the masculine plural",
+          "pos": "article",
+          "gender": "m",
+          "audio_key": "es.los",
+          "review_tags": [
+            "articles"
+          ]
+        },
+        {
+          "id": "las",
+          "es": "las",
+          "en": "the feminine plural",
+          "pos": "article",
+          "gender": "f",
+          "audio_key": "es.las",
+          "review_tags": [
+            "articles"
+          ]
+        },
+        {
+          "id": "un",
+          "es": "un",
+          "en": "a/an masculine",
+          "pos": "article",
+          "gender": "m",
+          "audio_key": "es.un",
+          "review_tags": [
+            "articles"
+          ]
+        },
+        {
+          "id": "una",
+          "es": "una",
+          "en": "a/an feminine",
+          "pos": "article",
+          "gender": "f",
+          "audio_key": "es.una",
+          "review_tags": [
+            "articles"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "nouns",
+        "gender",
+        "number",
+        "articles"
+      ],
+      "examples": [
+        {
+          "es": "el libro",
+          "en": "the book",
+          "analysis": "masculine singular"
+        },
+        {
+          "es": "la casa",
+          "en": "the house",
+          "analysis": "feminine singular"
+        },
+        {
+          "es": "los libros",
+          "en": "the books",
+          "analysis": "masculine plural"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w1d4-a1",
+          "type": "mcq",
+          "prompt": "Choose the correct phrase for “the house”:",
+          "answer": "la casa",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "articles",
+            "casa"
+          ],
+          "difficulty": "core",
+          "options": [
+            "el casa",
+            "la casa",
+            "los casa"
+          ]
+        },
+        {
+          "id": "w1d4-a2",
+          "type": "cloze",
+          "prompt": "Complete: ___ libro (the book).",
+          "answer": "el",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "articles",
+            "libro"
+          ],
+          "difficulty": "core",
+          "options": [
+            "el",
+            "la",
+            "los",
+            "las"
+          ]
+        },
+        {
+          "id": "w1d4-a3",
+          "type": "translate",
+          "prompt": "Translate: “the books”",
+          "answer": "los libros",
+          "hint": "",
+          "feedback": "Libro ends in a vowel, so the plural adds -s; the masculine plural article is los.",
+          "rationale": "",
+          "review_item_ids": [
+            "plural",
+            "libro"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "los libros"
+          ]
+        },
+        {
+          "id": "w1d4-a4",
+          "type": "classification",
+          "prompt": "Classify: casas",
+          "answer": "feminine plural",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gender",
+            "plural"
+          ],
+          "difficulty": "core",
+          "options": [
+            "masculine singular",
+            "feminine singular",
+            "masculine plural",
+            "feminine plural"
+          ]
+        },
+        {
+          "id": "w1d4-a5",
+          "type": "production",
+          "prompt": "Produce a noun phrase for “a friend” using amigo.",
+          "answer": "un amigo",
+          "hint": "Use un with the masculine form or una with the feminine form.",
+          "feedback": "The article must agree with the noun: un amigo or una amiga.",
+          "rationale": "",
+          "review_item_ids": [
+            "articles",
+            "agreement"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "un amigo",
+            "una amiga"
+          ]
+        }
+      ],
+      "mission": "Identify and describe objects in a simple environment.",
+      "dialogue": {
+        "title": "Labeling a desk",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Qué es?",
+            "en": "What is it?"
+          },
+          {
+            "speaker": "B",
+            "es": "Es un libro.",
+            "en": "It is a book."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Y qué son?",
+            "en": "And what are they?"
+          },
+          {
+            "speaker": "B",
+            "es": "Son las casas.",
+            "en": "They are the houses."
+          }
+        ],
+        "learner_turns": [
+          "Point to or imagine three objects and name them with an article.",
+          "Change singular nouns to plural."
+        ]
+      },
+      "exit_check": [
+        "Choose el, la, los, or las for four noun phrases.",
+        "Make libro, casa, amigo, and mapa plural.",
+        "Produce one masculine and one feminine noun phrase."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w1-d05",
+      "day": 5,
+      "title": "Describe a Person",
+      "focus": "Adjectives and agreement",
+      "estimated_minutes": 20,
+      "objectives": [
+        "place a basic adjective after a noun when needed",
+        "match adjective gender and number in common patterns",
+        "say whether someone is a student, friend, or teacher"
+      ],
+      "teaching": {
+        "explanation": "Many Spanish adjectives follow the noun and change for gender and number. A common pattern is -o/-a and plural -s: un amigo simpático, una amiga simpática, unos amigos simpáticos.",
+        "pattern": "Es + adjective = He/She/It is + adjective. Ella es alta. Él es alto.",
+        "strategy": "Learn adjectives in a pair such as alto/alta instead of memorizing an isolated English gloss."
+      },
+      "vocabulary": [
+        {
+          "id": "alto",
+          "es": "alto",
+          "en": "tall masculine",
+          "pos": "adjective",
+          "gender": "m",
+          "audio_key": "es.alto",
+          "review_tags": [
+            "adjectives",
+            "agreement"
+          ]
+        },
+        {
+          "id": "alta",
+          "es": "alta",
+          "en": "tall feminine",
+          "pos": "adjective",
+          "gender": "f",
+          "audio_key": "es.alta",
+          "review_tags": [
+            "adjectives",
+            "agreement"
+          ]
+        },
+        {
+          "id": "simpatico",
+          "es": "simpático",
+          "en": "friendly masculine",
+          "pos": "adjective",
+          "gender": "m",
+          "audio_key": "es.simpatico",
+          "review_tags": [
+            "adjectives",
+            "agreement"
+          ]
+        },
+        {
+          "id": "simpatica",
+          "es": "simpática",
+          "en": "friendly feminine",
+          "pos": "adjective",
+          "gender": "f",
+          "audio_key": "es.simpatica",
+          "review_tags": [
+            "adjectives",
+            "agreement"
+          ]
+        },
+        {
+          "id": "tranquilo",
+          "es": "tranquilo",
+          "en": "calm masculine",
+          "pos": "adjective",
+          "gender": "m",
+          "audio_key": "es.tranquilo",
+          "review_tags": [
+            "adjectives",
+            "agreement"
+          ]
+        },
+        {
+          "id": "tranquila",
+          "es": "tranquila",
+          "en": "calm feminine",
+          "pos": "adjective",
+          "gender": "f",
+          "audio_key": "es.tranquila",
+          "review_tags": [
+            "adjectives",
+            "agreement"
+          ]
+        },
+        {
+          "id": "estudiante",
+          "es": "estudiante",
+          "en": "student",
+          "pos": "noun",
+          "gender": null,
+          "audio_key": "es.estudiante",
+          "review_tags": [
+            "people"
+          ]
+        },
+        {
+          "id": "quien",
+          "es": "quién",
+          "en": "who",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.quien",
+          "review_tags": [
+            "questions"
+          ]
+        },
+        {
+          "id": "y",
+          "es": "y",
+          "en": "and",
+          "pos": "conjunction",
+          "gender": null,
+          "audio_key": "es.y",
+          "review_tags": [
+            "connectors"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "adjectives",
+        "agreement",
+        "ser"
+      ],
+      "examples": [
+        {
+          "es": "Ella es simpática.",
+          "en": "She is friendly.",
+          "analysis": "ella + es + feminine adjective"
+        },
+        {
+          "es": "Él es alto.",
+          "en": "He is tall.",
+          "analysis": "alto matches masculine él"
+        },
+        {
+          "es": "Son estudiantes.",
+          "en": "They are students.",
+          "analysis": "student is often used for all genders in this plural form"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w1d5-a1",
+          "type": "mcq",
+          "prompt": "Choose the feminine form:",
+          "answer": "alta",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "agreement"
+          ],
+          "difficulty": "core",
+          "options": [
+            "alto",
+            "alta",
+            "altos"
+          ]
+        },
+        {
+          "id": "w1d5-a2",
+          "type": "translate",
+          "prompt": "Translate: “She is friendly.”",
+          "answer": "Ella es simpática.",
+          "hint": "Use ella es + feminine adjective.",
+          "feedback": "Simpática ends in -a because it describes a feminine singular person.",
+          "rationale": "",
+          "review_item_ids": [
+            "ser",
+            "agreement"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Ella es simpática",
+            "Es simpática"
+          ]
+        },
+        {
+          "id": "w1d5-a3",
+          "type": "cloze",
+          "prompt": "Complete: unos amigos ___ (friendly).",
+          "answer": "simpáticos",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "agreement",
+            "plural"
+          ],
+          "difficulty": "core",
+          "options": [
+            "simpático",
+            "simpática",
+            "simpáticos",
+            "simpáticas"
+          ]
+        },
+        {
+          "id": "w1d5-a4",
+          "type": "error_correction",
+          "prompt": "Correct the sentence: Ella es alto.",
+          "answer": "Ella es alta.",
+          "hint": "",
+          "feedback": "Ella requires the feminine adjective alta in this regular pattern.",
+          "rationale": "",
+          "review_item_ids": [
+            "agreement"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w1d5-a5",
+          "type": "speak",
+          "prompt": "Describe a fictional person with two adjectives.",
+          "answer": "Es ____ y ____.",
+          "hint": "Choose matching forms such as alto/alta and simpático/simpática.",
+          "feedback": "Say a complete sentence, not a list of words.",
+          "rationale": "",
+          "review_item_ids": [
+            "ser",
+            "agreement"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Give a short description of a person.",
+      "dialogue": {
+        "title": "Introducing a colleague",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Quién es ella?",
+            "en": "Who is she?"
+          },
+          {
+            "speaker": "B",
+            "es": "Es mi amiga. Es simpática y alta.",
+            "en": "She is my friend. She is friendly and tall."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Y él?",
+            "en": "And he?"
+          },
+          {
+            "speaker": "B",
+            "es": "Es mi amigo. Es tranquilo.",
+            "en": "He is my friend. He is calm."
+          }
+        ],
+        "learner_turns": [
+          "Change the adjectives and names.",
+          "Say the dialogue as both speakers."
+        ]
+      },
+      "exit_check": [
+        "Match four adjectives to masculine and feminine forms.",
+        "Correct one agreement error.",
+        "Describe one imaginary person with two adjectives."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w1-d06",
+      "day": 6,
+      "title": "Questions and Answers",
+      "focus": "Question words and short answers",
+      "estimated_minutes": 20,
+      "objectives": [
+        "ask who, what, where, and how questions",
+        "distinguish qué from quién and dónde",
+        "answer with a complete phrase rather than a single word"
+      ],
+      "teaching": {
+        "explanation": "Question words carry an accent when they ask a direct question: qué, quién, dónde, cómo, cuándo. The question mark appears at both ends: ¿Qué es esto?",
+        "pattern": "¿Qué es? = What is it? ¿Quién es? = Who is it? ¿Dónde está? = Where is it? ¿Cómo estás? = How are you?",
+        "note": "This week, learn question words as retrieval cues. Full verb conjugation for estar begins next week."
+      },
+      "vocabulary": [
+        {
+          "id": "que",
+          "es": "qué",
+          "en": "what",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.que",
+          "review_tags": [
+            "questions"
+          ]
+        },
+        {
+          "id": "quien",
+          "es": "quién",
+          "en": "who",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.quien",
+          "review_tags": [
+            "questions"
+          ]
+        },
+        {
+          "id": "donde",
+          "es": "dónde",
+          "en": "where",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.donde",
+          "review_tags": [
+            "questions"
+          ]
+        },
+        {
+          "id": "como",
+          "es": "cómo",
+          "en": "how",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.como",
+          "review_tags": [
+            "questions"
+          ]
+        },
+        {
+          "id": "esto",
+          "es": "esto",
+          "en": "this",
+          "pos": "demonstrative",
+          "gender": null,
+          "audio_key": "es.esto",
+          "review_tags": [
+            "questions",
+            "objects"
+          ]
+        },
+        {
+          "id": "es",
+          "es": "es",
+          "en": "is",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.es",
+          "review_tags": [
+            "ser"
+          ]
+        },
+        {
+          "id": "quien-es",
+          "es": "¿Quién es?",
+          "en": "Who is it?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.quien-es",
+          "review_tags": [
+            "questions"
+          ]
+        },
+        {
+          "id": "que-es",
+          "es": "¿Qué es?",
+          "en": "What is it?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.que-es",
+          "review_tags": [
+            "questions"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "questions",
+        "ser",
+        "articles"
+      ],
+      "examples": [
+        {
+          "es": "¿Qué es esto?",
+          "en": "What is this?",
+          "analysis": "qué = what; esto = this"
+        },
+        {
+          "es": "¿Quién es?",
+          "en": "Who is it?",
+          "analysis": "quién = who"
+        },
+        {
+          "es": "¿Dónde está?",
+          "en": "Where is it?",
+          "analysis": "dónde = where; está = is located"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w1d6-a1",
+          "type": "mcq",
+          "prompt": "Which word means “where”?",
+          "answer": "dónde",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "question-words"
+          ],
+          "difficulty": "core",
+          "options": [
+            "qué",
+            "quién",
+            "dónde",
+            "cómo"
+          ]
+        },
+        {
+          "id": "w1d6-a2",
+          "type": "translate",
+          "prompt": "Translate: “Who is she?”",
+          "answer": "¿Quién es ella?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "quien",
+            "ser"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "¿Quién es ella?",
+            "Quien es ella?"
+          ]
+        },
+        {
+          "id": "w1d6-a3",
+          "type": "matching",
+          "prompt": "Match each question word: qué = what; quién = who; dónde = where; cómo = how.",
+          "answer": "qué = what; quién = who; dónde = where; cómo = how.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "question-words"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w1d6-a4",
+          "type": "ordering",
+          "prompt": "Put in order: es / ¿Dónde / esto?",
+          "answer": "¿Dónde es esto?",
+          "hint": "",
+          "feedback": "The natural location question is often ¿Dónde está esto?; the exercise accepts the simpler structural form while introducing está next week.",
+          "rationale": "",
+          "review_item_ids": [
+            "question-words"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "¿Dónde es esto?",
+            "¿Dónde está esto?"
+          ]
+        },
+        {
+          "id": "w1d6-a5",
+          "type": "speak",
+          "prompt": "Ask and answer: What is this?",
+          "answer": "¿Qué es esto? Es un/una ____.",
+          "hint": "Point to an imagined object.",
+          "feedback": "Use the question and a full noun phrase in the answer.",
+          "rationale": "",
+          "review_item_ids": [
+            "que",
+            "articles"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Ask for basic information instead of guessing.",
+      "dialogue": {
+        "title": "Question drill",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Qué es esto?",
+            "en": "What is this?"
+          },
+          {
+            "speaker": "B",
+            "es": "Es un mapa.",
+            "en": "It is a map."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Quién es ella?",
+            "en": "Who is she?"
+          },
+          {
+            "speaker": "B",
+            "es": "Es mi amiga.",
+            "en": "She is my friend."
+          }
+        ],
+        "learner_turns": [
+          "Replace mapa and amiga with your own words.",
+          "Ask all four question words aloud."
+        ]
+      },
+      "exit_check": [
+        "Retrieve qué, quién, dónde, and cómo.",
+        "Ask two questions and answer them with complete phrases.",
+        "Use both opening and closing question marks."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w1-d07",
+      "day": 7,
+      "title": "Week 1 Field Check",
+      "focus": "Integrated introductions and descriptions",
+      "estimated_minutes": 20,
+      "objectives": [
+        "hold a 60–90 second basic introduction",
+        "understand a short introduction at slow speed",
+        "combine identity, origin, noun phrases, and descriptions"
+      ],
+      "teaching": {
+        "explanation": "Today is a retrieval day. Do not reread the week first. Attempt the checkpoint from memory, then review only the items you miss. The goal is flexible recombination, not reciting one script.",
+        "pattern": "Hola. Me llamo ____. Soy de ____. Soy estudiante. Mi amigo/a es ____. Mucho gusto.",
+        "checkpoint": "You must greet, give a name and origin, ask one question, describe one person, and repair one misunderstanding."
+      },
+      "vocabulary": [
+        {
+          "id": "mi",
+          "es": "mi",
+          "en": "my",
+          "pos": "possessive",
+          "gender": null,
+          "audio_key": "es.mi",
+          "review_tags": [
+            "possessives"
+          ]
+        },
+        {
+          "id": "tu-amigo",
+          "es": "tu amigo",
+          "en": "your friend",
+          "pos": "noun phrase",
+          "gender": "m",
+          "audio_key": "es.tu-amigo",
+          "review_tags": [
+            "identity"
+          ]
+        },
+        {
+          "id": "mi-amiga",
+          "es": "mi amiga",
+          "en": "my friend",
+          "pos": "noun phrase",
+          "gender": "f",
+          "audio_key": "es.mi-amiga",
+          "review_tags": [
+            "identity"
+          ]
+        },
+        {
+          "id": "estudiante",
+          "es": "estudiante",
+          "en": "student",
+          "pos": "noun",
+          "gender": null,
+          "audio_key": "es.estudiante",
+          "review_tags": [
+            "identity"
+          ]
+        },
+        {
+          "id": "tambien",
+          "es": "también",
+          "en": "also",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.tambien",
+          "review_tags": [
+            "connectors"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "review",
+        "integration",
+        "mastery"
+      ],
+      "examples": [
+        {
+          "es": "Hola, me llamo Carlos. Soy de Perú.",
+          "en": "Hello, my name is Carlos. I am from Peru.",
+          "analysis": "greeting + identity + origin"
+        },
+        {
+          "es": "Mi amiga es simpática.",
+          "en": "My friend is friendly.",
+          "analysis": "possessive mi + feminine noun + adjective"
+        },
+        {
+          "es": "¿Puedes repetir, por favor?",
+          "en": "Can you repeat, please?",
+          "analysis": "repair strategy"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w1d7-a1",
+          "type": "retrieval",
+          "prompt": "Without hints, write the Spanish for “My name is …” and “I am from …”.",
+          "answer": "Me llamo ____. Soy de ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "me-llamo",
+            "soy",
+            "de"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w1d7-a2",
+          "type": "translation_chain",
+          "prompt": "Translate and then say: “Hello. I am from Mexico. Nice to meet you.”",
+          "answer": "Hola. Soy de México. Mucho gusto.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "hola",
+            "soy",
+            "mucho-gusto"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w1d7-a3",
+          "type": "listening_comprehension",
+          "prompt": "After hearing a short introduction, identify the speaker’s name and country.",
+          "answer": "name_and_country_from_audio",
+          "hint": "",
+          "feedback": "The app should generate or select a slow audio clip using Week 1 vocabulary.",
+          "rationale": "",
+          "review_item_ids": [
+            "identity",
+            "origin"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w1d7-a4",
+          "type": "error_correction",
+          "prompt": "Correct: Mi amiga es simpático.",
+          "answer": "Mi amiga es simpática.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "agreement"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w1d7-a5",
+          "type": "roleplay",
+          "prompt": "Complete the field check with a simulated partner.",
+          "answer": "Hola. Me llamo ____. Soy de ____. ¿Cómo te llamas? Mucho gusto.",
+          "hint": "",
+          "feedback": "Pass when you complete the exchange, ask one follow-up, and use one repair phrase if needed.",
+          "rationale": "",
+          "review_item_ids": [
+            "greetings",
+            "identity",
+            "questions",
+            "repair"
+          ],
+          "difficulty": "checkpoint"
+        }
+      ],
+      "mission": "Complete a first-contact conversation using the entire Week 1 toolkit.",
+      "dialogue": {
+        "title": "First meeting checkpoint",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "Hola. Me llamo Ana. Soy de México. ¿Cómo te llamas?",
+            "en": "Hello. My name is Ana. I am from Mexico. What is your name?"
+          },
+          {
+            "speaker": "B",
+            "es": "Me llamo ____. Soy de ____. Mucho gusto.",
+            "en": "My name is ____. I am from ____. Nice to meet you."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Quién es tu amigo?",
+            "en": "Who is your friend?"
+          },
+          {
+            "speaker": "B",
+            "es": "Es mi amigo/a. Es simpático/a.",
+            "en": "He/she is my friend. He/she is friendly."
+          }
+        ],
+        "learner_turns": [
+          "Perform the dialogue without looking at the English.",
+          "Repeat with formal usted language."
+        ]
+      },
+      "exit_check": [
+        "Complete the introduction from memory.",
+        "Understand the core meaning of a short introduction.",
+        "Pass the roleplay with at least 80% accuracy and one spontaneous substitution."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    }
+  ]
+}
