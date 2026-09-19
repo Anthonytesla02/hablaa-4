@@ -14,7 +14,219 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      completed_days: {
+        Row: {
+          completed_at: string
+          day_key: string
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string
+          day_key: string
+          user_id: string
+        }
+        Update: {
+          completed_at?: string
+          day_key?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      feed_posts: {
+        Row: {
+          body: string
+          callsign: string
+          created_at: string
+          id: string
+          kind: string
+          stats: Json
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          body?: string
+          callsign?: string
+          created_at?: string
+          id?: string
+          kind?: string
+          stats?: Json
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          body?: string
+          callsign?: string
+          created_at?: string
+          id?: string
+          kind?: string
+          stats?: Json
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          badges: string[]
+          callsign: string
+          created_at: string
+          credits: number
+          freezes: number
+          ghost_seed: number
+          lang_id: string
+          last_active_day: string | null
+          last_login_day: string | null
+          league_tier: number
+          longest_streak: number
+          perfect_week: boolean
+          persona_id: string
+          quests: Json
+          settings: Json
+          shadow_reps: number
+          started_at: number
+          streak: number
+          sts_streak: number
+          tier_id: string
+          timeline_id: string
+          updated_at: string
+          user_id: string
+          weekly_xp: number
+          xp: number
+        }
+        Insert: {
+          badges?: string[]
+          callsign?: string
+          created_at?: string
+          credits?: number
+          freezes?: number
+          ghost_seed?: number
+          lang_id?: string
+          last_active_day?: string | null
+          last_login_day?: string | null
+          league_tier?: number
+          longest_streak?: number
+          perfect_week?: boolean
+          persona_id?: string
+          quests?: Json
+          settings?: Json
+          shadow_reps?: number
+          started_at?: number
+          streak?: number
+          sts_streak?: number
+          tier_id?: string
+          timeline_id?: string
+          updated_at?: string
+          user_id: string
+          weekly_xp?: number
+          xp?: number
+        }
+        Update: {
+          badges?: string[]
+          callsign?: string
+          created_at?: string
+          credits?: number
+          freezes?: number
+          ghost_seed?: number
+          lang_id?: string
+          last_active_day?: string | null
+          last_login_day?: string | null
+          league_tier?: number
+          longest_streak?: number
+          perfect_week?: boolean
+          persona_id?: string
+          quests?: Json
+          settings?: Json
+          shadow_reps?: number
+          started_at?: number
+          streak?: number
+          sts_streak?: number
+          tier_id?: string
+          timeline_id?: string
+          updated_at?: string
+          user_id?: string
+          weekly_xp?: number
+          xp?: number
+        }
+        Relationships: []
+      }
+      session_history: {
+        Row: {
+          accuracy: number
+          cover_intact: boolean
+          created_at: string
+          date: number
+          day_key: string
+          id: string
+          items: number
+          user_id: string
+          xp: number
+        }
+        Insert: {
+          accuracy?: number
+          cover_intact?: boolean
+          created_at?: string
+          date: number
+          day_key: string
+          id?: string
+          items?: number
+          user_id: string
+          xp?: number
+        }
+        Update: {
+          accuracy?: number
+          cover_intact?: boolean
+          created_at?: string
+          date?: number
+          day_key?: string
+          id?: string
+          items?: number
+          user_id?: string
+          xp?: number
+        }
+        Relationships: []
+      }
+      srs_cards: {
+        Row: {
+          created_at: string
+          due_at: number
+          ease: number
+          id: string
+          interval_days: number
+          lang: string
+          lapses: number
+          reps: number
+          target: string
+          translation: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          due_at: number
+          ease?: number
+          id: string
+          interval_days?: number
+          lang: string
+          lapses?: number
+          reps?: number
+          target: string
+          translation: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          due_at?: number
+          ease?: number
+          id?: string
+          interval_days?: number
+          lang?: string
+          lapses?: number
+          reps?: number
+          target?: string
+          translation?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
