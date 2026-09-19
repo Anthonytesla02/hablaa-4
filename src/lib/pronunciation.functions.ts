@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { compareTranscript } from "./text-compare";
+import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 const GradeInput = z.object({
   audio: z.string().min(1),
@@ -10,10 +11,15 @@ const GradeInput = z.object({
 });
 
 export const gradePronunciation = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
   .inputValidator((data) => GradeInput.parse(data))
-  .handler(async ({ data }) => {
+  .handler(async ({ data, context }) => {
     const apiKey = process.env["LOVABLE_API_KEY"];
     if (!apiKey) throw new Error("AI Gateway key not configured");
+
+    // Each recording is unique, so scoring is budgeted per user per day.
+    const { requireQuota } = await import("./shared-cache.server");
+    await requireQuota(context.userId, "pronounce");
 
     // Decode base64 audio to binary
     const audioBytes = Uint8Array.from(atob(data.audio), (c) => c.charCodeAt(0));

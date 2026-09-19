@@ -1,5 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
+import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 const Input = z.object({
   text: z.string().min(1).max(600),
@@ -10,10 +11,18 @@ export type Translation = { text: string; translation: string };
 
 /** Translate what the learner just said (target language → English) for confirmation. */
 export const translateUtterance = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
   .inputValidator((data) => Input.parse(data))
-  .handler(async ({ data }): Promise<Translation> => {
+  .handler(async ({ data, context }): Promise<Translation> => {
     const apiKey = process.env["LOVABLE_API_KEY"];
     if (!apiKey) return { text: data.text, translation: "" };
+
+    const { cachedJson, hashKey, withinQuota } = await import("./shared-cache.server");
+    const cacheKey = await hashKey(
+      "translate-v1",
+      data.language.toLowerCase(),
+      data.text.trim().toLowerCase(),
+    );
 
     const system = `You clean up and translate a language learner's spoken utterance.
 The learner is practising ${data.language}. Reply with ONLY JSON:
@@ -22,6 +31,8 @@ The learner is practising ${data.language}. Reply with ONLY JSON:
 If the learner spoke English, keep it as it is in "text".
 "translation" = a plain English translation of what they actually said.`;
 
+    const produce = async (): Promise<Translation | null> => {
+    if (!(await withinQuota(context.userId, "translate"))) return null;
     try {
       const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
         method: "POST",
@@ -39,18 +50,26 @@ If the learner spoke English, keep it as it is in "text".
           ],
         }),
       });
-      if (!res.ok) return { text: data.text, translation: "" };
+      if (!res.ok) return null;
       const json = (await res.json()) as { choices?: { message?: { content?: string } }[] };
       const raw = json.choices?.[0]?.message?.content ?? "";
       const start = raw.indexOf("{");
       const end = raw.lastIndexOf("}");
-      if (start === -1 || end === -1) return { text: data.text, translation: "" };
+      if (start === -1 || end === -1) return null;
       const parsed = JSON.parse(raw.slice(start, end + 1)) as Partial<Translation>;
       return {
         text: (parsed.text ?? data.text).trim() || data.text,
         translation: (parsed.translation ?? "").trim(),
       };
     } catch {
-      return { text: data.text, translation: "" };
+      return null;
     }
+    };
+
+    return (
+      (await cachedJson<Translation>("translate", cacheKey, produce)) ?? {
+        text: data.text,
+        translation: "",
+      }
+    );
   });
