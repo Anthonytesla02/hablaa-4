@@ -72,15 +72,10 @@ function AuthGate() {
   if (!ready) {
     return (
       <div className="flex min-h-[100dvh] items-center justify-center overflow-hidden bg-background">
-        <video
-          src={avatarLoadingVideo.url}
-          aria-label="Habla avatar loading"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="max-h-[80dvh] w-[min(88vw,24rem)] object-contain"
+        <img
+          src={loadingLlama}
+          alt="Habla is getting your lessons ready"
+          className="bounce-soft w-[min(60vw,14rem)] object-contain"
         />
       </div>
     );
