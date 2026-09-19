@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "spanish-foundations-a0-a1",
+  "language": "es",
+  "source_language": "en",
+  "title": "Spanish Foundations: First Conversations",
+  "level": "A0-A1 foundation",
+  "description": "A four-week, mastery-gated Spanish course using short lessons, active recall, spaced review, practical scenarios, and cumulative conversation checks.",
+  "lesson_duration": "one week per unit; seven daily lessons per week",
+  "total_days": 28,
+  "weekly_files": [
+    "spanish_week_1.json",
+    "spanish_week_2.json",
+    "spanish_week_3.json",
+    "spanish_week_4.json"
+  ],
+  "supporting_files": [
+    "daily_challenges.json",
+    "special_challenges.json"
+  ],
+  "review_schedule": {
+    "new_item_intervals_days": [
+      0,
+      1,
+      2,
+      4,
+      7,
+      14
+    ],
+    "wrong_answer": "same_session_and_next_day",
+    "hinted_answer": "retain_current_interval",
+    "correct_no_hint": "promote_to_next_interval"
+  },
+  "mastery_rules": {
+    "daily_activity_accuracy": 0.8,
+    "daily_exit_accuracy": 0.7,
+    "weekly_checkpoint_accuracy": 0.8,
+    "requires_mission": true,
+    "final_roleplay_minimum_task_completion": 0.8
+  },
+  "item_types": [
+    "teach",
+    "retrieval",
+    "listen_select",
+    "listening_comprehension",
+    "matching",
+    "mcq",
+    "cloze",
+    "ordering",
+    "translate",
+    "translation_chain",
+    "error_correction",
+    "transform",
+    "production",
+    "free_response",
+    "speak",
+    "shadowing",
+    "roleplay",
+    "final_roleplay"
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "id": "es-week-1",
+      "title": "Foundations: First Contact",
+      "file": "spanish_week_1.json",
+      "lesson_ids": [
+        "es-w1-d01",
+        "es-w1-d02",
+        "es-w1-d03",
+        "es-w1-d04",
+        "es-w1-d05",
+        "es-w1-d06",
+        "es-w1-d07"
+      ],
+      "checkpoint_lesson_id": "es-w1-d07",
+      "unlock_rule": "Pass prior checkpoint at required accuracy."
+    },
+    {
+      "week": 2,
+      "id": "es-week-2",
+      "title": "Sentence Engine: Daily Life",
+      "file": "spanish_week_2.json",
+      "lesson_ids": [
+        "es-w2-d08",
+        "es-w2-d09",
+        "es-w2-d10",
+        "es-w2-d11",
+        "es-w2-d12",
+        "es-w2-d13",
+        "es-w2-d14"
+      ],
+      "checkpoint_lesson_id": "es-w2-d14",
+      "unlock_rule": "Pass prior checkpoint at required accuracy."
+    },
+    {
+      "week": 3,
+      "id": "es-week-3",
+      "title": "Needs, Preferences, and Transactions",
+      "file": "spanish_week_3.json",
+      "lesson_ids": [
+        "es-w3-d15",
+        "es-w3-d16",
+        "es-w3-d17",
+        "es-w3-d18",
+        "es-w3-d19",
+        "es-w3-d20",
+        "es-w3-d21"
+      ],
+      "checkpoint_lesson_id": "es-w3-d21",
+      "unlock_rule": "Pass prior checkpoint at required accuracy."
+    },
+    {
+      "week": 4,
+      "id": "es-week-4",
+      "title": "Conversation: Plans and Repair",
+      "file": "spanish_week_4.json",
+      "lesson_ids": [
+        "es-w4-d22",
+        "es-w4-d23",
+        "es-w4-d24",
+        "es-w4-d25",
+        "es-w4-d26",
+        "es-w4-d27",
+        "es-w4-d28"
+      ],
+      "checkpoint_lesson_id": "es-w4-d28",
+      "unlock_rule": "Pass prior checkpoint at required accuracy."
+    }
+  ],
+  "implementation_notes": {
+    "audio": "Resolve each vocabulary audio_key and dialogue audio_key through the app audio service; text remains complete without audio.",
+    "speech": "Use semantic scoring with tolerance for accent variation; require target words and intelligible syntax rather than exact phonetic identity.",
+    "feedback": "Show the first relevant explanation only, then offer a retry; log the error tag for review scheduling.",
+    "regional_spanish": "Teach ustedes as the broad default plural you; optionally expose vosotros as a recognition note in a later Spain-specific track."
+  }
+}

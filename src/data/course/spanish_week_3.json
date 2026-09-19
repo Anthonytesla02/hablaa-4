@@ -1,0 +1,1663 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "spanish-foundations-a0-a1",
+  "week": 3,
+  "title": "Needs, Preferences, and Transactions",
+  "lessons": [
+    {
+      "id": "es-w3-d15",
+      "day": 15,
+      "title": "Food and Preferences",
+      "focus": "Food vocabulary and querer",
+      "estimated_minutes": 20,
+      "objectives": [
+        "name common foods and drinks",
+        "say what you want politely",
+        "use quiero + noun or infinitive"
+      ],
+      "teaching": {
+        "explanation": "Quiero means “I want.” Use quiero + noun for an item or quiero + infinitive for an action. A polite request can add por favor.",
+        "pattern": "Quiero agua. Quiero comer. No quiero café.",
+        "culture_note": "In many contexts, please and a greeting make a direct request sound warmer; the app should reward both concise and polite answers."
+      },
+      "vocabulary": [
+        {
+          "id": "agua",
+          "es": "agua",
+          "en": "water",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.agua",
+          "review_tags": [
+            "food"
+          ]
+        },
+        {
+          "id": "cafe",
+          "es": "café",
+          "en": "coffee",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.cafe",
+          "review_tags": [
+            "food"
+          ]
+        },
+        {
+          "id": "te",
+          "es": "té",
+          "en": "tea",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.te",
+          "review_tags": [
+            "food"
+          ]
+        },
+        {
+          "id": "pan",
+          "es": "pan",
+          "en": "bread",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.pan",
+          "review_tags": [
+            "food"
+          ]
+        },
+        {
+          "id": "arroz",
+          "es": "arroz",
+          "en": "rice",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.arroz",
+          "review_tags": [
+            "food"
+          ]
+        },
+        {
+          "id": "fruta",
+          "es": "fruta",
+          "en": "fruit",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.fruta",
+          "review_tags": [
+            "food"
+          ]
+        },
+        {
+          "id": "comer",
+          "es": "comer",
+          "en": "to eat",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.comer",
+          "review_tags": [
+            "verbs"
+          ]
+        },
+        {
+          "id": "quiero",
+          "es": "quiero",
+          "en": "I want",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.quiero",
+          "review_tags": [
+            "wanting"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "querer",
+        "food",
+        "requests"
+      ],
+      "examples": [
+        {
+          "es": "Quiero agua, por favor.",
+          "en": "I want water, please.",
+          "analysis": "quiero + noun + courtesy"
+        },
+        {
+          "es": "Quiero comer.",
+          "en": "I want to eat.",
+          "analysis": "quiero + infinitive"
+        },
+        {
+          "es": "No quiero azúcar.",
+          "en": "I do not want sugar.",
+          "analysis": "no before quiero"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w3d1-a1",
+          "type": "mcq",
+          "prompt": "Choose “water.”",
+          "answer": "agua",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "food"
+          ],
+          "difficulty": "core",
+          "options": [
+            "agua",
+            "pan",
+            "arroz"
+          ]
+        },
+        {
+          "id": "w3d1-a2",
+          "type": "translate",
+          "prompt": "Translate: “I want coffee, please.”",
+          "answer": "Quiero café, por favor.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "querer",
+            "courtesy"
+          ],
+          "difficulty": "core",
+          "accepted_answers": [
+            "Quiero café por favor",
+            "Quiero café, por favor"
+          ]
+        },
+        {
+          "id": "w3d1-a3",
+          "type": "cloze",
+          "prompt": "Complete: No ___ azúcar.",
+          "answer": "quiero",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "querer",
+            "negation"
+          ],
+          "difficulty": "core",
+          "options": [
+            "quiero",
+            "quieres",
+            "quiere"
+          ]
+        },
+        {
+          "id": "w3d1-a4",
+          "type": "classification",
+          "prompt": "Which sentence uses querer + infinitive?",
+          "answer": "Quiero comer.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "querer"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Quiero agua.",
+            "Quiero comer.",
+            "Quiero el pan."
+          ]
+        },
+        {
+          "id": "w3d1-a5",
+          "type": "roleplay",
+          "prompt": "Order one drink and one food item.",
+          "answer": "Quiero ____, por favor. Y quiero ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "querer",
+            "food"
+          ],
+          "difficulty": "production"
+        }
+      ],
+      "mission": "Order a simple snack and express one preference.",
+      "dialogue": {
+        "title": "At a café",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "Hola. ¿Qué quieres?",
+            "en": "Hello. What do you want?"
+          },
+          {
+            "speaker": "B",
+            "es": "Quiero agua y pan, por favor.",
+            "en": "I want water and bread, please."
+          },
+          {
+            "speaker": "A",
+            "es": "¿Algo más?",
+            "en": "Anything else?"
+          },
+          {
+            "speaker": "B",
+            "es": "No, gracias.",
+            "en": "No, thank you."
+          }
+        ],
+        "learner_turns": [
+          "Change the order.",
+          "Say the request once with quiero and once with no quiero."
+        ]
+      },
+      "exit_check": [
+        "Name six food or drink items.",
+        "Make one positive and one negative request.",
+        "Complete the café roleplay."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w3-d16",
+      "day": 16,
+      "title": "Needs and Ability",
+      "focus": "necesitar, poder, and polite requests",
+      "estimated_minutes": 20,
+      "objectives": [
+        "say what you need",
+        "say what you can or cannot do",
+        "combine poder/necesitar with infinitives"
+      ],
+      "teaching": {
+        "explanation": "Use necesito + noun for a thing and necesito + infinitive for an action. Puedo means “I can”; no puedo means “I cannot.”",
+        "pattern": "Necesito ayuda. Necesito estudiar. ¿Puedes ayudarme? = Can you help me?",
+        "repair": "If you cannot complete a task, say No puedo todavía. = I cannot yet."
+      },
+      "vocabulary": [
+        {
+          "id": "necesito",
+          "es": "necesito",
+          "en": "I need",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.necesito",
+          "review_tags": [
+            "needs"
+          ]
+        },
+        {
+          "id": "necesitar",
+          "es": "necesitar",
+          "en": "to need",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.necesitar",
+          "review_tags": [
+            "needs"
+          ]
+        },
+        {
+          "id": "puedo",
+          "es": "puedo",
+          "en": "I can",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.puedo",
+          "review_tags": [
+            "ability"
+          ]
+        },
+        {
+          "id": "puedes",
+          "es": "puedes",
+          "en": "you can",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.puedes",
+          "review_tags": [
+            "ability"
+          ]
+        },
+        {
+          "id": "ayuda",
+          "es": "ayuda",
+          "en": "help",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.ayuda",
+          "review_tags": [
+            "needs"
+          ]
+        },
+        {
+          "id": "ayudar",
+          "es": "ayudar",
+          "en": "to help",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.ayudar",
+          "review_tags": [
+            "verbs"
+          ]
+        },
+        {
+          "id": "ahora",
+          "es": "ahora",
+          "en": "now",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.ahora",
+          "review_tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "todavia",
+          "es": "todavía",
+          "en": "yet/still",
+          "pos": "adverb",
+          "gender": null,
+          "audio_key": "es.todavia",
+          "review_tags": [
+            "time"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "necesitar",
+        "poder",
+        "requests"
+      ],
+      "examples": [
+        {
+          "es": "Necesito ayuda.",
+          "en": "I need help.",
+          "analysis": "necesito + noun"
+        },
+        {
+          "es": "¿Puedes ayudarme?",
+          "en": "Can you help me?",
+          "analysis": "puedes + infinitive + me"
+        },
+        {
+          "es": "No puedo ahora.",
+          "en": "I cannot now.",
+          "analysis": "no + puedo + time word"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w3d2-a1",
+          "type": "translate",
+          "prompt": "Translate: “I need help.”",
+          "answer": "Necesito ayuda.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "necesitar"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d2-a2",
+          "type": "mcq",
+          "prompt": "Choose “Can you help me?”",
+          "answer": "¿Puedes ayudarme?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "poder",
+            "requests"
+          ],
+          "difficulty": "core",
+          "options": [
+            "¿Quieres ayudarme?",
+            "¿Puedes ayudarme?",
+            "¿Necesitas ayudarme?"
+          ]
+        },
+        {
+          "id": "w3d2-a3",
+          "type": "cloze",
+          "prompt": "Complete: No ___ ahora.",
+          "answer": "puedo",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "poder",
+            "negation"
+          ],
+          "difficulty": "core",
+          "options": [
+            "puedo",
+            "puedes",
+            "puede"
+          ]
+        },
+        {
+          "id": "w3d2-a4",
+          "type": "ordering",
+          "prompt": "Put in order: estudiar / Necesito / hoy",
+          "answer": "Necesito estudiar hoy.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "necesitar",
+            "word-order"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d2-a5",
+          "type": "speak",
+          "prompt": "Ask for help and respond that you can or cannot help.",
+          "answer": "¿Puedes ayudarme? Sí, puedo. / No puedo todavía.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "poder",
+            "requests"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Ask for assistance and communicate whether you can complete a task.",
+      "dialogue": {
+        "title": "Asking for help",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Puedes ayudarme?",
+            "en": "Can you help me?"
+          },
+          {
+            "speaker": "B",
+            "es": "Sí, puedo. ¿Qué necesitas?",
+            "en": "Yes, I can. What do you need?"
+          },
+          {
+            "speaker": "A",
+            "es": "Necesito agua, por favor.",
+            "en": "I need water, please."
+          }
+        ],
+        "learner_turns": [
+          "Change the needed item.",
+          "Respond once with Sí, puedo and once with No puedo."
+        ]
+      },
+      "exit_check": [
+        "Use necesito with a noun and an infinitive.",
+        "Ask for help using puedes.",
+        "Say no puedo with a reason or time word."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w3-d17",
+      "day": 17,
+      "title": "Time and Numbers",
+      "focus": "Numbers 0–30, clock time, and schedules",
+      "estimated_minutes": 20,
+      "objectives": [
+        "count to 30",
+        "ask and tell the time in a simple way",
+        "state when an activity happens"
+      ],
+      "teaching": {
+        "explanation": "Use ¿Qué hora es? for the time. For a simple beginner response, use Es la una for one o’clock and Son las dos/tres/etc. for other hours.",
+        "pattern": "¿A qué hora? = At what time? A las ocho. = At eight. A la una. = At one.",
+        "memory_tip": "Practice numbers as a retrieval chain, then use them in meaningful time phrases."
+      },
+      "vocabulary": [
+        {
+          "id": "uno",
+          "es": "uno",
+          "en": "one",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.uno",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "dos",
+          "es": "dos",
+          "en": "two",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.dos",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "tres",
+          "es": "tres",
+          "en": "three",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.tres",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "cuatro",
+          "es": "cuatro",
+          "en": "four",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.cuatro",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "cinco",
+          "es": "cinco",
+          "en": "five",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.cinco",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "seis",
+          "es": "seis",
+          "en": "six",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.seis",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "siete",
+          "es": "siete",
+          "en": "seven",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.siete",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "ocho",
+          "es": "ocho",
+          "en": "eight",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.ocho",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "nueve",
+          "es": "nueve",
+          "en": "nine",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.nueve",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "diez",
+          "es": "diez",
+          "en": "ten",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.diez",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "hora",
+          "es": "hora",
+          "en": "hour/time",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.hora",
+          "review_tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "cuando",
+          "es": "cuándo",
+          "en": "when",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.cuando",
+          "review_tags": [
+            "questions",
+            "time"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "numbers",
+        "time",
+        "schedules"
+      ],
+      "examples": [
+        {
+          "es": "¿Qué hora es?",
+          "en": "What time is it?",
+          "analysis": "qué hora = what time"
+        },
+        {
+          "es": "Son las tres.",
+          "en": "It is three o’clock.",
+          "analysis": "plural hours use son las"
+        },
+        {
+          "es": "Trabajo a las ocho.",
+          "en": "I work at eight.",
+          "analysis": "a + time"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w3d3-a1",
+          "type": "retrieval",
+          "prompt": "Write the Spanish numbers 1–10 from memory.",
+          "answer": "uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "numbers"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d3-a2",
+          "type": "translate",
+          "prompt": "Translate: “What time is it?”",
+          "answer": "¿Qué hora es?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "time"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d3-a3",
+          "type": "mcq",
+          "prompt": "Choose the correct phrase for 3:00.",
+          "answer": "Son las tres.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "time"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Es la tres.",
+            "Son las tres.",
+            "Está tres."
+          ]
+        },
+        {
+          "id": "w3d3-a4",
+          "type": "cloze",
+          "prompt": "Complete: Trabajo ___ las ocho.",
+          "answer": "a",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "time",
+            "prepositions"
+          ],
+          "difficulty": "core",
+          "options": [
+            "a",
+            "en",
+            "de"
+          ]
+        },
+        {
+          "id": "w3d3-a5",
+          "type": "production",
+          "prompt": "State two activities and times.",
+          "answer": "Estudio a las ____. Trabajo a las ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "time",
+            "routine"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Arrange a simple appointment or daily schedule.",
+      "dialogue": {
+        "title": "Arranging a meeting",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿A qué hora estudias?",
+            "en": "At what time do you study?"
+          },
+          {
+            "speaker": "B",
+            "es": "Estudio a las ocho. ¿Y tú?",
+            "en": "I study at eight. And you?"
+          },
+          {
+            "speaker": "A",
+            "es": "Trabajo a las nueve.",
+            "en": "I work at nine."
+          }
+        ],
+        "learner_turns": [
+          "Change both times.",
+          "Ask the time and answer with a complete phrase."
+        ]
+      },
+      "exit_check": [
+        "Retrieve numbers 1–10, then 11–30.",
+        "Ask and tell the time.",
+        "Schedule two activities."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w3-d18",
+      "day": 18,
+      "title": "Shopping and Quantities",
+      "focus": "Prices, demonstratives, and polite buying",
+      "estimated_minutes": 20,
+      "objectives": [
+        "ask how much something costs",
+        "use este/esta and estos/estas",
+        "buy a small number of items"
+      ],
+      "teaching": {
+        "explanation": "Demonstratives point to a noun and agree with it: este libro, esta mesa, estos libros, estas mesas. Cuánto asks “how much”; cuánto changes to cuánta/cuántos/cuántas when directly agreeing with a noun.",
+        "pattern": "¿Cuánto cuesta? = How much does it cost? Quiero este libro. = I want this book.",
+        "culture_note": "A greeting and por favor are useful in a real shop; directness is normal when paired with courtesy."
+      },
+      "vocabulary": [
+        {
+          "id": "cuanto",
+          "es": "cuánto",
+          "en": "how much",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.cuanto",
+          "review_tags": [
+            "shopping"
+          ]
+        },
+        {
+          "id": "cuesta",
+          "es": "cuesta",
+          "en": "costs",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.cuesta",
+          "review_tags": [
+            "shopping"
+          ]
+        },
+        {
+          "id": "este",
+          "es": "este",
+          "en": "this masculine",
+          "pos": "demonstrative",
+          "gender": "m",
+          "audio_key": "es.este",
+          "review_tags": [
+            "agreement"
+          ]
+        },
+        {
+          "id": "esta",
+          "es": "esta",
+          "en": "this feminine",
+          "pos": "demonstrative",
+          "gender": "f",
+          "audio_key": "es.esta",
+          "review_tags": [
+            "agreement"
+          ]
+        },
+        {
+          "id": "estos",
+          "es": "estos",
+          "en": "these masculine plural",
+          "pos": "demonstrative",
+          "gender": "m",
+          "audio_key": "es.estos",
+          "review_tags": [
+            "agreement"
+          ]
+        },
+        {
+          "id": "estas",
+          "es": "estas",
+          "en": "these feminine plural",
+          "pos": "demonstrative",
+          "gender": "f",
+          "audio_key": "es.estas",
+          "review_tags": [
+            "agreement"
+          ]
+        },
+        {
+          "id": "precio",
+          "es": "precio",
+          "en": "price",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.precio",
+          "review_tags": [
+            "shopping"
+          ]
+        },
+        {
+          "id": "euros",
+          "es": "euros",
+          "en": "euros",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.euros",
+          "review_tags": [
+            "shopping"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "demonstratives",
+        "agreement",
+        "shopping"
+      ],
+      "examples": [
+        {
+          "es": "¿Cuánto cuesta?",
+          "en": "How much does it cost?",
+          "analysis": "fixed shopping question"
+        },
+        {
+          "es": "Quiero esta mesa.",
+          "en": "I want this table.",
+          "analysis": "esta agrees with feminine mesa"
+        },
+        {
+          "es": "¿Cuántos libros?",
+          "en": "How many books?",
+          "analysis": "cuántos agrees with masculine plural libros"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w3d4-a1",
+          "type": "mcq",
+          "prompt": "Choose “this table.”",
+          "answer": "esta mesa",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "demonstratives"
+          ],
+          "difficulty": "core",
+          "options": [
+            "este mesa",
+            "esta mesa",
+            "estos mesa"
+          ]
+        },
+        {
+          "id": "w3d4-a2",
+          "type": "translate",
+          "prompt": "Translate: “How much does it cost?”",
+          "answer": "¿Cuánto cuesta?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "shopping"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d4-a3",
+          "type": "cloze",
+          "prompt": "Complete: ___ libros (how many books).",
+          "answer": "Cuántos",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "quantities",
+            "agreement"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Cuánto",
+            "Cuánta",
+            "Cuántos",
+            "Cuántas"
+          ]
+        },
+        {
+          "id": "w3d4-a4",
+          "type": "error_correction",
+          "prompt": "Correct: Quiero este mesa.",
+          "answer": "Quiero esta mesa.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "demonstratives",
+            "agreement"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d4-a5",
+          "type": "roleplay",
+          "prompt": "Buy one item, ask its price, and thank the seller.",
+          "answer": "Hola. Quiero ____. ¿Cuánto cuesta? Gracias.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "shopping",
+            "courtesy"
+          ],
+          "difficulty": "core"
+        }
+      ],
+      "mission": "Buy one or two familiar items in Spanish.",
+      "dialogue": {
+        "title": "At a market stall",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "Hola. ¿Qué quieres?",
+            "en": "Hello. What do you want?"
+          },
+          {
+            "speaker": "B",
+            "es": "Quiero esta fruta. ¿Cuánto cuesta?",
+            "en": "I want this fruit. How much does it cost?"
+          },
+          {
+            "speaker": "A",
+            "es": "Cuatro euros.",
+            "en": "Four euros."
+          },
+          {
+            "speaker": "B",
+            "es": "Gracias.",
+            "en": "Thank you."
+          }
+        ],
+        "learner_turns": [
+          "Change the item and price.",
+          "Use este, esta, estos, or estas correctly."
+        ]
+      },
+      "exit_check": [
+        "Choose demonstratives with gender and number.",
+        "Ask a price question.",
+        "Complete a buying transaction."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w3-d19",
+      "day": 19,
+      "title": "Likes and Dislikes",
+      "focus": "gustar as a fixed pattern",
+      "estimated_minutes": 20,
+      "objectives": [
+        "say what you like and dislike",
+        "ask another person what they like",
+        "use me gusta with singular nouns and infinitives"
+      ],
+      "teaching": {
+        "explanation": "Treat gustar as a pattern: Me gusta + singular noun or infinitive; Me gustan + plural noun. The thing liked is grammatically the subject.",
+        "pattern": "Me gusta el café. Me gustan las frutas. Me gusta estudiar. No me gusta esperar.",
+        "contrast": "Do not say Yo gusto el café for “I like coffee.” The beginner pattern is Me gusta el café."
+      },
+      "vocabulary": [
+        {
+          "id": "gusta",
+          "es": "gusta",
+          "en": "is pleasing / like singular",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.gusta",
+          "review_tags": [
+            "preferences"
+          ]
+        },
+        {
+          "id": "gustan",
+          "es": "gustan",
+          "en": "are pleasing / like plural",
+          "pos": "verb form",
+          "gender": null,
+          "audio_key": "es.gustan",
+          "review_tags": [
+            "preferences"
+          ]
+        },
+        {
+          "id": "te-gusta",
+          "es": "¿Te gusta?",
+          "en": "Do you like it?",
+          "pos": "question",
+          "gender": null,
+          "audio_key": "es.te-gusta",
+          "review_tags": [
+            "preferences"
+          ]
+        },
+        {
+          "id": "esperar",
+          "es": "esperar",
+          "en": "to wait",
+          "pos": "verb",
+          "gender": null,
+          "audio_key": "es.esperar",
+          "review_tags": [
+            "verbs"
+          ]
+        },
+        {
+          "id": "musica",
+          "es": "música",
+          "en": "music",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.musica",
+          "review_tags": [
+            "preferences"
+          ]
+        },
+        {
+          "id": "peliculas",
+          "es": "películas",
+          "en": "movies",
+          "pos": "noun",
+          "gender": "f",
+          "audio_key": "es.peliculas",
+          "review_tags": [
+            "preferences"
+          ]
+        },
+        {
+          "id": "libros",
+          "es": "libros",
+          "en": "books",
+          "pos": "noun",
+          "gender": "m",
+          "audio_key": "es.libros",
+          "review_tags": [
+            "preferences"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "gustar",
+        "preferences",
+        "number"
+      ],
+      "examples": [
+        {
+          "es": "Me gusta el té.",
+          "en": "I like tea.",
+          "analysis": "singular thing + gusta"
+        },
+        {
+          "es": "Me gustan los libros.",
+          "en": "I like books.",
+          "analysis": "plural thing + gustan"
+        },
+        {
+          "es": "¿Te gusta estudiar?",
+          "en": "Do you like studying?",
+          "analysis": "te gusta asks a familiar person"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w3d5-a1",
+          "type": "mcq",
+          "prompt": "Choose the correct phrase for “I like books.”",
+          "answer": "Me gustan los libros.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gustar"
+          ],
+          "difficulty": "core",
+          "options": [
+            "Me gusta los libros.",
+            "Me gustan los libros.",
+            "Yo gusto los libros."
+          ]
+        },
+        {
+          "id": "w3d5-a2",
+          "type": "translate",
+          "prompt": "Translate: “I like to study.”",
+          "answer": "Me gusta estudiar.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gustar",
+            "infinitives"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d5-a3",
+          "type": "cloze",
+          "prompt": "Complete: No me ___ esperar.",
+          "answer": "gusta",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gustar",
+            "negation"
+          ],
+          "difficulty": "core",
+          "options": [
+            "gusta",
+            "gustan",
+            "gusto"
+          ]
+        },
+        {
+          "id": "w3d5-a4",
+          "type": "transform",
+          "prompt": "Change to plural: Me gusta la fruta.",
+          "answer": "Me gustan las frutas.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gustar",
+            "agreement"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d5-a5",
+          "type": "speak",
+          "prompt": "Say two things you like and one thing you do not like.",
+          "answer": "Me gusta ____. Me gustan ____. No me gusta ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gustar"
+          ],
+          "difficulty": "production"
+        }
+      ],
+      "mission": "Find one shared preference with a conversation partner.",
+      "dialogue": {
+        "title": "Finding common interests",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "¿Te gusta el café?",
+            "en": "Do you like coffee?"
+          },
+          {
+            "speaker": "B",
+            "es": "Sí, me gusta. ¿Y a ti?",
+            "en": "Yes, I do. And you?"
+          },
+          {
+            "speaker": "A",
+            "es": "Me gustan las frutas.",
+            "en": "I like fruit."
+          }
+        ],
+        "learner_turns": [
+          "Swap singular and plural objects.",
+          "Ask and answer with a partner."
+        ]
+      },
+      "exit_check": [
+        "Choose gusta or gustan.",
+        "Say a liked singular noun, plural noun, and infinitive.",
+        "Ask a preference question."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w3-d20",
+      "day": 20,
+      "title": "Week 3 Consolidated Review",
+      "focus": "needs, preferences, time, and shopping review",
+      "estimated_minutes": 20,
+      "objectives": [
+        "order or buy food",
+        "state a need and request help",
+        "arrange a time and express one preference"
+      ],
+      "teaching": {
+        "explanation": "This checkpoint is intentionally practical. Use memory first, then consult the word bank only for the item that blocked communication.",
+        "pattern": "Quiero ____. ¿Cuánto cuesta? Necesito ____. ¿Puedes ayudarme? Me gusta ____. ¿A qué hora?",
+        "checkpoint": "Complete a café/market scenario, ask for help, and arrange a time using at least one number."
+      },
+      "vocabulary": [
+        {
+          "id": "nos-vemos",
+          "es": "nos vemos",
+          "en": "see you",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.nos-vemos",
+          "review_tags": [
+            "greetings",
+            "schedules"
+          ]
+        },
+        {
+          "id": "cuatro",
+          "es": "cuatro",
+          "en": "four",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.cuatro",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "a-las-ocho",
+          "es": "a las ocho",
+          "en": "at eight",
+          "pos": "time phrase",
+          "gender": null,
+          "audio_key": "es.a-las-ocho",
+          "review_tags": [
+            "time"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "review",
+        "integration",
+        "mastery"
+      ],
+      "examples": [
+        {
+          "es": "Quiero agua y pan, por favor.",
+          "en": "I want water and bread, please.",
+          "analysis": "request + courtesy"
+        },
+        {
+          "es": "¿Puedes ayudarme? Necesito este libro.",
+          "en": "Can you help me? I need this book.",
+          "analysis": "ability question + need + demonstrative"
+        },
+        {
+          "es": "Me gusta estudiar a las ocho.",
+          "en": "I like studying at eight.",
+          "analysis": "gustar + infinitive + time"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w3d6-a1",
+          "type": "retrieval",
+          "prompt": "Retrieve the three patterns: I want, I need, I like.",
+          "answer": "Quiero ____. Necesito ____. Me gusta ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "querer",
+            "necesitar",
+            "gustar"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d6-a2",
+          "type": "listening_comprehension",
+          "prompt": "Listen to a market exchange and identify the item, quantity, and price.",
+          "answer": "item_quantity_price",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "shopping",
+            "numbers"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d6-a3",
+          "type": "translation_chain",
+          "prompt": "Translate: “I need help. Can you repeat, please?”",
+          "answer": "Necesito ayuda. ¿Puedes repetir, por favor?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "needs",
+            "repair"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d6-a4",
+          "type": "error_correction",
+          "prompt": "Correct: Me gusta los libros.",
+          "answer": "Me gustan los libros.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gustar",
+            "number"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d6-a5",
+          "type": "roleplay",
+          "prompt": "Complete the mission: order, ask a price, request clarification, and arrange a time.",
+          "answer": "Hola. Quiero ____. ¿Cuánto cuesta? ¿Puedes repetir? Nos vemos a las ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "week3"
+          ],
+          "difficulty": "checkpoint"
+        }
+      ],
+      "mission": "Handle a short café, market, and scheduling exchange.",
+      "dialogue": {
+        "title": "Café and schedule mission",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "Hola. ¿Qué quieres?",
+            "en": "Hello. What do you want?"
+          },
+          {
+            "speaker": "B",
+            "es": "Quiero ____. ¿Cuánto cuesta?",
+            "en": "I want ____. How much does it cost?"
+          },
+          {
+            "speaker": "A",
+            "es": "Cuatro euros.",
+            "en": "Four euros."
+          },
+          {
+            "speaker": "B",
+            "es": "Gracias. Nos vemos a las ocho.",
+            "en": "Thank you. See you at eight."
+          }
+        ],
+        "learner_turns": [
+          "Add a repair phrase and a preference.",
+          "Repeat without reading English."
+        ]
+      },
+      "exit_check": [
+        "Complete a transaction with one clarification.",
+        "Use querer, necesitar, and gustar correctly.",
+        "Pass the time-and-preference checkpoint."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    },
+    {
+      "id": "es-w3-d21",
+      "day": 21,
+      "title": "Week 3 Field Check",
+      "focus": "needs, preferences, time, and shopping review",
+      "estimated_minutes": 20,
+      "objectives": [
+        "order or buy food",
+        "state a need and request help",
+        "arrange a time and express one preference"
+      ],
+      "teaching": {
+        "explanation": "This checkpoint is intentionally practical. Use memory first, then consult the word bank only for the item that blocked communication.",
+        "pattern": "Quiero ____. ¿Cuánto cuesta? Necesito ____. ¿Puedes ayudarme? Me gusta ____. ¿A qué hora?",
+        "checkpoint": "Complete a café/market scenario, ask for help, and arrange a time using at least one number."
+      },
+      "vocabulary": [
+        {
+          "id": "nos-vemos",
+          "es": "nos vemos",
+          "en": "see you",
+          "pos": "phrase",
+          "gender": null,
+          "audio_key": "es.nos-vemos",
+          "review_tags": [
+            "greetings",
+            "schedules"
+          ]
+        },
+        {
+          "id": "cuatro",
+          "es": "cuatro",
+          "en": "four",
+          "pos": "number",
+          "gender": null,
+          "audio_key": "es.cuatro",
+          "review_tags": [
+            "numbers"
+          ]
+        },
+        {
+          "id": "a-las-ocho",
+          "es": "a las ocho",
+          "en": "at eight",
+          "pos": "time phrase",
+          "gender": null,
+          "audio_key": "es.a-las-ocho",
+          "review_tags": [
+            "time"
+          ]
+        }
+      ],
+      "grammar_tags": [
+        "review",
+        "integration",
+        "mastery"
+      ],
+      "examples": [
+        {
+          "es": "Quiero agua y pan, por favor.",
+          "en": "I want water and bread, please.",
+          "analysis": "request + courtesy"
+        },
+        {
+          "es": "¿Puedes ayudarme? Necesito este libro.",
+          "en": "Can you help me? I need this book.",
+          "analysis": "ability question + need + demonstrative"
+        },
+        {
+          "es": "Me gusta estudiar a las ocho.",
+          "en": "I like studying at eight.",
+          "analysis": "gustar + infinitive + time"
+        }
+      ],
+      "activities": [
+        {
+          "id": "w3d7-a1",
+          "type": "retrieval",
+          "prompt": "Retrieve the three patterns: I want, I need, I like.",
+          "answer": "Quiero ____. Necesito ____. Me gusta ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "querer",
+            "necesitar",
+            "gustar"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d7-a2",
+          "type": "listening_comprehension",
+          "prompt": "Listen to a market exchange and identify the item, quantity, and price.",
+          "answer": "item_quantity_price",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "shopping",
+            "numbers"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d7-a3",
+          "type": "translation_chain",
+          "prompt": "Translate: “I need help. Can you repeat, please?”",
+          "answer": "Necesito ayuda. ¿Puedes repetir, por favor?",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "needs",
+            "repair"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d7-a4",
+          "type": "error_correction",
+          "prompt": "Correct: Me gusta los libros.",
+          "answer": "Me gustan los libros.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "gustar",
+            "number"
+          ],
+          "difficulty": "core"
+        },
+        {
+          "id": "w3d7-a5",
+          "type": "roleplay",
+          "prompt": "Complete the mission: order, ask a price, request clarification, and arrange a time.",
+          "answer": "Hola. Quiero ____. ¿Cuánto cuesta? ¿Puedes repetir? Nos vemos a las ____.",
+          "hint": "",
+          "feedback": "",
+          "rationale": "",
+          "review_item_ids": [
+            "week3"
+          ],
+          "difficulty": "checkpoint"
+        }
+      ],
+      "mission": "Handle a short café, market, and scheduling exchange.",
+      "dialogue": {
+        "title": "Café and schedule mission",
+        "lines": [
+          {
+            "speaker": "A",
+            "es": "Hola. ¿Qué quieres?",
+            "en": "Hello. What do you want?"
+          },
+          {
+            "speaker": "B",
+            "es": "Quiero ____. ¿Cuánto cuesta?",
+            "en": "I want ____. How much does it cost?"
+          },
+          {
+            "speaker": "A",
+            "es": "Cuatro euros.",
+            "en": "Four euros."
+          },
+          {
+            "speaker": "B",
+            "es": "Gracias. Nos vemos a las ocho.",
+            "en": "Thank you. See you at eight."
+          }
+        ],
+        "learner_turns": [
+          "Add a repair phrase and a preference.",
+          "Repeat without reading English."
+        ]
+      },
+      "exit_check": [
+        "Complete a transaction with one clarification.",
+        "Use querer, necesitar, and gustar correctly.",
+        "Pass the time-and-preference checkpoint."
+      ],
+      "completion_rules": {
+        "minimum_activity_accuracy": 0.8,
+        "minimum_exit_accuracy": 0.7,
+        "requires_mission_completion": true,
+        "retry_policy": "Incorrect essential items return immediately, then again in next-day review."
+      }
+    }
+  ]
+}
