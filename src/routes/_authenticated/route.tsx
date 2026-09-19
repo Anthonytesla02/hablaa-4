@@ -21,8 +21,12 @@ function AuthGate() {
         void navigate({ to: "/auth" });
         return;
       }
-      // Load state from cloud
-      await syncFromCloud(session.user.id);
+      // Load state from cloud — never block the app if this fails
+      try {
+        await syncFromCloud(session.user.id);
+      } catch (error) {
+        console.error("Cloud sync failed, continuing with local state", error);
+      }
       if (cancelled) return;
       setReady(true);
 
