@@ -20,7 +20,7 @@ import { courseLessons } from "@/lib/course";
 import { stopSpeaking } from "@/lib/speech";
 import { useApp } from "@/lib/store";
 import { dueCards } from "@/lib/srs";
-import mascot from "@/assets/mascot-llama.png.asset.json";
+import mascot from "@/assets/mascot-llama.png";
 
 const TILE_TONE = {
   amber: "border-amber text-amber",
@@ -316,7 +316,7 @@ function SessionPage() {
       <div className="topo mx-auto flex min-h-[100dvh] w-full max-w-md flex-col justify-center px-5 py-8">
         <div className="flex flex-col items-center text-center">
           <img
-            src={mascot.url}
+            src={mascot}
             alt="Habla mascot celebrating"
             className="seal-in h-40 w-40 object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.18)]"
           />

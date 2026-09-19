@@ -2,7 +2,6 @@
  * Ambient soundscapes. Recorded loops where available (café), otherwise a
  * procedural Web Audio bed plus randomised events (clinks, chimes, rumble).
  */
-import cafeAmbience from "@/assets/cafe-ambience.mp3.asset.json";
 
 
 export type AmbienceId =
@@ -141,7 +140,7 @@ const rand = (a: number, b: number) => a + Math.random() * (b - a);
 
 /** Real recorded loops (preferred over the procedural bed when present). */
 const SAMPLES: Partial<Record<AmbienceId, { url: string; level: number }>> = {
-  cafe: { url: cafeAmbience.url, level: 0.45 },
+
 };
 
 export class Ambience {

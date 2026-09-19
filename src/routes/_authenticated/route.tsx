@@ -1,6 +1,6 @@
 import { createFileRoute, Outlet, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import avatarLoadingVideo from "@/assets/habla-avatar-loading.mp4.asset.json";
+import loadingLlama from "@/assets/habla-llama.png";
 import { supabase } from "@/integrations/supabase/client";
 import { syncFromCloud, scheduleCloudSave, flushCloudSave } from "@/lib/cloud-sync";
 import { useApp } from "@/lib/store";
@@ -21,8 +21,12 @@ function AuthGate() {
         void navigate({ to: "/auth" });
         return;
       }
-      // Load state from cloud
-      await syncFromCloud(session.user.id);
+      // Load state from cloud — never block the app if this fails
+      try {
+        await syncFromCloud(session.user.id);
+      } catch (error) {
+        console.error("Cloud sync failed, continuing with local state", error);
+      }
       if (cancelled) return;
       setReady(true);
 
@@ -68,15 +72,10 @@ function AuthGate() {
   if (!ready) {
     return (
       <div className="flex min-h-[100dvh] items-center justify-center overflow-hidden bg-background">
-        <video
-          src={avatarLoadingVideo.url}
-          aria-label="Habla avatar loading"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="max-h-[80dvh] w-[min(88vw,24rem)] object-contain"
+        <img
+          src={loadingLlama}
+          alt="Habla is getting your lessons ready"
+          className="bounce-soft w-[min(60vw,14rem)] object-contain"
         />
       </div>
     );
