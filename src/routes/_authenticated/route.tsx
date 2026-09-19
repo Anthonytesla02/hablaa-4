@@ -1,6 +1,6 @@
 import { createFileRoute, Outlet, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import avatarLoadingVideo from "@/assets/habla-avatar-loading.mp4.asset.json";
+import loadingLlama from "@/assets/habla-llama.png";
 import { supabase } from "@/integrations/supabase/client";
 import { syncFromCloud, scheduleCloudSave, flushCloudSave } from "@/lib/cloud-sync";
 import { useApp } from "@/lib/store";
