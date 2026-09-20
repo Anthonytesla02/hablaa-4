@@ -28,9 +28,9 @@ export function TalkButton({
   tour,
 }: {
   voice: VoiceAnswerState;
-  label?: string;
-  compact?: boolean;
-  tour?: string;
+  label?: string | undefined;
+  compact?: boolean | undefined;
+  tour?: string | undefined;
 }) {
   const { phase, level, toggle } = voice;
   const listening = phase === "listening";
