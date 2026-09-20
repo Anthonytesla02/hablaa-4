@@ -39,7 +39,6 @@ export function Tutorial() {
   const stepIndex = useApp((s) => s.tutorialStep);
   const setStep = useApp((s) => s.setTutorialStep);
   const end = useApp((s) => s.endTutorial);
-  const rate = useApp((s) => s.settings.rate);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   const step = stepIndex >= 0 ? TOUR[stepIndex] : undefined;
