@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { Sparkles } from "lucide-react";
-import { speak, stopSpeaking } from "@/lib/speech";
+import { stopSpeaking } from "@/lib/speech";
 import { sfx } from "@/lib/sfx";
 import { useApp } from "@/lib/store";
 import { TOUR } from "@/lib/tutorial";
