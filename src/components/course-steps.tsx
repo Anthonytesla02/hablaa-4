@@ -15,7 +15,7 @@ import {
 import { PlayButton, useSpeaker } from "@/components/Audio";
 import { Glossed } from "@/components/Glossed";
 import { Redaction } from "@/components/Redaction";
-import { useAudioRecorder } from "@/lib/audio-recorder";
+import { TalkButton, VoiceAnswer, VoiceResult } from "@/components/voice/VoiceAnswer";
 import {
   acceptedAnswers,
   activityAudio,
