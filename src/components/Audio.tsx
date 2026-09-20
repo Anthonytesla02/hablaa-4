@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Volume2 } from "lucide-react";
-import { isSpeaking, speak, ttsSupported } from "@/lib/speech";
+import { isSpeaking, speak } from "@/lib/speech";
 import { useApp } from "@/lib/store";
 
 export function useSpeaker(locale: string) {
