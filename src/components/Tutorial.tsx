@@ -50,22 +50,9 @@ export function Tutorial() {
 
   const rect = useTargetRect(onPage ? step?.target : undefined, stepIndex);
 
-  // Read the guide text out loud, clearly and paced.
-  useEffect(() => {
-    if (!step || !onPage) return;
-    let alive = true;
-    // On the lesson page let the tutor say the word itself first, then talk over it.
-    const delay = step.id === "first-word" ? 2600 : 450;
-    const t = setTimeout(() => {
-      if (alive) void speak(`${step.title}. ${step.text}`, "en-US", Math.min(0.9, rate));
-    }, delay);
-    return () => {
-      alive = false;
-      clearTimeout(t);
-      stopSpeaking();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [stepIndex, onPage]);
+  // The walkthrough is read silently — no spoken narration over the lesson audio.
+
+
 
   // Keep the highlighted element in view.
   useEffect(() => {
