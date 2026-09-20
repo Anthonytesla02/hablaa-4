@@ -135,9 +135,9 @@ export function VoiceAnswer({
   voice: VoiceAnswerState;
   expected: string;
   locale: string;
-  label?: string;
-  onType?: () => void;
-  tour?: string;
+  label?: string | undefined;
+  onType?: (() => void) | undefined;
+  tour?: string | undefined;
 }) {
   return (
     <div className="space-y-3 rounded-sm border border-secondary/40 bg-secondary/5 p-3">
