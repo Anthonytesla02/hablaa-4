@@ -15,7 +15,7 @@ import {
 import { PlayButton, useSpeaker } from "@/components/Audio";
 import { Glossed } from "@/components/Glossed";
 import { Redaction } from "@/components/Redaction";
-import { useAudioRecorder } from "@/lib/audio-recorder";
+import { TalkButton, VoiceAnswer, VoiceResult } from "@/components/voice/VoiceAnswer";
 import {
   acceptedAnswers,
   activityAudio,
@@ -28,8 +28,8 @@ import {
   type CourseLesson,
 } from "@/lib/course";
 import { handlerReact, handlerSay } from "@/lib/handler-bus";
-import { gradePronunciation } from "@/lib/pronunciation.functions";
-import { normalize } from "@/lib/text-compare";
+import { plain as normalize } from "@/lib/voice/score";
+import { useVoiceAnswer, voiceXp } from "@/lib/voice/use-voice-answer";
 import { useApp } from "@/lib/store";
 import { TOUR_STEP } from "@/lib/tutorial";
 import type { StepResult } from "@/components/steps";
@@ -53,82 +53,25 @@ function shuffle<T>(arr: T[]): T[] {
 export function SpeakBack({
   expected,
   locale,
-  label = "SAY IT BACK",
+  label = "TAP TO SPEAK",
 }: {
   expected: string;
   locale: string;
   label?: string;
 }) {
-  const { recording, start, stop } = useAudioRecorder();
-  const [grading, setGrading] = useState(false);
-  const [result, setResult] = useState<{ grade: string; transcript: string } | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const addXp = useApp((s) => s.addXp);
+  const voice = useVoiceAnswer({
+    expected,
+    locale,
+    onResult: (score) => {
+      const xp = voiceXp(score.verdict);
+      if (xp) addXp(xp);
+      handlerReact(score.verdict === "retry" ? "wrong" : "correct",
+        score.verdict === "retry" ? "tough" : "hype");
+    },
+  });
 
-  async function toggle() {
-    if (!recording) {
-      setResult(null);
-      setError(null);
-      void start();
-      return;
-    }
-    setGrading(true);
-    const captured = await stop();
-    if (!captured) {
-      setGrading(false);
-      setError("No audio captured — try again.");
-      return;
-    }
-    try {
-      const grade = await gradePronunciation({
-        data: { audio: captured.base64, expected, locale, mimeType: captured.mimeType },
-      });
-      setResult(grade);
-      if (grade.grade === "exact") addXp(5);
-      else if (grade.grade === "close") addXp(2);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Grading failed.");
-    } finally {
-      setGrading(false);
-    }
-  }
-
-  return (
-    <div className="rounded-sm border border-secondary/40 bg-secondary/5 p-3">
-      <button
-        type="button"
-        onClick={toggle}
-        disabled={grading}
-        className={`hud flex w-full items-center justify-center gap-2 text-[11px] ${
-          recording ? "text-destructive" : "text-secondary"
-        }`}
-      >
-        {grading ? (
-          <Loader2 className="h-4 w-4 animate-spin" />
-        ) : (
-          <Mic className={`h-4 w-4 ${recording ? "animate-pulse" : ""}`} />
-        )}
-        {grading ? "GRADING…" : recording ? "TAP TO STOP" : label}
-      </button>
-      {result && (
-        <div className="mt-2">
-          <p className="hud text-[10px]">
-            {result.grade === "exact" ? (
-              <span className="text-primary">NATIVE-LIKE · +5 XP</span>
-            ) : result.grade === "close" ? (
-              <span className="text-secondary">CLOSE · +2 XP</span>
-            ) : (
-              <span className="text-destructive">NEEDS WORK</span>
-            )}
-          </p>
-          {result.transcript && (
-            <p className="mt-1 text-[11px] opacity-70">HEARD: {result.transcript}</p>
-          )}
-        </div>
-      )}
-      {error && <p className="hud mt-2 text-[10px] text-destructive">{error}</p>}
-    </div>
-  );
+  return <VoiceAnswer voice={voice} expected={expected} locale={locale} label={label} />;
 }
 
 function Feedback({ act, ok }: { act: CourseActivity; ok: boolean }) {
@@ -180,29 +123,41 @@ function VocabDrill({
 }) {
   const say = useSpeaker(locale);
   const addXp = useApp((s) => s.addXp);
-  const { recording, error: micError, start, stop } = useAudioRecorder();
 
   const words = lesson.vocabulary;
   const [wi, setWi] = useState(0);
   const [rep, setRep] = useState(0);
-  const [phase, setPhase] = useState<"playing" | "await" | "grading" | "result">("playing");
-  const [result, setResult] = useState<{ grade: string; transcript: string; overlap: number } | null>(
-    null,
-  );
-  const [error, setError] = useState<string | null>(null);
+  const [intro, setIntro] = useState(true);
 
   const word = words[wi];
+  const advanceRef = useRef(() => {});
+
+  const voice = useVoiceAnswer({
+    expected: word?.es ?? "",
+    locale,
+    onResult: (score) => {
+      const tStep = useApp.getState().tutorialStep;
+      if (tStep === TOUR_STEP['first-mic']) useApp.getState().setTutorialStep(TOUR_STEP['done']!);
+      if (score.verdict === "great") addXp(3);
+      else if (score.verdict === "close") addXp(1);
+      if (score.verdict !== "retry") {
+        handlerReact("correct", "hype");
+        setTimeout(() => advanceRef.current(), 1500);
+      } else {
+        handlerReact("wrong", "tough");
+      }
+    },
+  });
 
   // Speak the current word at the start of every rep, then hand over to the mic.
   useEffect(() => {
     if (!word) return;
     let alive = true;
-    setResult(null);
-    setError(null);
-    setPhase("playing");
+    voice.reset();
+    setIntro(true);
     void (async () => {
       await say(word.es);
-      if (alive) setPhase("await");
+      if (alive) setIntro(false);
     })();
     return () => {
       alive = false;
@@ -220,43 +175,7 @@ function VocabDrill({
       onComplete();
     }
   }
-
-  async function toggleMic() {
-    if (!word) return;
-    if (!recording) {
-      setResult(null);
-      setError(null);
-      void start();
-      return;
-    }
-    setPhase("grading");
-    const captured = await stop();
-    if (!captured) {
-      setError("No audio captured — hold the mic open a moment longer.");
-      setPhase("await");
-      return;
-    }
-    try {
-      const grade = await gradePronunciation({
-        data: { audio: captured.base64, expected: word.es, locale, mimeType: captured.mimeType },
-      });
-      setResult(grade);
-      setPhase("result");
-      const tStep = useApp.getState().tutorialStep;
-      if (tStep === TOUR_STEP['first-mic']) useApp.getState().setTutorialStep(TOUR_STEP['done']!);
-      if (grade.grade === "exact") addXp(3);
-      else if (grade.grade === "close") addXp(1);
-      if (grade.grade !== "miss") {
-        handlerReact("correct", "hype");
-        setTimeout(advance, 1400);
-      } else {
-        handlerReact("wrong", "tough");
-      }
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Grading failed.");
-      setPhase("await");
-    }
-  }
+  advanceRef.current = advance;
 
   if (!word) return null;
 
