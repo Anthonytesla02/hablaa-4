@@ -1,6 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
-import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 const Turn = z.object({
   role: z.enum(["user", "character"]),
@@ -59,21 +58,10 @@ const FALLBACK: SimReply = {
 
 /** One turn of an immersive role-play conversation in the target language. */
 export const simulateTurn = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
   .inputValidator((data) => SimInput.parse(data))
-  .handler(async ({ data, context }): Promise<SimReply> => {
+  .handler(async ({ data }): Promise<SimReply> => {
     const apiKey = process.env["LOVABLE_API_KEY"];
     if (!apiKey) return FALLBACK;
-
-    // Role-play turns are unique per conversation; cap them per user per day.
-    const { withinQuota } = await import("./shared-cache.server");
-    if (!(await withinQuota(context.userId, "simulate"))) {
-      return {
-        ...FALLBACK,
-        reply_translation: "You have reached today's practice limit. Come back tomorrow.",
-        stage_direction: "Daily practice limit reached.",
-      };
-    }
 
     const c = data.companion;
     const slangWords = ["textbook-clean, no slang", "light everyday informality", "plenty of real slang", "maximum street slang, like texting a friend"];

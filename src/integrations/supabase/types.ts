@@ -14,57 +14,6 @@ export type Database = {
   }
   public: {
     Tables: {
-      ai_cache: {
-        Row: {
-          cache_key: string
-          created_at: string
-          feature: string
-          hits: number
-          last_used_at: string
-          payload: Json
-        }
-        Insert: {
-          cache_key: string
-          created_at?: string
-          feature: string
-          hits?: number
-          last_used_at?: string
-          payload: Json
-        }
-        Update: {
-          cache_key?: string
-          created_at?: string
-          feature?: string
-          hits?: number
-          last_used_at?: string
-          payload?: Json
-        }
-        Relationships: []
-      }
-      ai_usage: {
-        Row: {
-          day_key: string
-          feature: string
-          updated_at: string
-          used: number
-          user_id: string
-        }
-        Insert: {
-          day_key: string
-          feature: string
-          updated_at?: string
-          used?: number
-          user_id: string
-        }
-        Update: {
-          day_key?: string
-          feature?: string
-          updated_at?: string
-          used?: number
-          user_id?: string
-        }
-        Relationships: []
-      }
       completed_days: {
         Row: {
           completed_at: string
@@ -278,53 +227,12 @@ export type Database = {
         }
         Relationships: []
       }
-      tts_cache: {
-        Row: {
-          byte_size: number
-          cache_key: string
-          created_at: string
-          hits: number
-          last_used_at: string
-          speed: number
-          storage_path: string
-          text_preview: string
-          voice: string
-        }
-        Insert: {
-          byte_size?: number
-          cache_key: string
-          created_at?: string
-          hits?: number
-          last_used_at?: string
-          speed?: number
-          storage_path: string
-          text_preview?: string
-          voice?: string
-        }
-        Update: {
-          byte_size?: number
-          cache_key?: string
-          created_at?: string
-          hits?: number
-          last_used_at?: string
-          speed?: number
-          storage_path?: string
-          text_preview?: string
-          voice?: string
-        }
-        Relationships: []
-      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      consume_ai_quota: {
-        Args: { _feature: string; _limit: number; _user_id: string }
-        Returns: boolean
-      }
-      touch_ai_cache: { Args: { _cache_key: string }; Returns: undefined }
-      touch_tts_cache: { Args: { _cache_key: string }; Returns: undefined }
+      [_ in never]: never
     }
     Enums: {
       [_ in never]: never

@@ -1,6 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
-import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 const GlossInput = z.object({
   word: z.string().min(1).max(60),
@@ -30,21 +29,10 @@ const FALLBACK = (word: string): WordGloss => ({
 
 /** Look up a single word in context: translation + short grammar note. */
 export const explainWord = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
   .inputValidator((data) => GlossInput.parse(data))
-  .handler(async ({ data, context }): Promise<WordGloss> => {
+  .handler(async ({ data }): Promise<WordGloss> => {
     const apiKey = process.env["LOVABLE_API_KEY"];
     if (!apiKey) return FALLBACK(data.word);
-
-    // Word look-ups are identical for every learner, so they are answered from
-    // the shared cache and only ever generated once.
-    const { cachedJson, hashKey, withinQuota } = await import("./shared-cache.server");
-    const cacheKey = await hashKey(
-      "gloss-v1",
-      data.language.toLowerCase(),
-      data.word.toLowerCase(),
-      data.phrase.toLowerCase(),
-    );
 
     const system = `You are a concise ${data.language} tutor for absolute beginners.
 Explain ONE word as it is used in the given sentence.
@@ -55,8 +43,6 @@ Rules: "translation" = short English meaning in this context (max 6 words).
 "grammar" = ONE or TWO short sentences a beginner understands (gender, conjugation, agreement, register, or usage note).
 "example_target" = a new short natural sentence in ${data.language} using the word; "example_translation" = its English translation.`;
 
-    const produce = async (): Promise<WordGloss | null> => {
-    if (!(await withinQuota(context.userId, "gloss"))) return null;
     try {
       const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
         method: "POST",
@@ -77,20 +63,17 @@ Rules: "translation" = short English meaning in this context (max 6 words).
           ],
         }),
       });
-      if (!res.ok) return null;
+      if (!res.ok) return FALLBACK(data.word);
       const json = (await res.json()) as {
         choices?: { message?: { content?: string } }[];
       };
       const raw = json.choices?.[0]?.message?.content ?? "";
       const start = raw.indexOf("{");
       const end = raw.lastIndexOf("}");
-      if (start === -1 || end === -1) return null;
+      if (start === -1 || end === -1) return FALLBACK(data.word);
       const parsed = JSON.parse(raw.slice(start, end + 1)) as Partial<WordGloss>;
       return { ...FALLBACK(data.word), ...parsed, word: data.word };
     } catch {
-      return null;
+      return FALLBACK(data.word);
     }
-    };
-
-    return (await cachedJson<WordGloss>("gloss", cacheKey, produce)) ?? FALLBACK(data.word);
   });

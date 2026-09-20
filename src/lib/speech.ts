@@ -178,18 +178,6 @@ if (typeof window !== "undefined") {
   window.addEventListener("keydown", on, { once: true, capture: true });
 }
 
-/** Bearer token so the server can budget speech that is not course content. */
-async function authHeaders(): Promise<Record<string, string>> {
-  try {
-    const { supabase } = await import("@/integrations/supabase/client");
-    const { data } = await supabase.auth.getSession();
-    const token = data.session?.access_token;
-    return token ? { Authorization: `Bearer ${token}` } : {};
-  } catch {
-    return {};
-  }
-}
-
 async function speakNeural(
   text: string,
   locale: string,
@@ -204,15 +192,19 @@ async function speakNeural(
     if (!url) {
       const res = await fetch("/api/tts", {
         method: "POST",
-        headers: { "Content-Type": "application/json", ...(await authHeaders()) },
-        // Voice character and speed are decided server-side so every learner
-        // shares the same cached recording of the same phrase.
-        body: JSON.stringify({ text, voice, speed: rate }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text,
+          voice,
+          speed: rate,
+          instructions:
+            gender === "male"
+              ? "Young man in his early twenties, relaxed and friendly, natural conversational pace."
+              : "Warm, friendly young woman, natural conversational pace.",
+        }),
       });
       if (!res.ok) {
         if (res.status === 503 || res.status === 404) neuralBroken = true;
-        // 401/429 mean "not cached and not allowed right now" — fall back to
-        // the device voice for this line only.
         return false;
       }
       const blob = await res.blob();
@@ -250,16 +242,6 @@ async function speakNeural(
   }
 }
 
-/** True while a neural clip or the device voice is talking. */
-export function isSpeaking() {
-  if (currentAudio && !currentAudio.paused) return true;
-  if (ttsSupported()) {
-    const s = window.speechSynthesis;
-    if (s.speaking || s.pending) return true;
-  }
-  return speakingState.speaking;
-}
-
 export async function speak(
   text: string,
   locale: string,
@@ -267,8 +249,6 @@ export async function speak(
   preferredGender?: "male" | "female",
 ): Promise<void> {
   if (!text) return;
-  // Never let two lines play at once — overlapping voices sound like an echo.
-  stopSpeaking();
   // Always try the neural voice first: device speech engines are missing or
   // silently blocked on a lot of mobile browsers.
   {
