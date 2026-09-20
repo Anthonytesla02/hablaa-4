@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Volume2 } from "lucide-react";
-import { isSpeaking, speak } from "@/lib/speech";
+import { isSpeaking, speak, ttsSupported } from "@/lib/speech";
 import { useApp } from "@/lib/store";
 
 export function useSpeaker(locale: string) {
@@ -45,7 +45,7 @@ export function PlayButton({
   // fall back to playing on the first interaction anywhere on the page.
   const autoPlayed = useRef<string | null>(null);
   useEffect(() => {
-    if (!autoPlay || !ttsSupported()) return;
+    if (!autoPlay) return;
     if (autoPlayed.current === text) return;
     autoPlayed.current = text;
 
@@ -55,7 +55,9 @@ export function PlayButton({
     }, 250);
 
     const onGesture = () => {
-      if (!window.speechSynthesis.speaking && !window.speechSynthesis.pending) void play();
+      // Only retry if nothing is already playing — two copies at once sounded
+      // like an echo in a bathroom.
+      if (!isSpeaking()) void play();
       window.removeEventListener("pointerdown", onGesture);
     };
     window.addEventListener("pointerdown", onGesture, { once: true });
