@@ -34,7 +34,7 @@ function useTargetRect(selector: string | undefined, key: number) {
   return rect;
 }
 
-/** Floating, spoken walkthrough that guides a brand-new learner to their first recording. */
+/** Floating walkthrough that guides a brand-new learner to their first recording. */
 export function Tutorial() {
   const stepIndex = useApp((s) => s.tutorialStep);
   const setStep = useApp((s) => s.setTutorialStep);
