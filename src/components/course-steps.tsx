@@ -28,8 +28,8 @@ import {
   type CourseLesson,
 } from "@/lib/course";
 import { handlerReact, handlerSay } from "@/lib/handler-bus";
-import { gradePronunciation } from "@/lib/pronunciation.functions";
-import { normalize } from "@/lib/text-compare";
+import { plain as normalize } from "@/lib/voice/score";
+import { useVoiceAnswer, voiceXp } from "@/lib/voice/use-voice-answer";
 import { useApp } from "@/lib/store";
 import { TOUR_STEP } from "@/lib/tutorial";
 import type { StepResult } from "@/components/steps";
