@@ -407,15 +407,21 @@ export function StsStep({ data, locale, onDone }: Props & { data: Sts }) {
   const [state, setState] = useState<"idle" | "listening" | "processing" | "success" | "struggle">("idle");
   const [transcript, setTranscript] = useState("");
   const [typed, setTyped] = useState("");
-  const [useText, setUseText] = useState(!sttSupported());
+  const [typing, setTyping] = useState(false);
   const [attempts, setAttempts] = useState(0);
   const bumpSts = useApp((s) => s.bumpSts);
   const say = useSpeaker(locale);
-  const stopRef = useRef<() => void>(() => {});
+  const judgeRef = useRef<(text: string) => void>(() => {});
+
+  const voice = useVoiceAnswer({
+    expected: data.expected_answers[0]?.target ?? "",
+    locale,
+    onTranscript: (text) => judgeRef.current(text),
+  });
+  const useText = typing || !voice.supported;
 
   useEffect(() => {
     void say(data.ai_prompt_target);
-    return () => stopRef.current();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data.id]);
 
