@@ -623,7 +623,7 @@ function SimulatePage() {
     const c = correction;
     if (!c) return;
     const target = c.retry || c.better;
-    const { overlap } = compareTranscript(said, target);
+    const overlap = scoreSpeech(said, target).score / 100;
     if (overlap >= 0.6) {
       sfx("correct");
       setRetryState("ok");
