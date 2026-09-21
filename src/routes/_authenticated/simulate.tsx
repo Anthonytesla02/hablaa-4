@@ -667,33 +667,24 @@ function SimulatePage() {
     if (c) void advance(c.retry || c.better || c.pending, c.history);
   }
 
-  function record() {
-    if (listening) {
-      stopListenRef.current();
-      return;
-    }
-    setHeard("");
-    setDraft(null);
-    setListening(true);
-    sfx("record");
-    stopListenRef.current = listenContinuous(locale, {
-      onFinal: (text) => {
-        setListening(false);
-        sfx("stop");
-        const clean = text.trim();
-        if (!clean) return;
-        setDrafting(true);
-        void translateUtterance({ data: { text: clean, language } })
-          .then((t) => setDraft({ text: t.text || clean, translation: t.translation }))
-          .catch(() => setDraft({ text: clean, translation: "" }))
-          .finally(() => setDrafting(false));
-      },
+  onSpokenRef.current = (text: string) => {
+    sfx("stop");
+    const clean = text.trim();
+    if (!clean) return;
+    setDrafting(true);
+    void translateUtterance({ data: { text: clean, language } })
+      .then((t) => setDraft({ text: t.text || clean, translation: t.translation }))
+      .catch(() => setDraft({ text: clean, translation: "" }))
+      .finally(() => setDrafting(false));
+  };
 
-      onError: () => {
-        setListening(false);
-        setUseText(true);
-      },
-    });
+  function record() {
+    if (voice.phase !== "listening") {
+      setHeard("");
+      setDraft(null);
+      sfx("record");
+    }
+    voice.toggle();
   }
 
   function sendDraft() {
