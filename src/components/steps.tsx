@@ -452,17 +452,7 @@ export function StsStep({ data, locale, onDone }: Props & { data: Sts }) {
     }, 700);
   }
 
-  function record() {
-    setState("listening");
-    stopRef.current = listenOnce(
-      locale,
-      (t) => judge(t),
-      () => {
-        setUseText(true);
-        setState("idle");
-      },
-    );
-  }
+  judgeRef.current = judge;
 
   const passedFirstTry = attempts <= 1;
 
