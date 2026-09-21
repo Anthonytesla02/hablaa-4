@@ -99,70 +99,15 @@ export function McqStep({ data, locale, onDone }: Props & { data: Mcq }) {
               </div>
               {/* Mic button beside correct answer after correct pick */}
               {picked !== null && isAnswer && correct && (
-                <div className="border-t border-primary/30 px-3 py-2">
-                  <button
-                    type="button"
-                    onClick={handleMic}
-                    disabled={grading}
-                    className={`flex w-full items-center gap-2 text-[11px] ${
-                      recording
-                        ? "text-destructive"
-                        : "text-primary"
-                    }`}
-                  >
-                    {grading ? (
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                    ) : (
-                      <Mic
-                        className={`h-4 w-4 ${recording ? "animate-pulse" : ""}`}
-                      />
-                    )}
-                    {grading
-                      ? "GRADING…"
-                      : recording
-                        ? "● RECORDING — TAP TO STOP"
-                        : pronResult
-                          ? "RETRY PHRASE"
-                          : "REPEAT PHRASE"}
-                  </button>
-                  {micError && (
-                    <p className="mt-1 text-[10px] text-destructive">{micError}</p>
-                  )}
-                  {pronError && (
-                    <p className="mt-1 text-[10px] text-destructive">{pronError}</p>
-                  )}
-                  {pronResult && (
-                    <div className="mt-2 space-y-1">
-                      <p
-                        className={`hud text-[10px] ${
-                          pronResult.grade === "exact"
-                            ? "text-primary"
-                            : pronResult.grade === "close"
-                              ? "text-yellow-500"
-                              : "text-destructive"
-                        }`}
-                      >
-                        {pronResult.grade === "exact"
-                          ? "◆ PRONUNCIATION: NATIVE-LIKE"
-                          : pronResult.grade === "close"
-                            ? "◆ PRONUNCIATION: CLOSE"
-                            : "◆ PRONUNCIATION: NEEDS WORK"}
-                        {" "}
-                        ({pronResult.overlap}%)
-                      </p>
-                      <p className="text-[10px] text-muted-foreground">
-                        You said: <span className="text-foreground">{pronResult.transcript}</span>
-                      </p>
-                      <button
-                        type="button"
-                        onClick={() => void say(correctOption?.target ?? "")}
-                        className="hud mt-1 flex items-center gap-1 text-[10px] text-muted-foreground hover:text-foreground"
-                      >
-                        <Volume2 className="h-3 w-3" /> HEAR REFERENCE
-                      </button>
-                    </div>
-                  )}
+                <div className="space-y-2 border-t border-primary/30 px-3 py-3">
+                  <TalkButton voice={voice} label="REPEAT THE PHRASE" compact />
+                  <VoiceResult
+                    voice={voice}
+                    expected={correctOption?.target ?? ""}
+                    locale={locale}
+                  />
                 </div>
+
               )}
             </div>
           );
