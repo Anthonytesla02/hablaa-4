@@ -724,7 +724,7 @@ function SimulatePage() {
     // Guided run (daily practice or weekly recall): celebrate, then back to the map.
     if ((scene?.daily || scene?.weeklyWeek) && award) {
       setReward(gained);
-      setListening(false);
+      voice.reset();
       setDraft(null);
       setTimeout(() => void navigate({ to: "/dashboard" }), 2400);
       return;
