@@ -324,7 +324,8 @@ function SimulatePage() {
   const [objective, setObjective] = useState("");
   const [suggestions, setSuggestions] = useState<{ target: string; translation: string }[]>([]);
   const [thinking, setThinking] = useState(false);
-  const [listening, setListening] = useState(false);
+  const onSpokenRef = useRef<(text: string) => void>(() => {});
+  const onRetrySpokenRef = useRef<(text: string) => void>(() => {});
   const [heard, setHeard] = useState("");
   const [drafting, setDrafting] = useState(false);
   const [draft, setDraft] = useState<{ text: string; translation: string } | null>(null);
