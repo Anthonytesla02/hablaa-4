@@ -39,7 +39,9 @@ import {
   runningJoke,
   type Severity,
 } from "@/lib/severity";
-import { compareTranscript } from "@/lib/text-compare";
+import { scoreSpeech } from "@/lib/voice/score";
+import { useVoiceAnswer } from "@/lib/voice/use-voice-answer";
+import { TalkButton } from "@/components/voice/VoiceAnswer";
 import { translateUtterance } from "@/lib/translate.functions";
 import { bcp47, langById } from "@/lib/content";
 import { courseWeeks, lessonById } from "@/lib/course";
