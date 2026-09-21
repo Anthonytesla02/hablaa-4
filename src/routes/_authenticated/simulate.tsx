@@ -356,13 +356,25 @@ function SimulatePage() {
   const locale = bcp47(profile?.langId ?? "spanish");
   const language = langById(profile?.langId ?? "spanish")?.label ?? "Spanish";
 
+  const voice = useVoiceAnswer({
+    expected: "",
+    locale,
+    onTranscript: (text) => onSpokenRef.current(text),
+  });
+  const retryVoice = useVoiceAnswer({
+    expected: "",
+    locale,
+    onTranscript: (text) => onRetrySpokenRef.current(text),
+  });
+  const listening = voice.phase === "listening";
+
   useEffect(() => {
-    if (!sttSupported()) setUseText(true);
+    if (!voice.supported) setUseText(true);
     return () => {
       ambienceRef.current?.stop();
-      stopListenRef.current();
       stopSpeaking();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
