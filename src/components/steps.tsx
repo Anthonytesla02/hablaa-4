@@ -15,9 +15,9 @@ import {
   WriteStep,
 } from "@/components/course-steps";
 
-import { evaluateResponse, listenOnce, normalize, sttSupported } from "@/lib/speech";
-import { gradePronunciation } from "@/lib/pronunciation.functions";
-import { useAudioRecorder } from "@/lib/audio-recorder";
+import { evaluateResponse, normalize } from "@/lib/speech";
+import { TalkButton, VoiceResult } from "@/components/voice/VoiceAnswer";
+import { useVoiceAnswer, voiceXp } from "@/lib/voice/use-voice-answer";
 import { handlerReact } from "@/lib/handler-bus";
 import type { Step } from "@/lib/session";
 import type { Dictation, Mcq, PatternDrill, Shadow, Sts } from "@/lib/content";
@@ -47,54 +47,17 @@ export function McqStep({ data, locale, onDone }: Props & { data: Mcq }) {
   const correct = picked === data.correct_option_id;
   const addXp = useApp((s) => s.addXp);
 
-  // Pronunciation grading state
-  const { recording, error: micError, start, stop } = useAudioRecorder();
-  const [grading, setGrading] = useState(false);
-  const [pronResult, setPronResult] = useState<
-    | { grade: string; transcript: string; overlap: number }
-    | null
-  >(null);
-  const [pronError, setPronError] = useState<string | null>(null);
-
   const correctOption = data.options.find((o) => o.id === data.correct_option_id);
 
-  async function handleMic() {
-    if (recording) {
-      setGrading(true);
-      setPronError(null);
-      const result = await stop();
-      if (!result) {
-        setGrading(false);
-        setPronError("No audio captured — try again");
-        return;
-      }
-      try {
-        const grade = await gradePronunciation({
-          data: {
-            audio: result.base64,
-            expected: correctOption?.target ?? "",
-            locale,
-            mimeType: result.mimeType,
-          },
-        });
-        setPronResult(grade);
-        // Bonus XP for good pronunciation
-        if (grade.grade === "exact") {
-          addXp(5);
-        } else if (grade.grade === "close") {
-          addXp(2);
-        }
-      } catch (e) {
-        setPronError(e instanceof Error ? e.message : "Grading failed");
-      } finally {
-        setGrading(false);
-      }
-    } else {
-      setPronResult(null);
-      setPronError(null);
-      void start();
-    }
-  }
+  const voice = useVoiceAnswer({
+    expected: correctOption?.target ?? "",
+    locale,
+    onResult: (score) => {
+      const xp = voiceXp(score.verdict);
+      if (xp) addXp(xp);
+    },
+  });
+
 
   return (
     <div className="space-y-4">
@@ -136,70 +99,15 @@ export function McqStep({ data, locale, onDone }: Props & { data: Mcq }) {
               </div>
               {/* Mic button beside correct answer after correct pick */}
               {picked !== null && isAnswer && correct && (
-                <div className="border-t border-primary/30 px-3 py-2">
-                  <button
-                    type="button"
-                    onClick={handleMic}
-                    disabled={grading}
-                    className={`flex w-full items-center gap-2 text-[11px] ${
-                      recording
-                        ? "text-destructive"
-                        : "text-primary"
-                    }`}
-                  >
-                    {grading ? (
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                    ) : (
-                      <Mic
-                        className={`h-4 w-4 ${recording ? "animate-pulse" : ""}`}
-                      />
-                    )}
-                    {grading
-                      ? "GRADING…"
-                      : recording
-                        ? "● RECORDING — TAP TO STOP"
-                        : pronResult
-                          ? "RETRY PHRASE"
-                          : "REPEAT PHRASE"}
-                  </button>
-                  {micError && (
-                    <p className="mt-1 text-[10px] text-destructive">{micError}</p>
-                  )}
-                  {pronError && (
-                    <p className="mt-1 text-[10px] text-destructive">{pronError}</p>
-                  )}
-                  {pronResult && (
-                    <div className="mt-2 space-y-1">
-                      <p
-                        className={`hud text-[10px] ${
-                          pronResult.grade === "exact"
-                            ? "text-primary"
-                            : pronResult.grade === "close"
-                              ? "text-yellow-500"
-                              : "text-destructive"
-                        }`}
-                      >
-                        {pronResult.grade === "exact"
-                          ? "◆ PRONUNCIATION: NATIVE-LIKE"
-                          : pronResult.grade === "close"
-                            ? "◆ PRONUNCIATION: CLOSE"
-                            : "◆ PRONUNCIATION: NEEDS WORK"}
-                        {" "}
-                        ({pronResult.overlap}%)
-                      </p>
-                      <p className="text-[10px] text-muted-foreground">
-                        You said: <span className="text-foreground">{pronResult.transcript}</span>
-                      </p>
-                      <button
-                        type="button"
-                        onClick={() => void say(correctOption?.target ?? "")}
-                        className="hud mt-1 flex items-center gap-1 text-[10px] text-muted-foreground hover:text-foreground"
-                      >
-                        <Volume2 className="h-3 w-3" /> HEAR REFERENCE
-                      </button>
-                    </div>
-                  )}
+                <div className="space-y-2 border-t border-primary/30 px-3 py-3">
+                  <TalkButton voice={voice} label="REPEAT THE PHRASE" compact />
+                  <VoiceResult
+                    voice={voice}
+                    expected={correctOption?.target ?? ""}
+                    locale={locale}
+                  />
                 </div>
+
               )}
             </div>
           );
@@ -499,15 +407,21 @@ export function StsStep({ data, locale, onDone }: Props & { data: Sts }) {
   const [state, setState] = useState<"idle" | "listening" | "processing" | "success" | "struggle">("idle");
   const [transcript, setTranscript] = useState("");
   const [typed, setTyped] = useState("");
-  const [useText, setUseText] = useState(!sttSupported());
+  const [typing, setTyping] = useState(false);
   const [attempts, setAttempts] = useState(0);
   const bumpSts = useApp((s) => s.bumpSts);
   const say = useSpeaker(locale);
-  const stopRef = useRef<() => void>(() => {});
+  const judgeRef = useRef<(text: string) => void>(() => {});
+
+  const voice = useVoiceAnswer({
+    expected: data.expected_answers[0]?.target ?? "",
+    locale,
+    onTranscript: (text) => judgeRef.current(text),
+  });
+  const useText = typing || !voice.supported;
 
   useEffect(() => {
     void say(data.ai_prompt_target);
-    return () => stopRef.current();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data.id]);
 
@@ -538,17 +452,7 @@ export function StsStep({ data, locale, onDone }: Props & { data: Sts }) {
     }, 700);
   }
 
-  function record() {
-    setState("listening");
-    stopRef.current = listenOnce(
-      locale,
-      (t) => judge(t),
-      () => {
-        setUseText(true);
-        setState("idle");
-      },
-    );
-  }
+  judgeRef.current = judge;
 
   const passedFirstTry = attempts <= 1;
 
@@ -572,7 +476,7 @@ export function StsStep({ data, locale, onDone }: Props & { data: Sts }) {
           data={data}
           locale={locale}
           onWord={(w) => {
-            setUseText(true);
+            setTyping(true);
             setTyped((t) => (t ? `${t} ${w}` : w));
           }}
           onClear={() => setTyped("")}
@@ -627,33 +531,22 @@ export function StsStep({ data, locale, onDone }: Props & { data: Sts }) {
           <button className={btn} disabled={!typed.trim()} onClick={() => judge(typed)}>
             TRANSMIT REPLY
           </button>
-          {sttSupported() && (
-            <button className={ghost} onClick={() => setUseText(false)}>
+          {voice.supported && (
+            <button className={ghost} onClick={() => setTyping(false)}>
               <Mic className="mr-1 inline h-3 w-3" /> USE MICROPHONE
             </button>
           )}
         </div>
       ) : (
-        <div className="space-y-2">
-          <button
-            onClick={record}
-            disabled={state === "listening" || state === "processing"}
-            className={`flex w-full flex-col items-center gap-2 rounded-sm border py-6 ${
-              state === "listening"
-                ? "mic-live border-secondary bg-secondary/10 text-secondary"
-                : "border-border bg-card text-foreground"
-            }`}
-          >
-            <Mic className="h-7 w-7" />
-            <span className="hud text-[10px]">
-              {state === "listening"
-                ? "LISTENING…"
-                : state === "processing"
-                  ? "TRANSMITTING…"
-                  : "HOLD THE LINE — SPEAK"}
-            </span>
-          </button>
-          <button className={ghost} onClick={() => setUseText(true)}>
+        <div className="space-y-3 rounded-sm border border-secondary/40 bg-secondary/5 p-3">
+          <TalkButton
+            voice={voice}
+            label={state === "processing" ? "CHECKING YOUR REPLY…" : "TAP AND SPEAK YOUR REPLY"}
+          />
+          {voice.phase === "error" && voice.error && (
+            <p className="hud text-center text-[10px] text-destructive">{voice.error}</p>
+          )}
+          <button className={ghost} onClick={() => setTyping(true)}>
             <Keyboard className="mr-1 inline h-3 w-3" /> TYPE INSTEAD
           </button>
         </div>

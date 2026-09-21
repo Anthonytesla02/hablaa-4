@@ -39,13 +39,15 @@ import {
   runningJoke,
   type Severity,
 } from "@/lib/severity";
-import { compareTranscript } from "@/lib/text-compare";
+import { scoreSpeech } from "@/lib/voice/score";
+import { useVoiceAnswer } from "@/lib/voice/use-voice-answer";
+import { TalkButton } from "@/components/voice/VoiceAnswer";
 import { translateUtterance } from "@/lib/translate.functions";
 import { bcp47, langById } from "@/lib/content";
 import { courseWeeks, lessonById } from "@/lib/course";
 import { handlerReact, handlerSay } from "@/lib/handler-bus";
 import { sfx } from "@/lib/sfx";
-import { listenContinuous, speak, stopSpeaking, sttSupported } from "@/lib/speech";
+import { speak, stopSpeaking } from "@/lib/speech";
 import { useApp } from "@/lib/store";
 import { useCompanion } from "@/lib/use-companion";
 import { Link } from "@tanstack/react-router";
@@ -322,7 +324,8 @@ function SimulatePage() {
   const [objective, setObjective] = useState("");
   const [suggestions, setSuggestions] = useState<{ target: string; translation: string }[]>([]);
   const [thinking, setThinking] = useState(false);
-  const [listening, setListening] = useState(false);
+  const onSpokenRef = useRef<(text: string) => void>(() => {});
+  const onRetrySpokenRef = useRef<(text: string) => void>(() => {});
   const [heard, setHeard] = useState("");
   const [drafting, setDrafting] = useState(false);
   const [draft, setDraft] = useState<{ text: string; translation: string } | null>(null);
@@ -353,13 +356,25 @@ function SimulatePage() {
   const locale = bcp47(profile?.langId ?? "spanish");
   const language = langById(profile?.langId ?? "spanish")?.label ?? "Spanish";
 
+  const voice = useVoiceAnswer({
+    expected: "",
+    locale,
+    onTranscript: (text) => onSpokenRef.current(text),
+  });
+  const retryVoice = useVoiceAnswer({
+    expected: "",
+    locale,
+    onTranscript: (text) => onRetrySpokenRef.current(text),
+  });
+  const listening = voice.phase === "listening";
+
   useEffect(() => {
-    if (!sttSupported()) setUseText(true);
+    if (!voice.supported) setUseText(true);
     return () => {
       ambienceRef.current?.stop();
-      stopListenRef.current();
       stopSpeaking();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -608,7 +623,7 @@ function SimulatePage() {
     const c = correction;
     if (!c) return;
     const target = c.retry || c.better;
-    const { overlap } = compareTranscript(said, target);
+    const overlap = scoreSpeech(said, target).score / 100;
     if (overlap >= 0.6) {
       sfx("correct");
       setRetryState("ok");
@@ -625,22 +640,21 @@ function SimulatePage() {
     }
   }
 
+  onRetrySpokenRef.current = (t: string) => {
+    const clean = t.trim();
+    setRetryText(clean);
+    setRetryState("idle");
+    if (clean) submitRetry(clean);
+  };
+
   function retryByVoice() {
-    if (retryState === "listening") {
-      stopListenRef.current();
+    if (retryVoice.phase !== "listening") {
+      setRetryState("listening");
+      sfx("record");
+    } else {
       setRetryState("idle");
-      return;
     }
-    setRetryState("listening");
-    sfx("record");
-    stopListenRef.current = listenContinuous(locale, {
-      onFinal: (t) => {
-        setRetryText(t.trim());
-        setRetryState("idle");
-        if (t.trim()) submitRetry(t.trim());
-      },
-      onError: () => setRetryState("idle"),
-    });
+    retryVoice.toggle();
   }
 
   function closeCorrection() {
@@ -653,33 +667,24 @@ function SimulatePage() {
     if (c) void advance(c.retry || c.better || c.pending, c.history);
   }
 
-  function record() {
-    if (listening) {
-      stopListenRef.current();
-      return;
-    }
-    setHeard("");
-    setDraft(null);
-    setListening(true);
-    sfx("record");
-    stopListenRef.current = listenContinuous(locale, {
-      onFinal: (text) => {
-        setListening(false);
-        sfx("stop");
-        const clean = text.trim();
-        if (!clean) return;
-        setDrafting(true);
-        void translateUtterance({ data: { text: clean, language } })
-          .then((t) => setDraft({ text: t.text || clean, translation: t.translation }))
-          .catch(() => setDraft({ text: clean, translation: "" }))
-          .finally(() => setDrafting(false));
-      },
+  onSpokenRef.current = (text: string) => {
+    sfx("stop");
+    const clean = text.trim();
+    if (!clean) return;
+    setDrafting(true);
+    void translateUtterance({ data: { text: clean, language } })
+      .then((t) => setDraft({ text: t.text || clean, translation: t.translation }))
+      .catch(() => setDraft({ text: clean, translation: "" }))
+      .finally(() => setDrafting(false));
+  };
 
-      onError: () => {
-        setListening(false);
-        setUseText(true);
-      },
-    });
+  function record() {
+    if (voice.phase !== "listening") {
+      setHeard("");
+      setDraft(null);
+      sfx("record");
+    }
+    voice.toggle();
   }
 
   function sendDraft() {
@@ -719,7 +724,7 @@ function SimulatePage() {
     // Guided run (daily practice or weekly recall): celebrate, then back to the map.
     if ((scene?.daily || scene?.weeklyWeek) && award) {
       setReward(gained);
-      setListening(false);
+      voice.reset();
       setDraft(null);
       setTimeout(() => void navigate({ to: "/dashboard" }), 2400);
       return;
@@ -963,7 +968,7 @@ function SimulatePage() {
                   <Send className="h-4 w-4" />
                 </button>
               </div>
-              {sttSupported() && (
+              {voice.supported && (
                 <button
                   onClick={() => setUseText(false)}
                   className="hud w-full rounded-sm border border-border py-2.5 text-[10px] text-muted-foreground"
@@ -1007,20 +1012,22 @@ function SimulatePage() {
             </div>
           ) : (
             <div className="space-y-2">
-              <button
-                onClick={record}
-                disabled={thinking || checking}
-                className={`flex w-full flex-col items-center gap-2 rounded-sm border py-6 disabled:opacity-50 ${
+              <div
+                className={`flex w-full flex-col items-center gap-2 rounded-sm border py-5 ${
                   listening
-                    ? "mic-live border-secondary bg-secondary/10 text-secondary"
+                    ? "border-secondary bg-secondary/10"
                     : "border-border bg-card text-foreground"
                 }`}
               >
-                {listening ? <Square className="h-7 w-7" /> : <Mic className="h-7 w-7" />}
-                <span className="hud text-[10px]">
-                  {listening ? "RECORDING… TAP TO STOP" : "TAP AND SPEAK"}
-                </span>
-              </button>
+                <TalkButton
+                  voice={{ ...voice, toggle: record }}
+                  label={thinking || checking ? "WAIT A MOMENT…" : "TAP AND SPEAK"}
+                />
+              </div>
+              {voice.phase === "error" && voice.error && (
+                <p className="hud text-center text-[10px] text-destructive">{voice.error}</p>
+              )}
+
 
               <button
                 onClick={() => setUseText(true)}
@@ -1100,16 +1107,19 @@ function SimulatePage() {
                   <p className="mt-1 text-[11px] text-primary">That's it. Back to the scene…</p>
                 )}
                 <div className="mt-2 flex gap-2">
-                  {sttSupported() && (
+                  {retryVoice.supported && (
                     <button
                       onClick={retryByVoice}
-                      className={`hud flex-1 rounded-sm border py-2.5 text-[10px] ${
-                        retryState === "listening"
+                      disabled={retryVoice.phase === "checking"}
+                      className={`hud flex-1 rounded-sm border py-2.5 text-[10px] disabled:opacity-50 ${
+                        retryVoice.phase === "listening"
                           ? "mic-live border-secondary text-secondary"
                           : "border-border text-muted-foreground"
                       }`}
                     >
-                      {retryState === "listening" ? (
+                      {retryVoice.phase === "checking" ? (
+                        "CHECKING…"
+                      ) : retryVoice.phase === "listening" ? (
                         <>
                           <Square className="mr-1 inline h-3 w-3" /> STOP
                         </>
