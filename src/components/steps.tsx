@@ -15,9 +15,9 @@ import {
   WriteStep,
 } from "@/components/course-steps";
 
-import { evaluateResponse, listenOnce, normalize, sttSupported } from "@/lib/speech";
-import { gradePronunciation } from "@/lib/pronunciation.functions";
-import { useAudioRecorder } from "@/lib/audio-recorder";
+import { evaluateResponse, normalize } from "@/lib/speech";
+import { TalkButton, VoiceResult } from "@/components/voice/VoiceAnswer";
+import { useVoiceAnswer, voiceXp } from "@/lib/voice/use-voice-answer";
 import { handlerReact } from "@/lib/handler-bus";
 import type { Step } from "@/lib/session";
 import type { Dictation, Mcq, PatternDrill, Shadow, Sts } from "@/lib/content";
