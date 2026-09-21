@@ -47,7 +47,7 @@ import { bcp47, langById } from "@/lib/content";
 import { courseWeeks, lessonById } from "@/lib/course";
 import { handlerReact, handlerSay } from "@/lib/handler-bus";
 import { sfx } from "@/lib/sfx";
-import { listenContinuous, speak, stopSpeaking, sttSupported } from "@/lib/speech";
+import { speak, stopSpeaking } from "@/lib/speech";
 import { useApp } from "@/lib/store";
 import { useCompanion } from "@/lib/use-companion";
 import { Link } from "@tanstack/react-router";
