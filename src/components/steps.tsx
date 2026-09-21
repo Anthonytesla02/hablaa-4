@@ -476,7 +476,7 @@ export function StsStep({ data, locale, onDone }: Props & { data: Sts }) {
           data={data}
           locale={locale}
           onWord={(w) => {
-            setUseText(true);
+            setTyping(true);
             setTyped((t) => (t ? `${t} ${w}` : w));
           }}
           onClear={() => setTyped("")}
