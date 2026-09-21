@@ -640,22 +640,21 @@ function SimulatePage() {
     }
   }
 
+  onRetrySpokenRef.current = (t: string) => {
+    const clean = t.trim();
+    setRetryText(clean);
+    setRetryState("idle");
+    if (clean) submitRetry(clean);
+  };
+
   function retryByVoice() {
-    if (retryState === "listening") {
-      stopListenRef.current();
+    if (retryVoice.phase !== "listening") {
+      setRetryState("listening");
+      sfx("record");
+    } else {
       setRetryState("idle");
-      return;
     }
-    setRetryState("listening");
-    sfx("record");
-    stopListenRef.current = listenContinuous(locale, {
-      onFinal: (t) => {
-        setRetryText(t.trim());
-        setRetryState("idle");
-        if (t.trim()) submitRetry(t.trim());
-      },
-      onError: () => setRetryState("idle"),
-    });
+    retryVoice.toggle();
   }
 
   function closeCorrection() {
