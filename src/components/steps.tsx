@@ -531,33 +531,22 @@ export function StsStep({ data, locale, onDone }: Props & { data: Sts }) {
           <button className={btn} disabled={!typed.trim()} onClick={() => judge(typed)}>
             TRANSMIT REPLY
           </button>
-          {sttSupported() && (
-            <button className={ghost} onClick={() => setUseText(false)}>
+          {voice.supported && (
+            <button className={ghost} onClick={() => setTyping(false)}>
               <Mic className="mr-1 inline h-3 w-3" /> USE MICROPHONE
             </button>
           )}
         </div>
       ) : (
-        <div className="space-y-2">
-          <button
-            onClick={record}
-            disabled={state === "listening" || state === "processing"}
-            className={`flex w-full flex-col items-center gap-2 rounded-sm border py-6 ${
-              state === "listening"
-                ? "mic-live border-secondary bg-secondary/10 text-secondary"
-                : "border-border bg-card text-foreground"
-            }`}
-          >
-            <Mic className="h-7 w-7" />
-            <span className="hud text-[10px]">
-              {state === "listening"
-                ? "LISTENING…"
-                : state === "processing"
-                  ? "TRANSMITTING…"
-                  : "HOLD THE LINE — SPEAK"}
-            </span>
-          </button>
-          <button className={ghost} onClick={() => setUseText(true)}>
+        <div className="space-y-3 rounded-sm border border-secondary/40 bg-secondary/5 p-3">
+          <TalkButton
+            voice={voice}
+            label={state === "processing" ? "CHECKING YOUR REPLY…" : "TAP AND SPEAK YOUR REPLY"}
+          />
+          {voice.phase === "error" && voice.error && (
+            <p className="hud text-center text-[10px] text-destructive">{voice.error}</p>
+          )}
+          <button className={ghost} onClick={() => setTyping(true)}>
             <Keyboard className="mr-1 inline h-3 w-3" /> TYPE INSTEAD
           </button>
         </div>
