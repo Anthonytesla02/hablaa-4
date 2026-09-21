@@ -47,54 +47,17 @@ export function McqStep({ data, locale, onDone }: Props & { data: Mcq }) {
   const correct = picked === data.correct_option_id;
   const addXp = useApp((s) => s.addXp);
 
-  // Pronunciation grading state
-  const { recording, error: micError, start, stop } = useAudioRecorder();
-  const [grading, setGrading] = useState(false);
-  const [pronResult, setPronResult] = useState<
-    | { grade: string; transcript: string; overlap: number }
-    | null
-  >(null);
-  const [pronError, setPronError] = useState<string | null>(null);
-
   const correctOption = data.options.find((o) => o.id === data.correct_option_id);
 
-  async function handleMic() {
-    if (recording) {
-      setGrading(true);
-      setPronError(null);
-      const result = await stop();
-      if (!result) {
-        setGrading(false);
-        setPronError("No audio captured — try again");
-        return;
-      }
-      try {
-        const grade = await gradePronunciation({
-          data: {
-            audio: result.base64,
-            expected: correctOption?.target ?? "",
-            locale,
-            mimeType: result.mimeType,
-          },
-        });
-        setPronResult(grade);
-        // Bonus XP for good pronunciation
-        if (grade.grade === "exact") {
-          addXp(5);
-        } else if (grade.grade === "close") {
-          addXp(2);
-        }
-      } catch (e) {
-        setPronError(e instanceof Error ? e.message : "Grading failed");
-      } finally {
-        setGrading(false);
-      }
-    } else {
-      setPronResult(null);
-      setPronError(null);
-      void start();
-    }
-  }
+  const voice = useVoiceAnswer({
+    expected: correctOption?.target ?? "",
+    locale,
+    onResult: (score) => {
+      const xp = voiceXp(score.verdict);
+      if (xp) addXp(xp);
+    },
+  });
+
 
   return (
     <div className="space-y-4">
