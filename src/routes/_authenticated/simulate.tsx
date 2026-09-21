@@ -1012,20 +1012,22 @@ function SimulatePage() {
             </div>
           ) : (
             <div className="space-y-2">
-              <button
-                onClick={record}
-                disabled={thinking || checking}
-                className={`flex w-full flex-col items-center gap-2 rounded-sm border py-6 disabled:opacity-50 ${
+              <div
+                className={`flex w-full flex-col items-center gap-2 rounded-sm border py-5 ${
                   listening
-                    ? "mic-live border-secondary bg-secondary/10 text-secondary"
+                    ? "border-secondary bg-secondary/10"
                     : "border-border bg-card text-foreground"
                 }`}
               >
-                {listening ? <Square className="h-7 w-7" /> : <Mic className="h-7 w-7" />}
-                <span className="hud text-[10px]">
-                  {listening ? "RECORDING… TAP TO STOP" : "TAP AND SPEAK"}
-                </span>
-              </button>
+                <TalkButton
+                  voice={{ ...voice, toggle: record }}
+                  label={thinking || checking ? "WAIT A MOMENT…" : "TAP AND SPEAK"}
+                />
+              </div>
+              {voice.phase === "error" && voice.error && (
+                <p className="hud text-center text-[10px] text-destructive">{voice.error}</p>
+              )}
+
 
               <button
                 onClick={() => setUseText(true)}
