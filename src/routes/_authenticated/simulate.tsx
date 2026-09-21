@@ -1107,16 +1107,19 @@ function SimulatePage() {
                   <p className="mt-1 text-[11px] text-primary">That's it. Back to the scene…</p>
                 )}
                 <div className="mt-2 flex gap-2">
-                  {sttSupported() && (
+                  {retryVoice.supported && (
                     <button
                       onClick={retryByVoice}
-                      className={`hud flex-1 rounded-sm border py-2.5 text-[10px] ${
-                        retryState === "listening"
+                      disabled={retryVoice.phase === "checking"}
+                      className={`hud flex-1 rounded-sm border py-2.5 text-[10px] disabled:opacity-50 ${
+                        retryVoice.phase === "listening"
                           ? "mic-live border-secondary text-secondary"
                           : "border-border text-muted-foreground"
                       }`}
                     >
-                      {retryState === "listening" ? (
+                      {retryVoice.phase === "checking" ? (
+                        "CHECKING…"
+                      ) : retryVoice.phase === "listening" ? (
                         <>
                           <Square className="mr-1 inline h-3 w-3" /> STOP
                         </>
