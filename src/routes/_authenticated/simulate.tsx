@@ -968,7 +968,7 @@ function SimulatePage() {
                   <Send className="h-4 w-4" />
                 </button>
               </div>
-              {sttSupported() && (
+              {voice.supported && (
                 <button
                   onClick={() => setUseText(false)}
                   className="hud w-full rounded-sm border border-border py-2.5 text-[10px] text-muted-foreground"
