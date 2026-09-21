@@ -208,65 +208,27 @@ function VocabDrill({
         ))}
       </div>
 
-      <div className="mt-4 space-y-2">
-        {phase === "playing" ? (
+      <div className="mt-4 space-y-3">
+        {intro ? (
           <p className="hud animate-pulse text-center text-[11px] text-secondary">
             <Volume2 className="mr-1 inline h-3.5 w-3.5" /> TRANSMITTING…
           </p>
         ) : (
-          <button
-            type="button"
-            onClick={toggleMic}
-            data-tour="vocab-mic"
-            disabled={phase === "grading"}
-            className={`hud flex w-full items-center justify-center gap-2 rounded-sm border py-3 text-[11px] ${
-              recording
-                ? "border-destructive text-destructive"
-                : "border-secondary/60 text-secondary"
-            }`}
-          >
-            {phase === "grading" ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
-            ) : (
-              <Mic className={`h-4 w-4 ${recording ? "animate-pulse" : ""}`} />
-            )}
-            {phase === "grading"
-              ? "ANALYSING…"
-              : recording
-                ? "● RECORDING — TAP TO SUBMIT"
-                : `REPEAT IT (${rep + 1}/${REPS_PER_WORD})`}
-          </button>
+          <TalkButton
+            voice={voice}
+            tour="vocab-mic"
+            label={`REPEAT IT (${rep + 1}/${REPS_PER_WORD})`}
+          />
         )}
 
-        {result && (
-          <div
-            className={`rounded-sm border p-2 text-center text-[11px] ${
-              result.grade === "miss"
-                ? "border-destructive/50 bg-destructive/10"
-                : "border-primary/50 bg-primary/10"
-            }`}
-          >
-            <p className="hud text-[10px]">
-              {result.grade === "exact"
-                ? `NATIVE-LIKE · ${result.overlap}%`
-                : result.grade === "close"
-                  ? `CLOSE · ${result.overlap}%`
-                  : `OFF TARGET · ${result.overlap}%`}
-            </p>
-            <p className="mt-1">
-              {result.grade === "miss"
-                ? "Not quite — listen again and repeat."
-                : (PRAISE[rep] ?? "Good job. Now repeat again.")}
-            </p>
-            {result.transcript && (
-              <p className="mt-1 text-[10px] opacity-60">HEARD: {result.transcript}</p>
-            )}
-          </div>
+        <VoiceResult voice={voice} expected={word.es} locale={locale} />
+
+        {voice.result && voice.result.verdict !== "retry" && (
+          <p className="text-center text-[11px] text-muted-foreground">
+            {PRAISE[rep] ?? "Good job. Now repeat again."}
+          </p>
         )}
 
-        {(error || micError) && (
-          <p className="hud text-center text-[10px] text-destructive">{error ?? micError}</p>
-        )}
 
         <div className="flex gap-2">
           <button type="button" onClick={() => void say(word.es)} className={ghost}>
